@@ -1,0 +1,21 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.form-control{
+    width: 40rem;
+    margin-left: 20px;
+}
+.form-label,.form-label,.form-text,.form-check,.btn{
+    margin-left: 20px;
+}
