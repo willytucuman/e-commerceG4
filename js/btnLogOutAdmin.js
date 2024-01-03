@@ -1,6 +1,7 @@
-const btnLogoutAdmin = document.querySelector('#btnLogoutAdmin')
+const btnLogoutAdmin = document.querySelector('#btnLogOutAdmin')
 btnLogoutAdmin.addEventListener("click",e=>{
     e.preventDefault()
+    alert("hasta luego administrador!")
     localStorage.removeItem("login_success")
-    window.location.href = "login.html"
+    window.location.href = "/views/login.html"
 })

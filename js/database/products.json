@@ -2,42 +2,77 @@
     {
         "name" : "Procesador amd ryzen 5 5600g ",
         "price" : 80000,
+        "visible":true,
         "category" : "Procesadores",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/primer-plano-ciberespacio-circuito-luces-neon_39518202.htm#query=procesadores&position=14&from_view=search&track=sph&uuid=1e1b92c8-ebf8-4a67-9509-43adbf591b3f",
+        "image": "https://images.pexels.com/photos/3665442/pexels-photo-3665442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     },
     {
         "name" : "Memoria ram 16 gb ",
         "price" : 78900,
+        "visible":true,
         "category" : "Almacenamiento",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/textura-fondo-tecnologia_4139986.htm#query=memoria%20ram&position=1&from_view=search&track=ais&uuid=5e5a1b28-da16-4d1d-a31d-b02b0b3e84c0",
+        "image": "https://images.pexels.com/photos/2588757/pexels-photo-2588757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     },
     {
         "name" : "Gabinete gaming ",
         "price" : 47000,
+        "visible":true,
         "category" : "Gabinetes",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/mujer-jugadora-presionando-boton-inicio-computadora-rgb-videojuegos-space-shoother-campeonato-linea-pie-estudio-juegos-sistema-pc-operativo-profesional-jugadores-deportes-electronicos_20936749.htm#query=gabinete%20pc&position=2&from_view=search&track=ais&uuid=9ce356e1-53ce-44af-82e9-37a7ead2d8b9",
+        "image": "https://images.pexels.com/photos/159235/computer-technology-pc-electronics-159235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     },
     {
         "name" : "Auriculares gaming ",
         "price" : 34000,
+        "visible":true,
         "category" : "Perifericos",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/configuracion-juego-bodegon-auriculares_33263567.htm#query=auriculares%20gamin&position=0&from_view=search&track=ais&uuid=76413ec3-9e07-4bf3-904e-fb06fb5d3d54",
+        "image": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
         }
     ,   
     {
         "name" : "Silla gamer ",
         "price" : 80000,
+        "visible":true,
         "category" : "Sillas gamer",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/bodegon-asiento-jugadores_32500983.htm#query=sillas%20gamer&position=2&from_view=search&track=ais&uuid=88ce42c0-c4ea-4a93-8ab0-69e7b286f177",
+        "image": "https://images.pexels.com/photos/7858750/pexels-photo-7858750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "id": "6c03401c-6543-11ee-8c99-0242ac120002"
+    }
+    ,   
+    {
+        "name" : "Silla gamer ",
+        "price" : 80000,
+        "visible":true,
+        "category" : "Sillas gamer",
+        "quantity": 1,
+        "image": "https://images.pexels.com/photos/7858750/pexels-photo-7858750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "id": "6c03401c-6543-11ee-8c99-0242ac120002"
+    }
+    ,   
+    {
+        "name" : "Silla gamer ",
+        "price" : 80000,
+        "visible":true,
+        "category" : "Sillas gamer",
+        "quantity": 1,
+        "image": "https://images.pexels.com/photos/7858750/pexels-photo-7858750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "id": "6c03401c-6543-11ee-8c99-0242ac120002"
+    }
+    ,   
+    {
+        "name" : "Silla gamer ",
+        "price" : 80000,
+        "visible":true,
+        "category" : "Sillas gamer",
+        "quantity": 1,
+        "image": "https://images.pexels.com/photos/7858750/pexels-photo-7858750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     }
 ]

@@ -12,11 +12,10 @@ const logout = document.querySelector('#logout')
     }else if (validUser.email === "admin@gmail.com" && validUser.password ==="adminPassword"){
         alert("Bienvenido administrador nuevamente")
         localStorage.setItem('login_success', JSON.stringify(validUser))
-        window.location.href = "./adminPage.html"
+        window.location.href = "../adminPage.html"
         return
     }
     alert(`Bienvenido ${validUser.name}`)
     localStorage.setItem('login_success', JSON.stringify(validUser))
-    
     window.location.href = '../index.html' 
 })
