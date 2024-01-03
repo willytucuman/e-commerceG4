@@ -30,11 +30,11 @@ const Footer = () => {
             width="250"
             height="250"
             class="footer__logoImage" />
-          <figcaption class="footer__logoName h3 mb-0">Display-None</figcaption>
+          <figcaption class="footer__logoName h3 mb-0">Hard-Tech</figcaption>
           <figcaption class="mt-2 mb-lg-0 fst-italic">
             Todo lo que buscas en
           </figcaption>
-          <figcaption class="fst-italic">peliculas, series y más</figcaption>
+          <figcaption class="fst-italic">hardware</figcaption>
         </figure>
 
         <nav class="col-12 col-md-3">
@@ -276,7 +276,7 @@ const Footer = () => {
         </nav>
 
         <div class="col-12 mt-4">
-          <p>© 2023 Display-None. Todos los derechos reservados.</p>
+          <p>© 2023 Hard-Tech. Todos los derechos reservados.</p>
         </div>
       </section>
     ` 
