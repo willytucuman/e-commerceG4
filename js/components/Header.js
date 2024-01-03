@@ -42,7 +42,7 @@ const Navbar = () => {
                     <li class="nav-item">
                         <a class="nav-link p-0 ms-2 me-2" href="#"><i class="bi bi-cart fs-2 p-0 "></i></a>
                     </li>
-                </ul>€
+                </ul>
             </div>
         </div>
     </div>
