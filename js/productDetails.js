@@ -2,6 +2,7 @@ const url = "https://fakestoreapi.com/products";
 const getProducts = async () => {
     try {
         const response = await fetch(url);
+        console.log(response)
         if (!response.ok) {
             throw new Error("Error al cargar el archivo: ${response.statusText}");
         }
@@ -13,8 +14,7 @@ const getProducts = async () => {
     }
 };
 
-const idProductoBuscado = 2;
-
+const idProductoBuscado = 4;
 const mostrarProductoPorId = async (idProducto) => {
     try {
         const products = await getProducts();
@@ -23,7 +23,6 @@ const mostrarProductoPorId = async (idProducto) => {
             console.log('No se pudieron cargar los productos.');
             return;
         }
-
         const productoEspecifico = products.find(producto => producto.id == idProducto);
         console.log(productoEspecifico)
         console.log(productoEspecifico.title)
@@ -36,14 +35,9 @@ const mostrarProductoPorId = async (idProducto) => {
                         <p>Descripción: ${productoEspecifico.description}</p>
                         <button class="btn btn-primary">Agregar al Carrito</button>
                     `;
-            elementoAMostrar.innerHTML=contenidoHTML
-            // });
-        // } else {
-        //     console.log("Producto no encontrado.");
-        // }
+        elementoAMostrar.innerHTML=contenidoHTML
     } catch (error) {
         console.error('Error al mostrar el producto:', error);
     }
 };
-
 mostrarProductoPorId(idProductoBuscado);
