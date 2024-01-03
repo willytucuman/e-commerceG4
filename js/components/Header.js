@@ -34,6 +34,9 @@ const Navbar = () => {
                     <li class="nav-item">
                         <a class="nav-link" href="#">Lista de Deseos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">CRUD</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav justify-content-end align-items-center   flex-grow-1 pe-3">
                     <li class="nav-item">
