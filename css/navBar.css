@@ -14,11 +14,7 @@
     font-family: "Poppins" , sans-serif;
 }
 body{
-    background-image: url("../assets/icons/pngtree-black-shape-hardware-product-display-e-commerce-c4d-three-dimensional-background-image_1505527.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
+    background: black
 }
 nav{
     position: fixed;
