@@ -89,7 +89,7 @@ nav ul li a:hover{
 .menu-icon.active{
     background: rgba(0,0,0,0);
 }
-.menu-icon.menu-icon.active::before{
+.menu-icon.active::before{
     top: 0;
     transform: rotate(45deg);
 }
