@@ -49,7 +49,7 @@ const mostrarProductoPorId = async (idProducto) => {
                                 </div>
                                 <div class="mb-3">
                                     <span class="text-muted">price</span>
-                                    <span class="h5">$75.00</span>
+                                    <span class="h5">${productoEspecifico.price}</span>
                                 </div>
                                 <p>
                                     DESCRIPCION
