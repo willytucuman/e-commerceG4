@@ -65,13 +65,12 @@ const mostrarProductoPorId = async (idProducto) => {
                                     <div class="col-md-4 col-6 mb-3">
                                         <label class="mb-2 d-block">Quantity</label>
                                         <div class="input-group mb-3" style="width: 170px;">
-                                        <button type="button" class="btn btn-outline-secondary border border-secondary">
+                                        <button id="btnRestar" type="button" class="btn btn-outline-secondary border border-secondary" onclick="restar()">
                                             <i class="bi bi-dash text-black"></i>
                                         </button>
-                                            
-                                        </button>
-                                        <input type="text" class="form-control text-center border border-secondary" placeholder="0" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                                        <button type="button" class="btn btn-outline-secondary border border-secondary">
+                                    
+                                        <input type="text" id="productQuantity" class="form-control text-center border border-secondary"   aria-describedby="button-addon1" value="5">
+                                        <button id="btnSumar" type="button" class="btn btn-outline-secondary border border-secondary" onclick=sumar()>
                                         <i class="bi bi-plus text-black"></i>
                                     </button>
                                         </div>
@@ -200,5 +199,26 @@ const mostrarProductoPorId = async (idProducto) => {
     } catch (error) {
         console.error('Error al mostrar el producto:', error);
     }
+    
 };
 mostrarProductoPorId(idProductoBuscado);
+
+const btnRestar = document.querySelector("#btnRestar")
+const btnSumar = document.querySelector("#btnSumar")
+const Quantity = document.querySelector("#productQuantity")
+console.log(Quantity)
+
+const sumar = () => {
+    let valor = parseInt(Quantity.value);
+    if(valor<10){
+        Quantity.value = valor + 1;
+    }
+}
+sumar()
+
+const restar = () => {
+    let valor = parseInt(Quantity.value);
+    if (valor > 0) {
+        Quantity.value = valor - 1;
+    }
+}
