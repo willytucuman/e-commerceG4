@@ -1,0 +1,77 @@
+/* .footer__card {
+  width: fit-content;
+  height: fit-content;
+  background: radial-gradient(
+    circle,
+    rgba(255, 103, 76, 0) 30%,
+    rgba(255, 160, 51, 0) 100%);
+  align-items: center;
+  justify-content: center;
+  padding: 5px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  border: transparent;
+  border-radius: 15px;
+} */
+
+.footer__socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 15px;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* facebook*/
+.containerThree:hover {
+  background-color: #4d6fa9;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.footer__socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 24px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.footer__socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
