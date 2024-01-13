@@ -32,7 +32,7 @@ const mostrarProductoPorId = async (idProducto) => {
                     <div class="container">
                         <div class="row gx-5">
                             <aside class="col-lg-6">
-                            <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                            <div class="bg-dark rounded-4 mb-3 d-flex justify-content-center">
                                 <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
                                 <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="${productoEspecifico.image}"/>
                                 </a>
@@ -40,7 +40,7 @@ const mostrarProductoPorId = async (idProducto) => {
                             </aside>
                             <main class="col-lg-6">
                             <div class="ps-lg-3">
-                                <h4 class="title text-dark">
+                                <h4 class="title productTittle">
                                 ${productoEspecifico.title} <br/>
                                 </h4>
                                 <div class="d-flex flex-row my-3">
@@ -225,9 +225,3 @@ mostrarProductoPorId(idProductoBuscado);
 
 
 
-const restar = () => {
-    let valor = parseInt(Quantity.value);
-    if (valor > 0) {
-        Quantity.value = valor - 1;
-    }
-}

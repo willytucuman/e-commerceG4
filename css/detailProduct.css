@@ -1,9 +1,22 @@
-.icon-hover:hover {
-    border-color: #3b71ca !important;
-    background-color: white !important;
-    color: #3b71ca !important;
-  }
-  
-  .icon-hover:hover i {
-    color: #3b71ca !important;
-  }
+:root{
+  --fuzzy-wuzzy-brown-50: #fdf3f3;
+--fuzzy-wuzzy-brown-100: #faeae9;
+--fuzzy-wuzzy-brown-200: #f6d5d5;
+--fuzzy-wuzzy-brown-300: #eeb3b3;
+--fuzzy-wuzzy-brown-400: #e3898b;
+--fuzzy-wuzzy-brown-500: #d55e64;
+--fuzzy-wuzzy-brown-600: #c44a56;
+--fuzzy-wuzzy-brown-700: #a12f3d;
+--fuzzy-wuzzy-brown-800: #872a39;
+--fuzzy-wuzzy-brown-900: #742736;
+--fuzzy-wuzzy-brown-950: #401118;
+}
+body{
+  background:#fdf3f3;
+}
+.productCardBg{
+  background:#a12f3d;
+}
+.productTittle{
+  color:#742736;
+}
