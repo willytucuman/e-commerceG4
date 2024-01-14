@@ -8,6 +8,14 @@
   --color-text-Light: #f8f9fa;
   --color-text-White: #ffffff;
   --color-text-Custom: #cae6ff;
+  --color-text-Hover: rgb(49, 162, 255);
+  --color-text-Arrow-Shape: rgba(105, 105, 105, 0.658);
+  --color-Arrow-Shape: rgba(187, 187, 187, 0.938);
+  --color-Arrow-Background1: #ff7300f3;
+  --color-Arrow-Background2: #9b561509;
+  --color-Social-Figures: rgb(255, 255, 255);
+  --color-Social-Background: rgb(44, 44, 44);
+  
 }
 
 .footer__section {
@@ -33,7 +41,7 @@
 .footer__socialContainer {
   width: 52px;
   height: 52px;
-  background-color: rgb(44, 44, 44);
+  background-color: var(--color-Social-Background);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +81,7 @@
 }
 
 .footer__socialSvg path {
-  fill: rgb(255, 255, 255);
+  fill: var(--color-Social-Figures);
 }
 
 .footer__socialContainer:hover .footer__socialSvg {
@@ -95,7 +103,7 @@
 .footer__btn {
   width: 4em;
   height: 4em;
-  background: linear-gradient(#ff7300f3, #9b561500);
+  background: linear-gradient(var(--color-Arrow-Background1), var(--color-Arrow-Background2));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,14 +114,15 @@
 }
 
 .footer__arrow path {
-  fill: rgba(136, 136, 136, 0.938);
+  fill: var(--color-Arrow-Shape);
 }
 
 .footer__textBtn {
+  font-family: 'Bungee', 'Quantico';
   font-size: 1.7vh;
   width: 20px;
   position: absolute;
-  color: rgba(105, 105, 105, 0.658);
+  color: var(--color-text-Arrow-Shape);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,11 +148,14 @@
     padding: 0px;
   }
   .footer__logoImage {
-    margin-top: -45px;
+    margin-top: -25px;
     margin-bottom: -35px;
   }
 }
 
+.footer__logoImage {
+  margin-bottom: -30px;
+}
 @keyframes slide-in-bottom {
   0% {
     transform: translateY(10px);
@@ -156,10 +168,17 @@
   }
 }
 
-.footer__link, .footer__tittle, .footer__imgCaption, .footer__logoName {
+.footer__link, .footer__tittle, .footer__imgCaption, .footer__logoName, .footer__text {
   color: var(--color-text-Custom);
+  font-family: 'Tektur';
+  font-size: 17px;
+}
+
+.footer__tittle {
+  font-size: 23px;
+  color: var(--color-text-Light);
 }
 
 .footer__link:hover {
-  color: rgb(32, 190, 238) !important;
+  color: var(--color-text-Hover);
 }
