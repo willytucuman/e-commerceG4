@@ -1,18 +1,18 @@
-/* .footer__card {
+.footer__card {
   width: fit-content;
   height: fit-content;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
-    rgba(255, 103, 76, 0) 30%,
-    rgba(255, 160, 51, 0) 100%);
+    rgba(255, 103, 76, 0.5) 30%,
+    rgba(255, 160, 51, 0.5) 100%); */
   align-items: center;
   justify-content: center;
   padding: 5px 25px;
   gap: 20px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
   border: transparent;
   border-radius: 15px;
-} */
+}
 
 .footer__socialContainer {
   width: 52px;
@@ -27,22 +27,22 @@
   border-radius: 15px;
 }
 /* instagram*/
-.containerOne:hover {
+.footer__socialContainer_containerOne:hover {
   background-color: #d62976;
   transition-duration: 0.3s;
 }
 /* twitter*/
-.containerTwo:hover {
+.footer__socialContainer_containerTwo:hover {
   background-color: #00acee;
   transition-duration: 0.3s;
 }
 /* facebook*/
-.containerThree:hover {
+.footer__socialContainer_containerThree:hover {
   background-color: #4d6fa9;
   transition-duration: 0.3s;
 }
 /* Whatsapp*/
-.containerFour:hover {
+.footer__socialContainer_containerFour:hover {
   background-color: #128c7e;
   transition-duration: 0.3s;
 }
@@ -52,15 +52,15 @@
   transition-duration: 0.3s;
 }
 
-.socialSvg {
+.footer__socialSvg {
   width: 24px;
 }
 
-.socialSvg path {
+.footer__socialSvg path {
   fill: rgb(255, 255, 255);
 }
 
-.footer__socialContainer:hover .socialSvg {
+.footer__socialContainer:hover .footer__socialSvg {
   animation: slide-in-top 0.3s both;
 }
 
@@ -74,4 +74,71 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.footer__Btn {
+  width: 4em;
+  height: 4em;
+  background: linear-gradient(#ff7300f3, #9b561500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+.footer__arrow path {
+  fill: rgba(136, 136, 136, 0.938);
+}
+
+.footer__textBtn {
+  font-size: 1.7vh;
+  width: 20px;
+  position: absolute;
+  color: rgba(105, 105, 105, 0.658);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -6vh;
+  opacity: 0;
+  transition-duration: 0.7s;
+  text-decoration: none;
+  line-height: 2.1vh;
+}
+
+.footer__Btn:hover .footer__textBtn {
+  opacity: 1;
+  transition-duration: 0.7s;
+}
+
+.footer__Btn:hover .footer__arrow {
+  animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@media (max-width: 768px) {
+  .footer__card {
+    display: flex;
+    padding: 0px;
+  }
+  .footer__logoImage {
+    margin-top: -45px;
+    margin-bottom: -35px;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.footer__link:hover {
+  color: rgb(32, 190, 238) !important;
 }
