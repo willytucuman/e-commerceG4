@@ -1,6 +1,8 @@
 :root {
   --color-Background1: rgba(255, 103, 76, 0.932);
   --color-Background2: rgba(255, 160, 51, 0.918);
+  --color-Social-Figures: rgb(255, 255, 255);
+  --color-Social-Background: rgb(44, 44, 44);
   --color-Social-Instagram: #d62976;
   --color-Social-X-Twitter: #00acee;
   --color-Social-Facebook: #4d6fa9;
@@ -13,9 +15,6 @@
   --color-Arrow-Shape: rgba(187, 187, 187, 0.938);
   --color-Arrow-Background1: #ff7300f3;
   --color-Arrow-Background2: #9b561509;
-  --color-Social-Figures: rgb(255, 255, 255);
-  --color-Social-Background: rgb(44, 44, 44);
-  
 }
 
 .footer__section {
