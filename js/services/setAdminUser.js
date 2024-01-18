@@ -1,6 +1,6 @@
-import { User } from "../classes/user.class.js";
+import  User  from "../classes/UserClass.js";
 
-export const createAdminUser = () =>{
+export const setAdminUser = () =>{
     const adminUser = new User({email: "admin@gmail.com", password: "adminPassword", role: "admin"})
     const users = localStorage.getItem("users")
 

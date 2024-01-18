@@ -1,21 +1,82 @@
-const loginForm = document.querySelector("#loginForm")
+// import Navbar from "./components/Navbar.js";
+import { validateLoginUser } from "./validators/validateLoginUser.js";
+import { showPassword } from "./utils/showPassword.js";
+import  setLoggedUser  from "./services/setLoggedUser.js";
+import { redirectIndex } from "./utils/redirectIndex.js";
 
-const logout = document.querySelector('#logout')
- loginForm.addEventListener("submit",(e)=>{
-    e.preventDefault()
-    const email = document.querySelector("#email").value
-    const password = document.querySelector("#password").value
-    const Users = JSON.parse(localStorage.getItem("users"))
-    const validUser = Users.find(user => user.email === email && user.password === password)
-    if(!validUser){
-        return alert("Usuario y/o password incorrecto/s!! o usuario inexistente")
-    }else if (validUser.email === "admin@gmail.com" && validUser.password ==="adminPassword"){
-        alert("Bienvenido administrador nuevamente")
-        localStorage.setItem('login_success', JSON.stringify(validUser))
-        window.location.href = "../adminPage.html"
-        return
-    }
-    alert(`Bienvenido ${validUser.name}`)
-    localStorage.setItem('login_success', JSON.stringify(validUser))
-    window.location.href = '../index.html' 
-})
+// document.addEventListener("DOMContentLoaded", () => {
+//   Navbar();
+// });
+
+const showPasswordButton = document.getElementById("showPasswordBtn");
+
+showPasswordButton.addEventListener("click", (e) => {
+  showPassword(e);
+});
+
+const loginForm = document.getElementById("loginForm")
+const invalidLoginFeedback = document.getElementById("invalidLoginFeedback")
+
+
+const userLoginFeedback = (bool) =>{
+  invalidLoginFeedback.classList.add("hidden")
+
+   if (bool) {
+    return  invalidLoginFeedback.classList.add("hidden")
+   }
+
+   invalidLoginFeedback.classList.remove("hidden")
+   return 
+}
+
+/**
+ * 
+ * @param {object} e Evento de submit del formulario de login
+ * @returns Debe mostrar el feedback dependiendo de la validación del login, settearlo y redirigir al usuario a la página principal si este fue correcto.
+ */
+
+const userLogin = (e) =>{
+  e.preventDefault()
+  const formData = Object.fromEntries(new FormData(e.target))
+  if (validateLoginUser({email: formData.email, password: formData.password})) {
+     userLoginFeedback(true)
+     setLoggedUser(formData.email)
+     setTimeout(redirectIndex,800) 
+     return 
+  }
+
+  return userLoginFeedback(false)
+}
+
+loginForm.addEventListener("submit", userLogin)
+
+
+// import { validateLoginUser } from "./validators/validateLoginUser.js"
+// import { setLoguedUser } from "./services/setLoguedUser.js"
+// import { redirectIndex } from "./utils/redirectIndex.js"
+// const loginForm = document.querySelector("#loginForm")
+// const invalidLoginFeedback = document.getElementById("#invalidLoginFeedback")
+
+// const userLoginFeedback = (bool) =>{
+//     invalidLoginFeedback.classList.add("hidden")
+  
+//      if (bool) {
+//       return  invalidLoginFeedback.classList.add("hidden")
+//      }
+  
+//      invalidLoginFeedback.classList.remove("hidden")
+//      return 
+//   }
+//   const userLogin = (e) =>{
+//     e.preventDefault()
+//     const formData = Object.fromEntries(new FormData(e.target))
+//     if (validateLoginUser({email: formData.email, password: formData.password})) {
+//        userLoginFeedback(true)
+//        setLoguedUser(formData.email)
+//        setTimeout(redirectIndex,800) 
+//        return 
+//     }
+  
+//     return userLoginFeedback(false)
+//   }
+//   loginForm.addEventListener("submit", userLogin)
