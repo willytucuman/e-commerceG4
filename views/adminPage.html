@@ -29,28 +29,28 @@
             <div class="row mt-3">
               <div class="col">
                 <label>Title</label>
-                <input type="text" class="form-control" id="title" pattern="[A-Za-z]+" maxlength="20" required />
+                <input type="text" class="form-control" id="title" pattern="[a-zA-Z\s]+" title="Ingresa solo letras" maxlength="20" required />
               </div>
               <div class="col">
                 <label>Stock</label>
-                <input type="tel" class="form-control" id="stock" pattern="[0-9]{1,10}" maxlength="10" required />
+                <input type="tel" class="form-control" id="stock" pattern="[0-9]{1,10}" title="Ingresa solo Numeros" maxlength="10" required />
               </div>
               
             </div>  
             <div class="row mt-3">
               <div class="col">
                 <label>Category</label>
-                <input type="text" class="form-control" id="category" maxlength="10" required />
+                <input type="text" class="form-control" id="category" pattern="[a-zA-Z\s]+" title="Ingresa solo letras" maxlength="10" required />
               </div>
               <div class="col">
                 <label>Price</label>
-                <input type="text" class="form-control" id="price" pattern="[0-9]{1,10}" maxlength="15" required />
+                <input type="text" class="form-control" id="price" pattern="[0-9]{1,10}"  title="Ingresa solo Numeros" maxlength="15" required />
               </div>
             </div>
             <div class="row mt-3">
               <div class="col">
                 <label>Description</label>
-                <input type="text" class="form-control" id="description" pattern="[A-Za-z]+" maxlength="50" required />
+                <input type="text" class="form-control" id="description"  maxlength="50" required />
               </div>
             </div>
             <div class="row mt-3">
@@ -78,10 +78,11 @@
               <tr class="col-12 col-md-6">
                 <th>Image</th>
                 <th>Title</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Stock</th>
+                <th class="ocultar ">Description</th>
+                <th class="ocultar2">Price</th>
+                <th class="ocultar2">Stock</th>
+                <th class="ocultar3">Category</th>
+                
                 <th></th>
               </tr>
             </thead>
@@ -116,22 +117,22 @@
                 <div class="row mt-3">
                   <div class="col">
                     <label>Title</label>
-                    <input type="text" class="form-control" id="modaltitle" required />
+                    <input type="text" class="form-control" id="modaltitle" pattern="[a-zA-Z\s]+" title="Ingresa solo letras" required />
                   </div>
                   <div class="col">
                     <label>Stock</label>
-                    <input type="text" class="form-control" id="modalstock" required />
+                    <input type="text" class="form-control" id="modalstock" pattern="[0-9]{1,10}" title="Ingresa solo Numeros" required />
                   </div>
                   
                 </div>  
                 <div class="row mt-3">
                   <div class="col">
                     <label>Category</label>
-                    <input type="text" class="form-control" id="modalcategory" required />
+                    <input type="text" class="form-control" id="modalcategory" pattern="[a-zA-Z\s]+" title="Ingresa solo letras" required />
                   </div>
                   <div class="col">
                     <label>Price</label>
-                    <input type="text" class="form-control" id="modalprice" required />
+                    <input type="text" class="form-control" id="modalprice" pattern="[0-9]{1,10}" title="Ingresa solo Numeros" required />
                   </div>
                 </div>
                 <div class="row mt-3">
@@ -164,6 +165,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="../js/admin-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>

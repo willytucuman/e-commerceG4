@@ -5,6 +5,7 @@ import { setProducts } from "./services/setProducts.js";
 const cuerpoTabla = document.querySelector("#cuerpo-tabla");
 const myModal = new bootstrap.Modal(document.getElementById("modalGift"));
 let btn_eliminar = document.querySelectorAll(".btn-delete");
+
 setProducts();
 
 const datos = getProducts();
@@ -26,10 +27,11 @@ const cargarDatos = () => {
     <tr>
       <td><img class="rounded  img-thumbnail"  src="${product.image}" alt="${product.title}" width="100"></td>
       <td>${product.title}</td>
-      <td>${product.description}</td>
-      <td>$${product.price}</td>
-      <td>${product.category}</td>
-      <td>${product.stock}</td>
+      <td class="ocultar ">${product.description}</td>
+      <td class="ocultar2">$${product.price}</td>
+      <td class="ocultar2">${product.stock}</td>
+      <td class="ocultar3">${product.category}</td>
+      
       <td class="width=100%"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal(${product.id})">Update</button>
       <button class="btn btn-primary btn-delete mt-1 w-100" id="${product.id} ">Delete</button>
       </td>
@@ -76,7 +78,7 @@ const UpdateProduct = (e) => {
     duration: 3000,
     close: true,
     gravity: "bottom", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    position: "left", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "blue)",
@@ -91,7 +93,7 @@ const UpdateProduct = (e) => {
     onClick: function () {}, // Callback after click
   }).showToast();
 };
-let myuuid= crypto.randomUUID();
+let myuuid = crypto.randomUUID();
 const agregarProducto = (event) => {
   event.preventDefault();
   let id = myuuid;
@@ -121,7 +123,7 @@ const agregarProducto = (event) => {
     duration: 3000,
     close: true,
     gravity: "bottom", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    position: "left", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "#5eff70",
@@ -145,33 +147,25 @@ function actualizar_btn_delete() {
   });
 }
 function deleteProduct(e) {
-  Toastify({
-    text: "Product Delete",
-    duration: 3000,
-    close: true,
-    gravity: "bottom", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: "#d41414",
-      borderRadius: "2rem",
-      textTransform: "uppercase",
-      fontSize: ".75rem",
-    },
-    offset: {
-      x: "1.5rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-      y: "1.5rem", // vertical axis - can be a number or a string indicating unity. eg: '2em'
-    },
-    onClick: function () {}, // Callback after click
-  }).showToast();
   const idbtn = e.currentTarget.id;
-  console.log(idbtn);
   const index = datos.findIndex((producto) => producto.id == idbtn);
-  datos.splice(index, 1);
-
-  // Guardar los datos actualizados en el localstorage
-  localStorage.setItem("products", JSON.stringify(datos));
-  cargarDatos();
+  let validar = Swal.fire({
+    title: "Are you sure?",
+    icon: "question",
+    html: "Delete Produtc",
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText: "Yes",
+    cancelButtonText: "No",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      datos.splice(index, 1);
+      // Guardar los datos actualizados en el localstorage
+      localStorage.setItem("products", JSON.stringify(datos));
+      cargarDatos();
+    }
+  });
 }
 
 document.querySelector("#formGift").addEventListener("submit", agregarProducto);
