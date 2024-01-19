@@ -17,7 +17,8 @@ const Navbar = () => {
             <div class="menu-icon"></div>
         </nav>
     `;
-    head.innerHTML ='<link rel="stylesheet" href="./css/navBar.css">';
+    const link = '<link rel="stylesheet" href="./css/navBar.css">'
+    head.insertAdjacentHTML("beforeend",link)
 
     const menuIcon = document.querySelector(".menu-icon")
     const navList = document.querySelector("ul")
