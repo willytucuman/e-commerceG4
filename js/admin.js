@@ -1,4 +1,4 @@
-import { Product } from "./classes/product.class.js";
+import { Product } from "./classes/product.class.jsgit";
 import { getProducts } from "./services/getProducts.js";
 import { setProducts } from "./services/setProducts.js";
 
