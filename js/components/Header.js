@@ -6,7 +6,8 @@ const Navbar = () => {
     header.innerHTML = `
     <nav>
             <div class="logo">
-                <a href="">HardTech</a>
+                
+                <a href=""><img src="./assets/logo/logoBlanco.png" alt="">HardTech</a>
             </div>
             <ul>
                 <li><a href="">Home</a></li>

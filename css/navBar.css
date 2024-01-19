@@ -36,6 +36,13 @@ nav .logo a {
     font-weight: 600;
     text-decoration: none;
 }
+nav .logo a img{
+    width: 48px;
+    position: absolute;
+    top: 50;
+    left: 0;
+    transform: translateX(30px);
+}
 
 nav .logo a:hover {
     color: #ff2222;
@@ -125,6 +132,9 @@ nav ul li a:hover{
 @media screen and (max-width:767px){
     nav{
         padding: 0 50px;
+    }
+    nav .logo a img{
+        display: none;
     }
     
 }
