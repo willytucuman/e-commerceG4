@@ -8,4 +8,4 @@ export class Product {
       this.category = category;
       this.stock = stock;
     }
-  }
+  } 
