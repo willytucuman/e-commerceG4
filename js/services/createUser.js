@@ -1,4 +1,4 @@
-import {User} from "../classes/UserClass.js"
+import {User} from "../classes/userClass.js"
 export const createUser = ({ email, password }) => {
     const users = JSON.parse(localStorage.getItem("users"));
     const newUser = new User({ email: email, password: password, role: "user" });
