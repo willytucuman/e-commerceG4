@@ -12,8 +12,6 @@ const Navbar = () => {
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="">Whishlist</a></li>
-                <li><a href="">CRUD</a></li>
                 <li><a href="">Login</a></li>
             </ul>
             <div class="menu-icon"></div>
