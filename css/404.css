@@ -29,7 +29,7 @@ body{
 }
 .error h2 a {
     text-decoration: none;
-    color: #ba8b02;
+    color: #f2dddb;
 }
 .error .msg {
     top: -190px;
@@ -92,7 +92,6 @@ body{
   top: 8%;
   color: white;
   background: linear-gradient(to right, #8e0e00, #1f1c18);
-  /* background: linear-gradient(to right, #ba8b02, #181818); */
   border-radius: 50%;
   display: inline-block;
   transform: skew(45deg);
