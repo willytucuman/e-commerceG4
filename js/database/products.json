@@ -4,7 +4,7 @@
         "price" : 80000,
         "category" : "Procesadores",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/primer-plano-ciberespacio-circuito-luces-neon_39518202.htm#query=procesadores&position=14&from_view=search&track=sph&uuid=1e1b92c8-ebf8-4a67-9509-43adbf591b3f",
+        "image": "https://img.freepik.com/fotos-premium/chip-cpu-computadora-aislado-sobre-fondo-blanco-unidad-procesador-central_136875-2490.jpg?w=1380",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     },
     {
@@ -12,7 +12,7 @@
         "price" : 78900,
         "category" : "Almacenamiento",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/textura-fondo-tecnologia_4139986.htm#query=memoria%20ram&position=1&from_view=search&track=ais&uuid=5e5a1b28-da16-4d1d-a31d-b02b0b3e84c0",
+        "image": "https://img.freepik.com/fotos-premium/modulos-ram-memoria-acceso-aleatorio-computadora-coleccion-electronica_486684-2759.jpg?w=1380",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     },
     {
@@ -20,7 +20,7 @@
         "price" : 47000,
         "category" : "Gabinetes",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/mujer-jugadora-presionando-boton-inicio-computadora-rgb-videojuegos-space-shoother-campeonato-linea-pie-estudio-juegos-sistema-pc-operativo-profesional-jugadores-deportes-electronicos_20936749.htm#query=gabinete%20pc&position=2&from_view=search&track=ais&uuid=9ce356e1-53ce-44af-82e9-37a7ead2d8b9",
+        "image": "https://img.freepik.com/foto-gratis/mujer-jugadora-presionando-boton-inicio-computadora-rgb-videojuegos-space-shoother-campeonato-linea-pie-estudio-juegos-sistema-pc-operativo-profesional-jugadores-deportes-electronicos_482257-29256.jpg?w=740&t=st=1705547154~exp=1705547754~hmac=3f3bf5d0918e9c39d2d47e3e3fd4dcfb09746ab36566924afcbfb10828aeed81",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     },
     {
@@ -28,7 +28,7 @@
         "price" : 34000,
         "category" : "Perifericos",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/configuracion-juego-bodegon-auriculares_33263567.htm#query=auriculares%20gamin&position=0&from_view=search&track=ais&uuid=76413ec3-9e07-4bf3-904e-fb06fb5d3d54",
+        "image": "https://img.freepik.com/foto-gratis/auriculares-brillantes-iluminan-entretenimiento-moderno-club-nocturno-generado-ia_188544-25756.jpg?w=1380&t=st=1705547178~exp=1705547778~hmac=cc258da70f28bc24c10a9200009d65ddd377d7c4281f4cfa3f1af0f640f4ecac",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
         }
     ,   
@@ -37,7 +37,16 @@
         "price" : 80000,
         "category" : "Sillas gamer",
         "quantity": 1,
-        "image": "https://www.freepik.es/foto-gratis/bodegon-asiento-jugadores_32500983.htm#query=sillas%20gamer&position=2&from_view=search&track=ais&uuid=88ce42c0-c4ea-4a93-8ab0-69e7b286f177",
+        "image": "https://img.freepik.com/foto-gratis/bodegon-asiento-jugadores_23-2149746607.jpg?w=740&t=st=1705547223~exp=1705547823~hmac=b0cab16befc9948538b03d38b037882f0c85813c1ccc64d3f0b44305542034c5",
+        "id": "6c03401c-6543-11ee-8c99-0242ac120002"
+    }
+    ,   
+    {
+        "name" : "Silla gamer ",
+        "price" : 80000,
+        "category" : "Sillas gamer",
+        "quantity": 1,
+        "image": "https://img.freepik.com/foto-gratis/bodegon-asiento-jugadores_23-2149746607.jpg?w=740&t=st=1705547223~exp=1705547823~hmac=b0cab16befc9948538b03d38b037882f0c85813c1ccc64d3f0b44305542034c5",
         "id": "6c03401c-6543-11ee-8c99-0242ac120002"
     }
 ]
