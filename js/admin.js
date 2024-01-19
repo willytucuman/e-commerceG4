@@ -9,7 +9,7 @@ let btn_eliminar = document.querySelectorAll(".btn-delete");
 setProducts();
 
 const datos = getProducts();
-let idProductUpdate = null;
+let idProductUpdate = null; 
 
 const cargarDatos = () => {
   cuerpoTabla.innerHTML = "";
