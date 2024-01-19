@@ -1,12 +1,12 @@
-// import Navbar from "./components/Navbar.js";
+import Navbar from "./components/NavBar.js";
 import { validateLoginUser } from "./validators/validateLoginUser.js";
 import { showPassword } from "./utils/showPassword.js";
-import  setLoggedUser  from "./services/setLoggedUser.js";
+import { setLoggedUser } from "./services/setLoggedUser.js";
 import { redirectIndex } from "./utils/redirectIndex.js";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   Navbar();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  Navbar();
+});
 
 const showPasswordButton = document.getElementById("showPasswordBtn");
 
@@ -49,34 +49,3 @@ const userLogin = (e) =>{
 }
 
 loginForm.addEventListener("submit", userLogin)
-
-
-// import { validateLoginUser } from "./validators/validateLoginUser.js"
-// import { setLoguedUser } from "./services/setLoguedUser.js"
-// import { redirectIndex } from "./utils/redirectIndex.js"
-// const loginForm = document.querySelector("#loginForm")
-// const invalidLoginFeedback = document.getElementById("#invalidLoginFeedback")
-
-// const userLoginFeedback = (bool) =>{
-//     invalidLoginFeedback.classList.add("hidden")
-  
-//      if (bool) {
-//       return  invalidLoginFeedback.classList.add("hidden")
-//      }
-  
-//      invalidLoginFeedback.classList.remove("hidden")
-//      return 
-//   }
-//   const userLogin = (e) =>{
-//     e.preventDefault()
-//     const formData = Object.fromEntries(new FormData(e.target))
-//     if (validateLoginUser({email: formData.email, password: formData.password})) {
-//        userLoginFeedback(true)
-//        setLoguedUser(formData.email)
-//        setTimeout(redirectIndex,800) 
-//        return 
-//     }
-  
-//     return userLoginFeedback(false)
-//   }
-//   loginForm.addEventListener("submit", userLogin)

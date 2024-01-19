@@ -1,4 +1,4 @@
-import  User  from "../classes/UserClass.js";
+import  {User}  from "../classes/UserClass.js";
 
 export const setAdminUser = () =>{
     const adminUser = new User({email: "admin@gmail.com", password: "adminPassword", role: "admin"})

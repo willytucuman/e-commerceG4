@@ -1,3 +1,3 @@
-export const redirectIndexLogin = () =>{
-    window.location.pathname = "/views/login.html"
+export const redirectIndex = () =>{
+    window.location.pathname = "/index.html"
 }
