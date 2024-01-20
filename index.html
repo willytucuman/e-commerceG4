@@ -38,9 +38,9 @@
                 </button>
         </section>
         <section class="container mt-5 pt-5 text-center text-light" >
-            <h1 class="display-2 fw-normal ms-5">HardTech</h1>
+            <h1 class="display-2 fw-normal mx-auto">HardTech</h1>
             <form class="row g-3 justify-content-center">
-                <div class="col-12 col-md-4">
+                <div class="col-11 col-md-4">
                     <div class="input-group">
                         <input
                         type="text"
@@ -51,7 +51,7 @@
                         />
                     </div>
                 </div>
-                <div class="col-12 col-md-4 ">
+                <div class="col-auto col-md-4 ">
                 <select class="form-select" id="categorySelect">
                     <option disabled selected hidden class="default" value="">
                     Filtrar por categoria
@@ -63,7 +63,7 @@
                     <option value="bottle">Parlante</option>
                 </select>
                 </div>
-                <div class="col-8 col-md-3">
+                <div class="col-auto col-md-3">
                   <button
                     class="btn btn-dark border-1 border-light w-100"
                     id="clearFilters">
@@ -73,17 +73,16 @@
           </form>
         </section>
 
-        <section class="container mt-3 bg-danger py-5">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-2" id="productsTable">
-
+        <section class="container head__cardsContainer my-3 bg-danger py-5 rounded-1">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 gy-2" id="productsTable">
             </div>
         </section>
 
         <section class="container py-4 ">
             <nav class="row">
-                <div class="col-4"></div>
-                <div class="col-4 d-flex justify-content-center">
-                    <ul class="pagination pagination-sm col-4">
+                
+                <div class="col-auto m-auto">
+                    <ul class="pagination pagination-sm col-4 m-auto">
                         <li class="page-item disabled">
                             <a class="page-link" href="#"> &laquo; </a>
                         </li>
@@ -107,9 +106,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-2"></div>
-                <div class="dropdown col-2 d-flex justify-content-end h-25">
-                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                
+                <div class="dropdown col-auto ms-auto">
+                    <button class="btn btn-light dropdown-toggle m-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Productos
                     </button>
                     <ul class="dropdown-menu">
@@ -117,6 +116,17 @@
                       <li><a class="dropdown-item" href="#">30</a></li>
                       <li><a class="dropdown-item" href="#">40</a></li>
                     </ul>
+                  </div>
+                  
+                  <div class="col-auto">
+                    <label for="validationCustom04" class="form-label">State</label>
+                    <select class="form-select col-auto mx-auto" id="validationCustom04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option class="col-auto">...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
                   </div>
                   
                   <!-- <div class="btn-group h-50 col-2">
