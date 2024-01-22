@@ -3,7 +3,7 @@
   background: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);
 }
 
-.footer__card {
+.footer__card { 
   width: fit-content;
   height: fit-content;
   /* background: radial-gradient(
