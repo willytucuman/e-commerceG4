@@ -5,10 +5,10 @@ const head = document.querySelector("head")
 const Navbar = () => {
     const loggedUser = getLoggedUser()
     header.innerHTML = `
-    <nav>
+    <nav class="navBar">
             <div class="logo">
                 
-                <a href=""><img src="./assets/logo/logo_Minimizado.png" alt="">HardTech</a>
+                <a href=""><img src="./assets/logo/logoBlanco.png" alt="">HardTech</a>
             </div>
             <ul>
                 <li><a href="">Home</a></li>
@@ -29,14 +29,14 @@ const Navbar = () => {
                     loggedUser?.role == "admin" ? "Admin" : ""
                     } <i class="bi bi-person "></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                <ul class="dropdown-menu  dropdown-bg dropdown-menu-end">
                     <li ><a class="dropdown-item w-100 d-flex" href="/views/404.html">Opciones <i class="bi bi-gear ms-auto"></i></a></li>
                     ${
                     loggedUser.role == "admin"
-                        ? '<li ><a class="dropdown-item w-100 d-flex" href="/views/adminPage.html">Panel de administrador <i class="bi bi-gear ms-2"></i></a></li>'
+                        ? '<li ><a class="dropdown-item w-100 d-flex" href="/views/adminPage.html">Panel de administrador <i class="bi bi-gear ms-auto"></i></a></li>'
                         : ""
                     }
-                    <li><a id="logout" onclick="logout()" class="dropdown-item w-100 d-flex">Cerrar sesion <i class="bi bi-box-arrow-in-left ms-auto"></i></a></li>
+                    <li><a id="logout" onclick="logout()" class="dropdown-item w-100 d-flex pointer">Cerrar sesion <i class="bi bi-box-arrow-in-left ms-auto"></i></a></li>
                 </ul>
                 </li>`
                     : ""
