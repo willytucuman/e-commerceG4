@@ -1,4 +1,22 @@
 @import url(./main.css);
+:root {
+  --color-Background1: #1F1C18;
+  --color-Background2: #8E0E00;
+  --color-Social-Figures: rgb(255, 255, 255);
+  --color-Social-Background: rgb(44, 44, 44);
+  --color-Social-Instagram: #d62976;
+  --color-Social-X-Twitter: #00acee;
+  --color-Social-Facebook: #4d6fa9;
+  --color-Social-Whatsapp: #128c7e;
+  --color-text-Light: #f8f9fa;
+  --color-text-White: #ffffff;
+  --color-text-Custom: #cae6ff;
+  --color-text-Hover: rgb(49, 162, 255);
+  --color-text-Arrow-Shape: rgba(105, 105, 105, 0.658);
+  --color-Arrow-Shape: rgba(187, 187, 187, 0.938);
+  --color-Arrow-Background1: #ff7300f3;
+  --color-Arrow-Background2: #9b561509;
+}
 .footer__section {
   background: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);
 }
