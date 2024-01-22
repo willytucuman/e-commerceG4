@@ -7,7 +7,7 @@ const bodyBootstrap = `<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2
 const headGoogleFonts = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&family=Genos:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Play:wght@400;700&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Silkscreen:wght@400;700&family=Tektur:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">`;
-const footerContent = `<div class="footer__homeLink position-absolute end-0 pe-1">
+const footerContent = `<div class="footer__homeLink position-absolute end-0 pe-1"> 
 <a href="#pageBeginning">
   <button class="footer__btn">
     <svg xmlns="http://www.w3.org/2000/svg" class="footer__arrow bi bi-arrow-up-circle" viewBox="0 0 16 16">

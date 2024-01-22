@@ -14,7 +14,7 @@ import productsDatabase from "../js/database/products.json" assert { type: "json
 localStorage.setItem("products", JSON.stringify(productsDatabase)) //Linea de uso temporal para cargar Json al LocalStorage, se elimina de version final 
 
 
-import { getProducts } from "../js/services/getProducts.js";
+import { getProducts } from "../js/services/getProducts.js"; 
 const products = getProducts()
 
 const productsTable = document.querySelector("#productsTable");

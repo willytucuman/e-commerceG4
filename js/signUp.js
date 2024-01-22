@@ -83,7 +83,7 @@ const showSuccesfulSignUpModal = () =>{
     const modal = new bootstrap.Modal(document.getElementById('succesfulSignupModal'))
     modal.show()
     setTimeout(redirectIndex, 3000)
-}
+} 
 
 
 

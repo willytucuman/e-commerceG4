@@ -12,5 +12,5 @@ export const validateExistingEmail = (email) =>{
         return false
     }
 
-    return true
+    return true 
 }

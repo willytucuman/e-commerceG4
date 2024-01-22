@@ -13,7 +13,7 @@ loop3 = setInterval(function () {
     if (i > 40) {
         clearInterval(loop3);
         digit3.textContent = 4;
-    } else {
+    } else { 
         digit3.textContent = randomNum();
         i++;
     }

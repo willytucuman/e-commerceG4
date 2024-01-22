@@ -4,5 +4,5 @@ export const createUser = ({ email, password }) => {
     const newUser = new User({ email: email, password: password, role: "user" });
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-  };
+  }; 
   

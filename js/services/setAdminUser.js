@@ -8,3 +8,4 @@ export const setAdminUser = () =>{
         localStorage.setItem("users", JSON.stringify([adminUser]))
     }
 }
+ 

@@ -11,4 +11,4 @@ export const showPassword = (e) =>{
     currentState? input.type = 'text' : input.type = 'password'
     currentState? icon.classList.add('bi-eye-slash') : icon.classList.add('bi-eye')
     currentState?  icon.classList.remove('bi-eye') :  icon.classList.remove('bi-eye-slash')
-}
+} 

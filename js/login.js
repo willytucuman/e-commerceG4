@@ -15,7 +15,7 @@ showPasswordButton.addEventListener("click", (e) => {
 });
 
 const loginForm = document.getElementById("loginForm")
-const invalidLoginFeedback = document.getElementById("invalidLoginFeedback")
+const invalidLoginFeedback = document.getElementById("invalidLoginFeedback") 
 
 
 const userLoginFeedback = (bool) =>{
