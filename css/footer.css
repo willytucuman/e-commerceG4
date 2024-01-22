@@ -1,0 +1,165 @@
+@import url(./main.css);
+.footer__section {
+  background: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);
+}
+
+.footer__card {
+  width: fit-content;
+  height: fit-content;
+  /* background: radial-gradient(
+    circle,
+    rgba(255, 103, 76, 0.5) 30%,
+    rgba(255, 160, 51, 0.5) 100%); */
+  align-items: center;
+  justify-content: center;
+  padding: 5px 25px;
+  gap: 20px;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+  border: transparent;
+  border-radius: 15px;
+}
+
+.footer__socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-Social-Background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 15px;
+}
+/* instagram*/
+.footer__socialContainer_containerOne:hover {
+  background-color: var(--color-Social-Instagram);
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.footer__socialContainer_containerTwo:hover {
+  background-color: var(--color-Social-X-Twitter);
+  transition-duration: 0.3s;
+}
+/* facebook*/
+.footer__socialContainer_containerThree:hover {
+  background-color: var(--color-Social-Facebook);
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.footer__socialContainer_containerFour:hover {
+  background-color: var(--color-Social-Whatsapp);
+  transition-duration: 0.3s;
+}
+
+.footer__socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.footer__socialSvg {
+  width: 24px;
+}
+
+.footer__socialSvg path {
+  fill: var(--color-Social-Figures);
+}
+
+.footer__socialContainer:hover .footer__socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.footer__btn {
+  width: 4em;
+  height: 4em;
+  background: linear-gradient(var(--color-Arrow-Background1), var(--color-Arrow-Background2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+.footer__arrow path {
+  fill: var(--color-Arrow-Shape);
+}
+
+.footer__textBtn {
+  font-family: 'Bungee', 'Quantico';
+  font-size: 1.7vh;
+  width: 20px;
+  position: absolute;
+  color: var(--color-text-Arrow-Shape);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -6vh;
+  opacity: 0;
+  transition-duration: 0.7s;
+  text-decoration: none;
+  line-height: 2.1vh;
+}
+
+.footer__btn:hover .footer__textBtn {
+  opacity: 1;
+  transition-duration: 0.7s;
+}
+
+.footer__btn:hover .footer__arrow {
+  animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@media (max-width: 768px) {
+  .footer__card {
+    display: flex;
+    padding: 0px;
+  }
+  .footer__logoImage {
+    margin-top: -25px;
+    margin-bottom: -35px;
+  }
+}
+
+.footer__logoImage {
+  margin-bottom: -30px;
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.footer__link, .footer__tittle, .footer__imgCaption, .footer__logoName, .footer__text {
+  color: var(--color-text-Custom);
+  font-family: 'Tektur';
+  font-size: 17px;
+}
+
+.footer__tittle {
+  font-size: 23px;
+  color: var(--color-text-Light);
+}
+
+.footer__link:hover {
+  color: var(--color-text-Hover);
+}
