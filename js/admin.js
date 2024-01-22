@@ -14,7 +14,7 @@ let idProductUpdate = null;
 const cargarDatos = () => {
   cuerpoTabla.innerHTML = "";
   datos.map((producto) => {
-    const product = new Product(
+    const product = new Product( 
       producto.id,
       producto.image,
       producto.title,

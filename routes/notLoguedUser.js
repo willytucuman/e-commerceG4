@@ -3,4 +3,4 @@ export const notLoguedUser =()=>{
     if(!getLoguedUser()){
     return    window.location.pathname ='/views/login.html'
     }
-}
+} 

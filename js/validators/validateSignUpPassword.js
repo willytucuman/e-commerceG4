@@ -12,5 +12,5 @@ export const validateSignUpPassword = (password) =>{
         return true
     }
 
-    return false
+    return false 
 }

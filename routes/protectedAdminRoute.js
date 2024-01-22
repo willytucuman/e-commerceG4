@@ -10,3 +10,4 @@ export const protectedAdminRoute = () => {
     return (window.location.pathname = "/index.html");
   }
 };
+ 

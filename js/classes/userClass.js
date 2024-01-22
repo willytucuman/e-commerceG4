@@ -4,5 +4,5 @@ export class User {
         this.password = password
         this.role = role
         this.id = crypto.randomUUID()
-    }
+    } 
 }

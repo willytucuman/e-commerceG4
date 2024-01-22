@@ -6,6 +6,6 @@ export class Product {
       this.description = description;
       this.price = price;
       this.category = category;
-      this.stock = stock;
+      this.stock = stock; 
     }
   } 

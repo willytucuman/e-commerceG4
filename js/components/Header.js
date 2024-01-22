@@ -14,7 +14,7 @@ const Navbar = () => {
                 <li><a href="">About</a></li>
                 <li><a href="">Login</a></li>
             </ul>
-            <div class="menu-icon"></div>
+            <div class="menu-icon"></div> 
         </nav>
     `;
     const link = '<link rel="stylesheet" href="./css/navBar.css">'

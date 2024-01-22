@@ -7,4 +7,4 @@ export const setProducts = () => {
     localStorage.setItem("products", JSON.stringify(productsDb))
    }
 }
-    
+     
