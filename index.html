@@ -10,6 +10,9 @@
     <header>
     </header>
     <main>
+        <div class="container text-center text-light">
+            <h1 class="display-2 fw-normal mx-auto mb-3">HardTech</h1>
+        </div>
         <section class="container-fluid mt-5 text-center d-flex justify-content-center align-items-center">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
@@ -37,11 +40,11 @@
                     <span class="visually-hidden">Next</span>
                 </button>
         </section>
-        <section class="container mt-5 pt-5 text-center text-light" >
-            <h1 class="display-2 fw-normal ms-5">HardTech</h1>
-            <form class="row g-3 justify-content-center">
-                <div class="col-12 col-md-4">
-                    <div class="input-group">
+
+        <section class="container mt-5 pt-5" >
+            <form class="main__formProductFilter row g-3 justify-content-center">
+                <div class="col-11 col-md-4">
+                    <div class="main__inputNameFilter input-group">
                         <input
                         type="text"
                         class="form-control"
@@ -51,71 +54,73 @@
                         />
                     </div>
                 </div>
-                <div class="col-12 col-md-4 ">
-                <select class="form-select" id="categorySelect">
-                    <option disabled selected hidden class="default" value="">
-                    Filtrar por categoria
-                    </option>
-                    <option value="mug">teclados</option>
-                    <option value="notepad">Mouse</option>
-                    <option value="keychain">Monitor</option>
-                    <option value="hat">Cabinas</option>
-                    <option value="bottle">Parlante</option>
-                </select>
+                <div class="col-auto col-md-auto ">
+                    <select class="main__inputCategoryFilter form-select">
+
+                    </select>
                 </div>
-                <div class="col-8 col-md-3">
+                <div class="col-auto col-md-auto">
                   <button
-                    class="btn btn-dark border-1 border-light w-100"
+                    class="main__btnClearFilter btn btn-dark border-1 border-light w-100"
                     id="clearFilters">
                     Limpiar filtros
                   </button>
                 </div>
           </form>
         </section>
-
-        <section class="container mt-3 bg-danger py-5 rounded-1">
-            <div class="main__productsTable row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-2 justify-content-center">
-            </div>
-        </section>
-
-        <section class="container py-4 ">
-            <nav class="row">
-                <div class="col col-auto mx-auto ">
-                    <ul class="pagination pagination-sm ">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#"> &laquo; </a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">4</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">5</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">&raquo;</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- <div class="dropdown col-2 col-auto me-auto">
-                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="d-none d-sm-inline">Productos</span>
+        
+        <section class="container head__cardsContainer my-3 py-5 pt-1 rounded-1">
+            <div>
+                <nav class="row row-cols-1">
+                    <div class="col-auto mx-auto mx-lg-0 ms-lg-auto ">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item">
+                                <a class="page-link" href="#"> &laquo; </a>
+                            </li>
+                            <!-- <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">5</a>
+                            </li> -->
+                            <li class="page-item">
+                                <a class="page-link" href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>  
+                </nav>
+                <!-- <div class="dropdown col-auto ms-auto">
+                    <button class="btn btn-light dropdown-toggle m-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Productos
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu mx-auto">
                       <li><a class="dropdown-item" href="#">20</a></li>
                       <li><a class="dropdown-item" href="#">30</a></li>
                       <li><a class="dropdown-item" href="#">40</a></li>
                     </ul>
-                </div> -->
+                  </div> -->
+                  
+                  <!-- <div class="row pb-2">
+                    <label for="validationCustom04" class="col col-4 col-sm-2 col-lg-1 ms-auto pe-0 form-label text-light lh-1 text-center">Items por pag.</label>
+                    <div class="col col-auto mx-0 px-1">
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="" class="col-auto px-0 mx-0"></option>
+                      <option class="col-auto">20</option>
+                      <option class="col-auto">30</option>
+                      <option class="col-auto">40</option>
+                    </select>
+                    </div>
+                    
+                  </div> -->
                   
                   <!-- <div class="btn-group h-50 col-2">
                     <button type="button" class="btn btn-light">Productos</button>
@@ -130,9 +135,11 @@
                       <li><a class="dropdown-item" href="#">40</a></li>
                     </ul>
                   </div> -->
-            </nav>
+            </div>
+          
+            <div class="main__productsTable row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 gy-2 justify-content-center">
+            </div>
         </section>
-
     </main>
 
     <footer>

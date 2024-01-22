@@ -1,6 +1,6 @@
 :root {
-  --color-Background1: rgba(255, 103, 76, 0.932);
-  --color-Background2: rgba(255, 160, 51, 0.918);
+  --color-Background1: #000000;
+  --color-Background2: #8E0E00;
   --color-Social-Figures: rgb(255, 255, 255);
   --color-Social-Background: rgb(44, 44, 44);
   --color-Social-Instagram: #d62976;
@@ -18,7 +18,7 @@
 }
 
 .footer__section {
-  background: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);
+  background: linear-gradient(0deg, var(--color-Background1) 20%, var(--color-Background2) 100%);
 }
 
 .footer__card {
