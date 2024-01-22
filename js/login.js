@@ -1,4 +1,4 @@
-import Navbar from "./components/NavBar.js";
+import Navbar from "./components/Header.js";
 import { validateLoginUser } from "./validators/validateLoginUser.js";
 import { showPassword } from "./utils/showPassword.js";
 import { setLoggedUser } from "./services/setLoggedUser.js";

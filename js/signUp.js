@@ -1,4 +1,4 @@
-import Navbar from "./components/NavBar.js"; 
+import Navbar from "./components/Header.js"; 
 import { validateExistingEmail } from "./validators/validateExistingEmail.js";
 import { validateSignUpPassword } from "./validators/validateSignUpPassword.js";
 import { validateRepeatPassword } from "./validators/validateRepeatPassword.js";
