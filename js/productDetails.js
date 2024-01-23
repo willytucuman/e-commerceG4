@@ -1,3 +1,4 @@
+
 const url = "https://fakestoreapi.com/products";
 const getProducts = async () => {
     try {
@@ -28,27 +29,27 @@ const mostrarProductoPorId = async (idProducto) => {
         console.log(productoEspecifico.title)
         const elementoAMostrar = document.getElementById('productDetail')
                     const contenidoHTML = `
-                    <section class="py-5">
+                    <section class="py-5 bg-black">
                     <div class="container">
                         <div class="row gx-5">
                             <aside class="col-lg-6">
-                            <div class="bg-dark rounded-4 mb-3 d-flex justify-content-center">
+                            <div class="bg-black rounded-4 mb-3 d-flex justify-content-center">
                                 <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="${productoEspecifico.image}"/>
+                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="../assets/img/gabinete.png"/>
                                 </a>
                             </div>
                             </aside>
                             <main class="col-lg-6">
                             <div class="ps-lg-3">
-                                <h4 class="title productTittle">
+                                <h4 class="title text-white">
                                 ${productoEspecifico.title} <br/>
                                 </h4>
                                 <div class="d-flex flex-row my-3">
                                     <span class="text-success ms-2">In stock</span>
-                                    <span class="text-muted"><i class="bi bi-bag mx-1"></i>154</span>
+                                    <span class="text-white"><i class="bi bi-bag mx-1"></i>154</span>
                                 </div>
                                 <div class="mb-3">
-                                    <span class="text-muted">price</span>
+                                    <span class="text-white">price</span>
                                     <span class="h5">${productoEspecifico.price}</span>
                                 </div>
                                 <p>
@@ -85,7 +86,7 @@ const mostrarProductoPorId = async (idProducto) => {
                     </div>
                 </section>
             
-                <section class="bg-light border-top py-4">
+                <section class="bg-black border-top border-dark py-4">
                         <div class="container">
                         <div class="row gx-4">
                             <div class="col-lg-8 mb-4">
