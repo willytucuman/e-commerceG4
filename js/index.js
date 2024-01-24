@@ -1,3 +1,4 @@
+import ProductsFilter from "./components/ProductsFilter.js";
 import productsDatabase from "../js/database/products.json" assert { type: "json" }; //Linea de uso temporal para cargar Json al LocalStorage, se elimina de version final 
 localStorage.setItem("products", JSON.stringify(productsDatabase)) //Linea de uso temporal para cargar Json al LocalStorage, se elimina de version final 
 
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   head.insertAdjacentHTML("beforeend", headFaviconContent);
   title.innerHTML = "HARD-TECH";
   Footer();
+  ProductsFilter()
 });
 
 const loadTable = (objectsArray) => {
