@@ -35,7 +35,7 @@ const mostrarProductoPorId = async (idProducto) => {
                             <aside class="col-lg-6">
                             <div class="bg-black rounded-4 mb-3 d-flex justify-content-center">
                                 <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="../assets/img/gabinete.png"/>
+                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit floatImage" src="../assets/img/gabinete.png"/>
                                 </a>
                             </div>
                             </aside>
