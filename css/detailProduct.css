@@ -20,3 +20,10 @@ body{
 .productTittle{
   color:#742736;
 }
+.similarHover:hover{
+  background-color: #872a39 !important;
+  transition: .7s;
+}
+.redColor{
+  background-color: #872a39 !important
+}

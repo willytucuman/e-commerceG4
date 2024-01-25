@@ -49,55 +49,57 @@ const mostrarProductoPorId = async (idProducto) => {
                                     <span class="text-white"><i class="bi bi-bag mx-1"></i>154</span>
                                 </div>
                                 <div class="mb-3">
-                                    <span class="text-white">price</span>
-                                    <span class="h5">${productoEspecifico.price}</span>
+                                    <span class="text-secondary"><strong>Precio</strong></span>
+                                    <span class="h5 text-white"><strong>${productoEspecifico.price}<strong></span>
                                 </div>
-                                <p>
+                                <p class="text-white">
                                     DESCRIPCION
                                 </p>
                                 <div class="row">
-                                    <dt class="col-3">Category:</dt>
-                                    <dd class="col-9">${productoEspecifico.category}</dd>
-                                    <dt class="col-3">Marca</dt>
-                                    <dd class="col-9">${productoEspecifico.marca}</dd>
+                                    <dt class="col-3 text-secondary">categoria:</dt>
+                                    <dd class="col-9 text-white"><strong>${productoEspecifico.category}</strong></dd>
+                                    <dt class="col-3 text-secondary">marca</dt>
+                                    <dd class="col-9 text-white"><strong>${productoEspecifico.marca}</strong></dd>
                                 </div>
                                 <hr />
                                 <div class="row mb-4">
                                     <div class="col-md-4 col-6 mb-3">
-                                        <label class="mb-2 d-block">Quantity</label>
+                                        <label class="mb-2 d-block text-white">
+                                        <strong>Cantidad</strong>
+                                        </label>
                                         <div class="input-group mb-3" style="width: 170px;">
-                                            <button id="btnRestar" type="button" class="btn btn-outline-secondary border border-secondary">
-                                                <i class="bi bi-dash text-black"></i>
+                                            <button id="btnRestar" type="button" class="btn similarHover border border-danger text-secondary bg-dark">
+                                                <i class="bi bi-dash "></i>
                                             </button>
                                         
-                                            <input type="" id="productQuantity" class="form-control text-center border border-secondary"   aria-describedby="button-addon1" value="2">
-                                            <button id="btnSumar" type="button" class="btn btn-outline-secondary border border-secondary" >
-                                            <i class="bi bi-plus text-black"></i>
+                                            <input type="" id="productQuantity" class="form-control text-center text-white bg-black border border-danger"   aria-describedby="button-addon1" value="2">
+                                            <button id="btnSumar" type="button" class="btn similarHover border border-danger text-secondary bg-dark" >
+                                            <i class="bi bi-plus "></i>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-                                <a href="#" class="btn btn-primary shadow-0"> <i class="bi bi-cart-plus"></i> Add to cart </a>
-                                <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="bi bi-heart-fill text-secondary"></i> Save </a>
+                                <a href="./404.html" class="btn btn-success shadow-0"> Buy now </a>
+                                <a href="./404.html" class="btn similarHover border-dark text-secondary shadow-0"> <i class="bi bi-cart-plus"></i> Add to cart </a>
+                                <a href="./404.html" class="btn btn-dark py-2 icon-hover px-3"> <i class="bi bi-heart-fill text-danger"></i> Save </a>
                             </div>
                             </main>
                         </div>
                     </div>
                 </section>
             
-                <section class="bg-black border-top border-dark py-4">
+                <section class="bg-black py-4">
                         <div class="container">
                         <div class="row gx-4">
                             <div class="col-lg-8 mb-4">
-                            <div class="border rounded-2 px-3 py-2 bg-white">
+                            <div class="border border-dark rounded-2 px-3 py-2 bg-black">
                                 <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
                                 <li class="nav-item d-flex" role="presentation">
-                                    <a class="nav-link d-flex align-items-center justify-content-center w-100 active" id="ex1-tab-1" data-mdb-toggle="pill" href="" role="tab" aria-controls="ex1-pills-1" aria-selected="true">Specification</a>
+                                    <a class="nav-link d-flex align-items-center justify-content-center w-100 active bg-danger redColor" id="ex1-tab-1" data-mdb-toggle="pill" href="" role="tab" aria-controls="ex1-pills-1" aria-selected="true">Especificaciones</a>
                                 </li>
                                 </ul>
                                 <div class="tab-content" id="ex1-content">
-                                <div class="tab-pane fade show active" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                                <div class="tab-pane fade show active text-white" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
                                     <p>
                                     With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                                     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -120,7 +122,7 @@ const mostrarProductoPorId = async (idProducto) => {
                                         </ul>
                                     </div>
                                     </div>
-                                    <table class="table border mt-3 mb-2">
+                                    <table class="table table-dark table-striped mt-3 mb-2">
                                     <tr>
                                         <th class="py-2">Display:</th>
                                         <td class="py-2">13.3-inch LED-backlit display with IPS</td>
@@ -139,53 +141,52 @@ const mostrarProductoPorId = async (idProducto) => {
                             </div>
                             </div>
                             <div class="col-lg-4">
-                            <div class="px-0 border rounded-2 shadow-0">
-                                <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Similar items</h5>
-                                    <div class="d-flex mb-3">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp" style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
+                            <div class="px-0 border-dark rounded-2 shadow-0">
+                                <div class="card border-dark">
+                                <div class="card-body bg-dark text-white">
+                                    <h5 class="card-title text-center mb-3 ">Articulos Similares</h5>
+                                    <div class="d-flex mb-3 similarHover">
+                                    <a href="./404.html" class="me-3 ">
+                                        <img src="../assets/img/teclado.png" style="min-width: 96px; height: 96px;" class="img-md w-100" />
                                     </a>
-                                    <div class="info">
-                                        <a href="#" class="nav-link mb-1">
-                                        Rucksack Backpack Large <br />
-                                        Line Mounts
+                                    <div class="info ">
+                                        <a href="./404.html" class="nav-link mb-1">
+                                        Teclado Xpg Gaming Red Switch Winter <br />
                                         </a>
-                                        <strong class="text-dark"> $38.90</strong>
+                                        <strong class="text-white"> $85.960,00</strong>
                                     </div>
                                     </div>
                     
-                                    <div class="d-flex mb-3">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/9.webp" style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
+                                    <div class="d-flex mb-3 similarHover">
+                                    <a href="./404.html" class="me-3">
+                                        <img src="../assets/img/gabinete.png" style="min-width: 96px; height: 96px;" class="img-md w-100 " />
                                     </a>
                                     <div class="info">
-                                        <a href="#" class="nav-link mb-1">
-                                        Summer New Men's Denim <br />
-                                        Jeans Shorts
+                                        <a href="./404.html" class="nav-link mb-1">
+                                        Gabinete Senty k20 Super <br />
+                                        
                                         </a>
-                                        <strong class="text-dark"> $29.50</strong>
+                                        <strong class="text-white"> $82.980,00</strong>
                                     </div>
                                     </div>
                     
-                                    <div class="d-flex mb-3">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/10.webp" style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
+                                    <div class="d-flex mb-3 similarHover">
+                                    <a href="./404.html" class="me-3">
+                                        <img src="../assets/img/placaVideo.png" style="min-width: 96px; height: 96px;" class="img-md" />
                                     </a>
                                     <div class="info">
-                                        <a href="#" class="nav-link mb-1"> T-shirts with multiple colors, for men and lady </a>
-                                        <strong class="text-dark"> $120.00</strong>
+                                        <a href="./404.html" class="nav-link mb-1"> Placa video RTX 3080 8GB </a>
+                                        <strong class="text-white"> $1.235.000.00</strong>
                                     </div>
                                     </div>
                     
-                                    <div class="d-flex">
-                                    <a href="#" class="me-3">
-                                        <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/11.webp" style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
+                                    <div class="d-flex similarHover">
+                                    <a href="./404.html" class="me-3">
+                                        <img src="../assets/img/silla.png" style="min-width: 96px; height: 96px;" class="img-md" />
                                     </a>
                                     <div class="info">
-                                        <a href="#" class="nav-link mb-1"> Blazer Suit Dress Jacket for Men, Blue color </a>
-                                        <strong class="text-dark"> $339.90</strong>
+                                        <a href="./404.html" class="nav-link mb-1"> Silla Gamer Ergonomica Reclinable </a>
+                                        <strong class="text-white"> $162.350,90</strong>
                                     </div>
                                     </div>
                                 </div>
