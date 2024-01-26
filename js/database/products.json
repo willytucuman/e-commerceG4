@@ -15,7 +15,8 @@
     "detail5" :"conexión 2 HDMI 1.4",
     "detail6" :"Comodidad visual en todo momento",
     "medida1" :"326.3 mm",
-    "medida2" :"547.8 mm"
+    "medida2" :"547.8 mm",
+    "marca": "Samsung"
   },
   {
     "id": 2,
@@ -32,7 +33,8 @@
     "detail5" :"Con conexión VGA/D-Sub",
     "detail6" :"Comodidad visual en todo momento",
     "medida1" :"27.3 cm",
-    "medida2" :"43.7 cm"
+    "medida2" :"43.7 cm",
+    "marca": "Philips"
   },
   {
     "id": 3,
@@ -49,7 +51,8 @@
     "detail5" :"Tecla plana",
     "detail6" :"Resistente a Salpicadura",
     "medida1" :"124 mm",
-    "medida2" :"279 mm"
+    "medida2" :"279 mm",
+    "marca": "Logitech"
   },
   {
     "id": 4,
@@ -66,7 +69,8 @@
     "detail5" :"Con conector USB",
     "detail6" :"Tecla cilíndrica",
     "medida1" :"15.5 cm",
-    "medida2" :"37.5 cm"
+    "medida2" :"37.5 cm",
+    "marca": "Redragon"
   },
   {
     "id": 5,
@@ -83,7 +87,8 @@
     "detail5" :"color: NEGRO",
     "detail6" :"peso : 85g",
     "medida1" :"-",
-    "medida2" :"-"
+    "medida2" :"-",
+    "marca": "Rival"
   },
 
   {
@@ -101,7 +106,8 @@
     "detail5" :"Resolución de 8000dpi",
     "detail6" :"Tipo de mouse: Gamer",
     "medida1" :"116.6 mm",
-    "medida2" :"62.15 mm"
+    "medida2" :"62.15 mm",
+    "marca": "Logitech"
   },
   {
     "id": 7,
@@ -118,7 +124,8 @@
     "detail5" :"Uso apto para gaming",
     "detail6" :"Cómodos y prácticos",
     "medida1" :"-",
-    "medida2" :"-"
+    "medida2" :"-",
+    "marca": "HyperX"
   },
   {
     "id": 8,
@@ -135,7 +142,8 @@
     "detail5" :"Micrófono incorporado",
     "detail6" :"Cómodo y práctico",
     "medida1" :"-",
-    "medida2" :"-"
+    "medida2" :"-",
+    "marca": "Steelseries"
   },
   {
     "id": 9,
@@ -152,7 +160,8 @@
     "detail5" :"No incluye Cooler",
     "detail6" :"RAM soportadas : DDR5 5600, DDR4 3200",
     "medida1" :"-",
-    "medida2" :"-"
+    "medida2" :"-",
+    "marca": "Intel"
   },
   {
     "id": 10,
@@ -169,6 +178,7 @@
     "detail5" :"RAM soportada 128 GB",
     "detail6" :"5° Generacion",
     "medida1" :"-",
-    "medida2" :"-"
+    "medida2" :"-",
+    "marca": "Ryzen"
   } 
 ]

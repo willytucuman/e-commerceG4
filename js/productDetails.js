@@ -2,6 +2,10 @@ import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import {getProducts} from "./services/getProducts.js"
 
+document.addEventListener("DOMContentLoaded", () => {
+    Navbar();
+    Footer();
+});
 
 let products= getProducts()
 // const url = "https://fakestoreapi.com/products";
@@ -19,7 +23,7 @@ let products= getProducts()
 //         return null;
 //     }
 // };
-let idProductoBuscado = 5
+let idProductoBuscado = 1
 let stockLimit
 
 const mostrarProductoPorId = (idProducto) => {
@@ -33,7 +37,7 @@ const mostrarProductoPorId = (idProducto) => {
         const productoEspecifico = products.find(producto => producto.id == idProducto);
         const elementoAMostrar = document.getElementById('productDetail')
                     const contenidoHTML = `
-                    <section class="py-5 bg-black">
+                    <section class="py-5 bg-black mt-5">
                     <div class="container">
                         <div class="row gx-5">
                             <aside class="col-lg-6">
