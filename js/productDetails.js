@@ -41,7 +41,7 @@ const mostrarProductoPorId = async (idProducto) => {
                             </aside>
                             <main class="col-lg-6">
                             <div class="ps-lg-3">
-                                <h4 class="title text-white">
+                                <h4 class="title text-white text-capitalize text-center fs-1 fw-bold ">
                                 ${productoEspecifico.title} <br/>
                                 </h4>
                                 <div class="d-flex flex-row my-3">
@@ -153,7 +153,7 @@ const mostrarProductoPorId = async (idProducto) => {
                                         <a href="./404.html" class="nav-link mb-1">
                                         Teclado Xpg Gaming Red Switch Winter <br />
                                         </a>
-                                        <strong class="text-white"> $85.960,00</strong>
+                                        <strong class="text-success"> $85.960,00</strong>
                                     </div>
                                     </div>
                     
@@ -166,7 +166,7 @@ const mostrarProductoPorId = async (idProducto) => {
                                         Gabinete Senty k20 Super <br />
                                         
                                         </a>
-                                        <strong class="text-white"> $82.980,00</strong>
+                                        <strong class="text-success"> $82.980,00</strong>
                                     </div>
                                     </div>
                     
@@ -176,7 +176,7 @@ const mostrarProductoPorId = async (idProducto) => {
                                     </a>
                                     <div class="info">
                                         <a href="./404.html" class="nav-link mb-1"> Placa video RTX 3080 8GB </a>
-                                        <strong class="text-white"> $1.235.000.00</strong>
+                                        <strong class="text-success"> $1.235.000.00</strong>
                                     </div>
                                     </div>
                     
@@ -186,7 +186,7 @@ const mostrarProductoPorId = async (idProducto) => {
                                     </a>
                                     <div class="info">
                                         <a href="./404.html" class="nav-link mb-1"> Silla Gamer Ergonomica Reclinable </a>
-                                        <strong class="text-white"> $162.350,90</strong>
+                                        <strong class="text-success"> $162.350,90</strong>
                                     </div>
                                     </div>
                                 </div>
