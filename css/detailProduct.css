@@ -1,9 +1,9 @@
-
+@import url(./main.css);
 .productCardBg{
   background:#a12f3d;
 }
 .productTittle{
-  color:#742736;
+  font-family: var(--font-principal);
 }
 .similarHover:hover{
   background-color: #872a39 !important;
@@ -23,4 +23,17 @@
     transform: translateY(-1rem);
   }
   
+}
+.textJustify{
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-family: var(--font-secondary);
+}
+.textJustifySpecific{
+  text-align: justify;
+  font-family: var(--font-secondary);
 }

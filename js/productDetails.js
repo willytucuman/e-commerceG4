@@ -19,7 +19,7 @@ let products= getProducts()
 //         return null;
 //     }
 // };
-let idProductoBuscado = 4
+let idProductoBuscado = 5
 let stockLimit
 
 const mostrarProductoPorId = (idProducto) => {
@@ -37,7 +37,7 @@ const mostrarProductoPorId = (idProducto) => {
                     <div class="container">
                         <div class="row gx-5">
                             <aside class="col-lg-6">
-                            <div class="bg-black rounded-4 mb-3 d-flex justify-content-center">
+                            <div class="bg-transparent rounded-4 mb-3 d-flex justify-content-center">
                                 <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
                                 <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit floatImage" src="${productoEspecifico.image}"/>
                                 </a>
@@ -45,7 +45,7 @@ const mostrarProductoPorId = (idProducto) => {
                             </aside>
                             <main class="col-lg-6">
                             <div class="ps-lg-3">
-                                <h4 class="title text-white text-capitalize text-center fs-1 fw-bold ">
+                                <h4 class="title text-white text-capitalize text-center fs-1 fw-bold productTittle ">
                                 ${productoEspecifico.title} <br/>
                                 </h4>
                                 <div class="d-flex flex-row my-3">
@@ -54,9 +54,9 @@ const mostrarProductoPorId = (idProducto) => {
                                 </div>
                                 <div class="mb-3">
                                     <span class="text-secondary"><strong>Precio</strong></span>
-                                    <span class="h5 text-white"><strong>${productoEspecifico.price}<strong></span>
+                                    <span class="h5 text-white"><strong>$ ${productoEspecifico.price}<strong></span>
                                 </div>
-                                <p class="text-white">
+                                <p class="text-white textJustify">
                                     ${productoEspecifico.description}
                                 </p>
                                 <div class="row">
@@ -104,40 +104,37 @@ const mostrarProductoPorId = (idProducto) => {
                                 </ul>
                                 <div class="tab-content" id="ex1-content">
                                 <div class="tab-pane fade show active text-white" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                                    <p>
-                                    With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur.
+                                    <p class="textJustifySpecific">
+                                    ${productoEspecifico.description}
                                     </p>
                                     <div class="row mb-2">
                                     <div class="col-12 col-md-6">
                                         <ul class="list-unstyled mb-0">
-                                        <li><i class="bi bi-check-lg text-success me-2"></i></i>Some great feature name here</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>Lorem ipsum dolor sit amet, consectetur</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>Duis aute irure dolor in reprehenderit</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>Optical heart sensor</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i></i>${productoEspecifico.detail1}</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail2}</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail3}</li>
                                         </ul>
                                     </div>
                                     <div class="col-12 col-md-6 mb-0">
                                         <ul class="list-unstyled">
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>Easy fast and ver good</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>Some great feature name here</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>Modern style and design</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail4}</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail5}</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail6}</li>
                                         </ul>
                                     </div>
                                     </div>
                                     <table class="table table-dark table-striped mt-3 mb-2">
                                     <tr>
-                                        <th class="py-2">Display:</th>
-                                        <td class="py-2">13.3-inch LED-backlit display with IPS</td>
+                                        <th class="py-2">MEDIDAS</th>
+                                        <td class="py-2"></td>
                                     </tr>
                                     <tr>
-                                        <th class="py-2">Processor capacity:</th>
-                                        <td class="py-2">2.3GHz dual-core Intel Core i5</td>
+                                        <th class="py-2">Ancho</th>
+                                        <td class="py-2">${productoEspecifico.medida2}</td>
                                     </tr>
                                     <tr>
-                                        <th class="py-2">Memory</th>
-                                        <td class="py-2">8 GB RAM or 16 GB RAM</td>
+                                        <th class="py-2">Alto</th>
+                                        <td class="py-2">${productoEspecifico.medida1}</td>
                                     </tr>
                                     </table>
                                 </div>
