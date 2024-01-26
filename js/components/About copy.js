@@ -255,8 +255,8 @@ class="container-md align-items-center justify-content-center "
 </article>
 </section>`;
 
-console.log("hola desde el aboutcopy.js");
-console.log(aboutContent);
+//console.log("hola desde el aboutcopy.js");
+//console.log(aboutContent);
 const About = () =>{
     mainAbout.innerHTML=aboutContent;
     //mainAbout.classList.value = "conteiner-fluid pt-2";

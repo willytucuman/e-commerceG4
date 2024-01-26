@@ -1,5 +1,5 @@
 body {
-	background-image: url('../assets/img/about-background.png');
+	background-image: url('../assets/img/about-fondo1.jpg');
 	background-position: top;
 	background-attachment: fixed;
 	background-blend-mode: color-burn;
@@ -88,7 +88,9 @@ body {
 	align-items:center;
 	justify-content:center;
 	min-height:100vh;
-	background: #262433;
+	/* background: #5b1212; */
+	background: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);
+	
   }
   .menu{
 	position:relative;
@@ -161,10 +163,13 @@ body {
 
 
   :root {
+	--color-Background1: #1F1C18;
+	--color-Background2: #8E0E00;
+	
 	--color-background: #000000;
 	--color-primary: #5a1212;
-	--font-color-primary: #ffffff;
-	--font-color-secondary: #7b7b7b;
+	--font-color-primary: #c4ce85;
+	--font-color-secondary: #ffffff;
 	--font-principal: 'Montserrat', sans-serif;
 	--font-secundaria: 'Nunito Sans', sans-serif;
 	--font-size-title: 2rem;
