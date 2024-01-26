@@ -1,32 +1,36 @@
+import Navbar from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import {getProducts} from "./services/getProducts.js"
 
-const url = "https://fakestoreapi.com/products";
-const getProducts = async () => {
-    try {
-        const response = await fetch(url);
-        console.log(response)
-        if (!response.ok) {
-            throw new Error("Error al cargar el archivo: ${response.statusText}");
-        }
-        const products = await response.json();
-        return products;
-    } catch (error) {
-        console.error('Error al obtener productos:', error);
-        return null;
-    }
-};
 
-const idProductoBuscado = 4;
-const mostrarProductoPorId = async (idProducto) => {
+let products= getProducts()
+// const url = "https://fakestoreapi.com/products";
+// const getProducts = async () => {
+//     try {
+//         const response = await fetch(url);
+//         console.log(response)
+//         if (!response.ok) {
+//             throw new Error("Error al cargar el archivo: ${response.statusText}");
+//         }
+//         const products = await response.json();
+//         return products;
+//     } catch (error) {
+//         console.error('Error al obtener productos:', error);
+//         return null;
+//     }
+// };
+let idProductoBuscado = 4
+let stockLimit
+
+const mostrarProductoPorId = (idProducto) => {
     try {
-        const products = await getProducts();
-        console.log(products)
+        // const products = await getProducts();
+        // console.log(products)
         if (!products) {
             console.log('No se pudieron cargar los productos.');
             return;
         }
         const productoEspecifico = products.find(producto => producto.id == idProducto);
-        console.log(productoEspecifico)
-        console.log(productoEspecifico.title)
         const elementoAMostrar = document.getElementById('productDetail')
                     const contenidoHTML = `
                     <section class="py-5 bg-black">
@@ -35,7 +39,7 @@ const mostrarProductoPorId = async (idProducto) => {
                             <aside class="col-lg-6">
                             <div class="bg-black rounded-4 mb-3 d-flex justify-content-center">
                                 <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit floatImage" src="../assets/img/gabinete.png"/>
+                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit floatImage" src="${productoEspecifico.image}"/>
                                 </a>
                             </div>
                             </aside>
@@ -46,14 +50,14 @@ const mostrarProductoPorId = async (idProducto) => {
                                 </h4>
                                 <div class="d-flex flex-row my-3">
                                     <span class="text-success ms-2">In stock</span>
-                                    <span class="text-white"><i class="bi bi-bag mx-1"></i>154</span>
+                                    <span class="text-white"><i class="bi bi-bag mx-1"></i>${productoEspecifico.stock}</span>
                                 </div>
                                 <div class="mb-3">
                                     <span class="text-secondary"><strong>Precio</strong></span>
                                     <span class="h5 text-white"><strong>${productoEspecifico.price}<strong></span>
                                 </div>
                                 <p class="text-white">
-                                    DESCRIPCION
+                                    ${productoEspecifico.description}
                                 </p>
                                 <div class="row">
                                     <dt class="col-3 text-secondary">categoria:</dt>
@@ -197,6 +201,7 @@ const mostrarProductoPorId = async (idProducto) => {
                         </div>
                 </section>
                     `;
+                    stockLimit = productoEspecifico.stock
         elementoAMostrar.innerHTML=contenidoHTML
     } catch (error) {
         console.error('Error al mostrar el producto:', error);
@@ -208,7 +213,7 @@ console.log(Quantity.value)
 
 const sumar = () => {
     let valor = parseInt(Quantity.value);
-    if(valor<10){
+    if(valor<stockLimit){
         Quantity.value = valor + 1;
     }
 }
