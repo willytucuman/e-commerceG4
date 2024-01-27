@@ -1,0 +1,39 @@
+@import url(./main.css);
+.productCardBg{
+  background:#a12f3d;
+}
+.productTittle{
+  font-family: var(--font-principal);
+}
+.similarHover:hover{
+  background-color: #872a39 !important;
+  transition: .7s;
+}
+.redColor{
+  background-color: #872a39 !important
+}
+.floatImage{
+  animation: float 4s linear infinite;
+}
+@keyframes float {
+  0% , 100%{
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  
+}
+.textJustify{
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-family: var(--font-secondary);
+}
+.textJustifySpecific{
+  text-align: justify;
+  font-family: var(--font-secondary);
+}

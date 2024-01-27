@@ -1,4 +1,7 @@
-function randomNum() {
+import Navbar from "./components/Header.js";
+import Footer from "./components/Footer.js";
+
+const randomNum=() =>{
   return Math.floor(Math.random() * 9) + 1;
 }
 let loop1,
