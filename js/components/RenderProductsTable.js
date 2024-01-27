@@ -1,6 +1,7 @@
+const productsTable = document.querySelector(".main__productsTable");
 const ProductCard = (product) => {
-    return `<div class="col col-11 col-sm-10 text-center mx-auto px-1 shadow-lg">
-    <div class="card h-100">
+    return `<div class="col col-11 col-sm-10 text-center mx-auto shadow-lg">
+    <div class="main__productCard card h-100">
       <div class="card-footer p-0">
         <small class="text-body-secondary"><p class="text-center text-secondary m-0 p-0">${product.category.trim().charAt().toUpperCase()+product.category.slice(1)}</p></small>
       </div>
@@ -17,4 +18,12 @@ const ProductCard = (product) => {
     </div>
     </div>`
 };
-export default ProductCard;
+
+const RenderProductsTable = (productsArray) => {
+  productsTable.innerHTML = "";
+  productsTable.classList.value =`row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4 justify-content-center`;
+  productsArray.map((product)=> {
+    productsTable.insertAdjacentHTML("beforeend", ProductCard(product))
+  })
+};
+export default RenderProductsTable;

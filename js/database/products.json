@@ -90,5 +90,23 @@
     "category": "procesador",
     "image": "https://http2.mlstatic.com/D_Q_NP_806834-MLA44347094824_122020-R.webp",
     "stock": 5
+  },
+  {
+    "id": 11,
+    "title": " Intel Core i9-13900K BX8071513900K de 24 núcleos y 5.8GHz ",
+    "price": 999.999,
+    "description": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
+    "category": "procesador",
+    "image": "https://http2.mlstatic.com/D_Q_NP_814028-MLA52221724020_102022-R.webp",
+    "stock": 7
+  },
+  {
+    "id": 12,
+    "title": "AMD Ryzen 5 5600X 100-100000065BOX de 6 núcleos y 4.6GHz",
+    "price": 255.51,
+    "description": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
+    "category": "procesador",
+    "image": "https://http2.mlstatic.com/D_Q_NP_806834-MLA44347094824_122020-R.webp",
+    "stock": 5
   }
 ]

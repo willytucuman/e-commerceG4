@@ -1,3 +1,48 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0.8vw;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(209, 30, 30, 0.589);
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: #ff00009a;
+}
+body::-webkit-scrollbar-track {
+    background-color: #2e2c2c;
+}
+
 .main__productImage {
-    max-height: 14rem;
+    max-height: 15rem;
+}
+
+body{
+    background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main__productCard:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
+    box-shadow: 22px 20px 19px -3px rgba(243, 243, 243, 0.1);
+}
+.main__productCard{
+    transition: all 1.3s;
+    
+}
+
+.main__carouselDivImg{
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.main__carouselImg{
+    /* transform: scale(1.75); */
+    transition: all 3s;
 }
