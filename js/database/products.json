@@ -1,11 +1,10 @@
 [
-
   {
     "id": 1,
     "title": "Monitor Gamer 24 Samsung Curvo Full Hd 144hz",
     "price": 390.999,
     "description": "Pantalla LCD de 24,Curvo,Tiene una resolución de 1920px-1080px,Panel VA,Su brillo es de 200cd/m² ,Con conexión HDMI",
-    "category": "monitor",
+    "category": "monitores",
     "image": "https://http2.mlstatic.com/D_Q_NP_728121-MLU72700172921_112023-R.webp ",
     "stock": 5
   },
@@ -14,7 +13,7 @@
     "title": "Monitor Philips V 193v5lhsb2/55 Lcd Full Hd Negro 18,5",
     "price": 94.499,
     "description": "Pantalla LCD TFT de 18.5,Tiene una resolución de 1366px-768px, Relación de aspecto de 16:9,Panel TFT,Su brillo es de 200cd/m²,Con conexión VGA/D-Sub, Es reclinable, Comodidad visual en todo momento",
-    "category": "monitor",
+    "category": "monitores",
     "image": "https://http2.mlstatic.com/D_Q_NP_633732-MLU70008454264_062023-R.webp",
     "stock": 10
   },
@@ -23,7 +22,7 @@
     "title": "Mens Cotton JacketTeclado bluetooth Logitech K380 QWERTY español color grafito",
     "price": 64.999,
     "description": "Innovadores en diseño y tecnología, Logitech se encarga de brindar la mejor experiencia de uso para sus usuarios. Sus teclados resaltan por ser resistentes y muy de buena calidad, por lo que podrás disfrutarlos por un largo tiempo.",
-    "category": "teclado",
+    "category": "teclados",
     "image": "https://http2.mlstatic.com/D_Q_NP_948839-MLA46869223637_072021-R.webp",
     "stock": 3
   },
@@ -32,7 +31,7 @@
     "title": "Teclado gamer Redragon Kumara K552",
     "price": 15.99,
     "description": "La gran calidad del Redragon Kumara K552, y su precio económico lo vuelven un atractivo ideal para que te diviertas frente a la pantalla. Su ergonomía, su base antidelizante y su rápido tiempo de respuesta permite que tus juegos favoritos se sientan más cerca que nunca, al alcance de tus manos.",
-    "category": "teclado",
+    "category": "teclados",
     "image": "https://http2.mlstatic.com/D_Q_NP_811151-MLA52350593586_112022-R.webp",
     "stock": 10
   },
@@ -78,7 +77,7 @@
     "title": " Intel Core i9-13900K BX8071513900K de 24 núcleos y 5.8GHz ",
     "price": 999.999,
     "description": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
-    "category": "procesador",
+    "category": "procesadores",
     "image": "https://http2.mlstatic.com/D_Q_NP_814028-MLA52221724020_102022-R.webp",
     "stock": 7
   },
@@ -87,7 +86,7 @@
     "title": "AMD Ryzen 5 5600X 100-100000065BOX de 6 núcleos y 4.6GHz",
     "price": 255.51,
     "description": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
-    "category": "procesador",
+    "category": "procesadores",
     "image": "https://http2.mlstatic.com/D_Q_NP_806834-MLA44347094824_122020-R.webp",
     "stock": 5
   },
@@ -96,7 +95,7 @@
     "title": " Intel Core i9-13900K BX8071513900K de 24 núcleos y 5.8GHz ",
     "price": 999.999,
     "description": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
-    "category": "procesador",
+    "category": "procesadores",
     "image": "https://http2.mlstatic.com/D_Q_NP_814028-MLA52221724020_102022-R.webp",
     "stock": 7
   },
@@ -105,7 +104,7 @@
     "title": "AMD Ryzen 5 5600X 100-100000065BOX de 6 núcleos y 4.6GHz",
     "price": 255.51,
     "description": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
-    "category": "procesador",
+    "category": "procesadores",
     "image": "https://http2.mlstatic.com/D_Q_NP_806834-MLA44347094824_122020-R.webp",
     "stock": 5
   }

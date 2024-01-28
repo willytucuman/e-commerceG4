@@ -13,14 +13,14 @@ const filterContent = `<form class="main__formProductFilter row g-3 justify-cont
         />
     </div>
 </div>
-<div class="col-auto col-md-4 ">
+<div class="col col-auto">
     <select class="main__inputCategoryFilter form-select">
         
     </select>
 </div>
-<div class="col-auto col-md-3">
+<div class="col-auto">
     <button
-      class="main__btnFilterClear btn btn-dark border-1 border-light w-100">
+      class="main__btnFilterClear btn">
       Limpiar filtros
     </button>
 </div>
@@ -28,7 +28,7 @@ const filterContent = `<form class="main__formProductFilter row g-3 justify-cont
 
 const ProductsFilter = () => {
   productsFilter.innerHTML = filterContent;
-  productsFilter.classList.value = "container mt-5 pt-5";
+  productsFilter.classList.value = "container mb-4 mt-5";
   const inputNameFilter = document.querySelector(".main__inputNameFilter");
   const inputCategoryFilter = document.querySelector(
     ".main__inputCategoryFilter"
@@ -50,7 +50,7 @@ const ProductsFilter = () => {
     categories.forEach((cat) => {
       inputCategoryFilter.insertAdjacentHTML(
         "beforeend",
-        `<option value="${cat}">${cat}</option>`
+        `<option class="main__categoriesOption" value="${cat}">${cat}</option>`
       );
     });
   };
@@ -105,6 +105,7 @@ const ProductsFilter = () => {
       inputNameFilter.value.toLowerCase(),
       e.target.value.toLowerCase()
     );
+    document.activeElement.blur();
   });
 
   btnFilterClear.addEventListener("click", (e) => {
@@ -112,6 +113,7 @@ const ProductsFilter = () => {
     inputNameFilter.value = "";
     inputCategoryFilter.value = "";
     RenderProductsTable(products);
+    document.activeElement.blur();
   });
 };
 export default ProductsFilter;
