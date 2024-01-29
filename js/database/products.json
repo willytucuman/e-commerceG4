@@ -7,7 +7,13 @@
     "description": "Pantalla LCD de 24,Curvo,Tiene una resolución de 1920px-1080px,Panel VA,Su brillo es de 200cd/m² ,Con conexión HDMI",
     "category": "monitor",
     "image": "../assets/img-database/monitor.png",
-    "stock": 5
+    "stock": 5,
+    "detail1" :"Pantalla LCD de 23.5 pulg",
+    "detail2" :"Curvo",
+    "detail3" :"resolución de 1920px-1080px",
+    "detail4" :"Relación de aspecto de 16:9",
+    "medida1" :"326.3 mm",
+    "marca": "Samsung"
   },
   {
     "id": 2,
@@ -16,7 +22,13 @@
     "description": "Pantalla LCD TFT de 18.5,Tiene una resolución de 1366px-768px, Relación de aspecto de 16:9,Panel TFT,Su brillo es de 200cd/m²,Con conexión VGA/D-Sub, Es reclinable, Comodidad visual en todo momento",
     "category": "monitor",
     "image": "../assets/img-database/monitor-philips.png",
-    "stock": 10
+    "stock": 10,
+    "detail1" :"Pantalla LCD TFT de 18.5 pulg",
+    "detail2" :"Panel TFT",
+    "detail3" :"Resolución de 1366px-768px",
+    "detail4" :"Relación de aspecto de 16:9",
+    "medida1" :"27.3 cm",
+    "marca": "Philips"
   },
   {
     "id": 3,
@@ -25,7 +37,13 @@
     "description": "Innovadores en diseño y tecnología, Logitech se encarga de brindar la mejor experiencia de uso para sus usuarios. Sus teclados resaltan por ser resistentes y muy de buena calidad, por lo que podrás disfrutarlos por un largo tiempo.",
     "category": "teclado",
     "image": "../assets/img-database/teclado-logitech.png",
-    "stock": 3
+    "stock": 3,
+    "detail1" :"Conectividad con múltiples dispositivos",
+    "detail2" :"Ergonómico",
+    "detail3" :"Tipo de teclado: tijera",
+    "detail4" :"Con conector Bluetooth",
+    "medida1" :"124 mm",
+    "marca": "Logitech"
   },
   {
     "id": 4,
@@ -34,7 +52,13 @@
     "description": "La gran calidad del Redragon Kumara K552, y su precio económico lo vuelven un atractivo ideal para que te diviertas frente a la pantalla. Su ergonomía, su base antidelizante y su rápido tiempo de respuesta permite que tus juegos favoritos se sientan más cerca que nunca, al alcance de tus manos.",
     "category": "teclado",
     "image": "../assets/img-database/teclado-redragon.png",
-    "stock": 10
+    "stock": 10,
+    "detail1" :"Ergonómico ",
+    "detail2" :"Resiste a salpicaduras",
+    "detail3" :"antighosting incorporada",
+    "detail4" :"Tipo de teclado: mecánico",
+    "medida1" :"15.5 cm",
+    "marca": "Redragon"
   },
   {
     "id": 5,
@@ -43,7 +67,13 @@
     "description": "Sensor de aire TrueMove: un sensor de seguimiento personalizado real 1 a 1, 18.000 CPI, 400 IPS, 40G de aceleración y seguimiento de inclinación. 9 botones programables: cada botón es totalmente personalizable para sus teclas de acceso rápido más importantes.",
     "category": "mouse",
     "image": "../assets/img-database/mouse-steelseries.png",
-    "stock": 4
+    "stock": 4,
+    "detail1" :"Utiliza cable",
+    "detail2" :"Con sensor óptico",
+    "detail3" :"Tipo de mouse: Gamer",
+    "detail4" :"9 botones",
+    "medida1" :"-",
+    "marca": "Rival"
   },
 
   {
@@ -53,7 +83,13 @@
     "description": "Logitech diseña productos y experiencias que ocupan un lugar cotidiano en la vida de las personas, poniendo foco en la innovación y la calidad. Su objetivo es crear momentos verdaderamente únicos y significativos para sus usuarios.",
     "category": "mouse",
     "image": "../assets/img-database/mouse-logitech.png",
-    "stock": 9
+    "stock": 9,
+    "detail1" :"Utiliza cable",
+    "detail2" :"Posee rueda de desplazamiento",
+    "detail3" :"luces para mejorar la experiencia de uso",
+    "detail4" :"sensor óptico",
+    "medida1" :"116.6 mm",
+    "marca": "Logitech"
   },
   {
     "id": 7,
@@ -62,7 +98,13 @@
     "description": "Ideado para los gamers más exigentes, el HyperX Cloud Flight tiene todo lo que un jugador busca. Su conectividad inalámbrica permite moverte de un lugar a otro sin cables.",
     "category": "auriculares",
     "image": "../assets/img-database/auriculares-hx.png",
-    "stock": 6
+    "stock": 6,
+    "detail1" :"Alcance inalámbrico de 30 m",
+    "detail2" :"Modo manos libres incluido",
+    "detail3" :"cancelación de ruido",
+    "detail4" :"Micrófono flexible incorporado",
+    "medida1" :"-",
+    "marca": "HyperX"
   },
   {
     "id": 8,
@@ -71,7 +113,13 @@
     "description": "¡Experimenta la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los SteelSeries Arctis 9X no te pierdes ningún detalle y escuchas el audio tal y como fue diseñado por los creadores.",
     "category": "auriculares",
     "image": "../assets/img-database/auriculares-steelseries.png",
-    "stock": 11
+    "stock": 11,
+    "detail1" :"monoaural",
+    "detail2" :"Alcance inalámbrico de 6 m",
+    "detail3" :"Modo manos libres incluido",
+    "detail4" :"Cancelación de ruido",
+    "medida1" :"-",
+    "marca": "Steelseries"
   },
   {
     "id": 9,
@@ -80,7 +128,13 @@
     "description": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
     "category": "procesador",
     "image": "../assets/img-database/i9.png",
-    "stock": 7
+    "stock": 7,
+    "detail1" :"Soporta 128 GB RAM",
+    "detail2" :"24 Nucleos",
+    "detail3" :"Procesador Grafico: Intel UHD Graphics 770",
+    "detail4" :"Generacion 13°",
+    "medida1" :"-",
+    "marca": "Intel"
   },
   {
     "id": 10,
@@ -89,6 +143,12 @@
     "description": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
     "category": "procesador",
     "image": "../assets/img-database/ryzen.png",
-    "stock": 5
+    "stock": 5,
+    "detail1" :"Soporta memoria RAM DDR4",
+    "detail2" :"Procesador gráfico Sem Vídeo,Não possui vídeo integrado",
+    "detail3" :"Memoria caché de 32 MB, rápida y volátil",
+    "detail4" :"Potencia es de 65 W",
+    "medida1" :"-",
+    "marca": "Ryzen"
   } 
 ]
