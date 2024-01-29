@@ -1,13 +1,160 @@
-body {
-	background-image: url('../assets/img/about-fondo1.jpg');
-	background-position: top;
-	background-attachment: fixed;
-	background-blend-mode: color-burn;
+/*  .bodyabout {
+  margin-top: 1opx;
+  background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .about__text--bg,
 .card {
-	background: rgba(57, 57, 57, 0.2);
+  background: rgba(57, 57, 57, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(54, 54, 54, 0.3);
+}
+
+.about__card__image__container {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.about__card__image {
+  width: 100%;
+}
+
+.about__card__item:hover .nosotros__card__image__container {
+  background-color: rgba(255, 200, 81, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+.about__card__item:hover .card-img-top img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.about__card__item:hover .card {
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.card img {
+  filter: grayscale(100%);
+}
+
+.card-title {
+  color: var(--color-primary);
+}
+
+.about__card__btn__social {
+  color: var(--font-color-primary);
+}
+
+.about__card__btn__social:hover {
+  color: var(--color-primary);
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 320px) {
+  .about__card__image__container {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .about__card__image__container {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-Background1: #1f1c18;
+  --color-Background2: #8e0e00;
+
+  --color-background: #000000;
+  --color-primary: #5a1212;
+  --font-color-primary: #c4ce85;
+  --font-color-secondary: #ffffff;
+  --font-principal: "Montserrat", sans-serif;
+  --font-secundaria: "Nunito Sans", sans-serif;
+  --font-size-title: 2rem;
+  --font-size-title-tablet: 2.5rem;
+  --font-size-title-desktop: 3rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-subtitle-tablet: 2rem;
+  --font-size-subtitle-desktop: 2.5rem;
+  --font-size-parrafo: 1rem;
+  --font-size-parrafo-tablet: 1.15rem;
+  --font-size-parrafo-desktop: 1.25rem;
+  --font-size-bottom: 1.2rem;
+}
+
+.nosotros__card__btn__social {
+  color: var(--font-color-primary);
+}
+
+.nosotros__card__btn__social:hover {
+  color: var(--color-primary);
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-about {
+  padding-top: 500px;
+}
+
+
+
+
+ */
+
+ body {
+	background-image: url('https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg');
+	background-position: top;
+	background-attachment: fixed;
+	background-blend-mode: color-burn;
+	background-color: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);;
+	
+}
+
+.divAbout{
+width: 100%;
+height: 100px;
+
+}
+/* .main-about {
+	margin-top: 200px;
+  } */
+
+.body{
+	background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+  }
+
+.nosotros__text--bg,
+.card {
+	/* background: rgba(57, 57, 57, 0.2); */
 	border-radius: 16px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(5px);
@@ -15,7 +162,7 @@ body {
 	border: 1px solid rgba(54, 54, 54, 0.3);
 }
 
-.about__card__image__container {
+.nosotros__card__image__container {
 	width: 8rem;
 	height: 8rem;
 	background-color: rgba(255, 255, 255, 1);
@@ -24,22 +171,22 @@ body {
 	margin: 0 auto;
 }
 
-.about__card__image {
+.nosotros__card__image {
 	width: 100%;
 }
 
-.about__card__item:hover .nosotros__card__image__container {
-	background-color: rgba(255, 200, 81, 0.8);
+.nosotros__card__item:hover .nosotros__card__image__container {
+	background-color: rgba(137, 17, 21, 0.8);
 	transition: all 0.5s ease-in-out;
 }
 
-.about__card__item:hover .card-img-top img {
+.nosotros__card__item:hover .card-img-top img {
 	filter: grayscale(0%);
 	transform: scale(1.1);
 	transition: all 0.5s ease-in-out;
 }
 
-.about__card__item:hover .card {
+.nosotros__card__item:hover .card {
 	border-color: var(--color-primary);
 	transform: scale(1.05);
 	transition: all 0.5s ease-in-out;
@@ -53,11 +200,11 @@ body {
 	color: var(--color-primary);
 }
 
-.about__card__btn__social {
+.nosotros__card__btn__social {
 	color: var(--font-color-primary);
 }
 
-.about__card__btn__social:hover {
+.nosotros__card__btn__social:hover {
 	color: var(--color-primary);
 	transform: scale(1.3);
 	cursor: pointer;
@@ -65,44 +212,28 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-	.about__card__image__container {
+	.nosotros__card__image__container {
 		width: 12rem;
 		height: 12rem;
 	}
 }
 
 @media screen and (min-width: 1400px) {
-	.about__card__image__container {
+	.nosotros__card__image__container {
 		width: 10rem;
 		height: 10rem;
 	}
-}
+} 
 
-*{
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-  }
-  body{
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	min-height:100vh;
-	background: #5b1212; 
-	/* background: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%); */
-	
-  }
+/* --------------------------------------------- */
 
-
-
-  :root {
+:root {
 	--color-Background1: #1F1C18;
-	--color-Background2: #8E0E00;
-	
-	--color-background: #000000;
-	--color-primary: #5a1212;
-	--font-color-primary: #c4ce85;
-	--font-color-secondary: #ffffff;
+    --color-Background2: #8E0E00;
+	--color-background: #121618;
+	--color-primary:  rgba(137, 17, 21, 0.8);;
+	--font-color-primary:#8E0E00;
+	--font-color-secondary: #7b7b7b;
 	--font-principal: 'Montserrat', sans-serif;
 	--font-secundaria: 'Nunito Sans', sans-serif;
 	--font-size-title: 2rem;
@@ -117,14 +248,61 @@ body {
 	--font-size-bottom: 1.2rem;
 }
 
-.nosotros__card__btn__social {
-	color: var(--font-color-primary);
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+	font-family: 'Montserrat', 'Nunito Sans', sans-serif;
 }
 
-.nosotros__card__btn__social:hover {
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-principal);
+	font-weight: 600;
+}
+p {
+	font-family: var(--font-secundaria);
+}
+
+
+.title {
 	color: var(--color-primary);
-	transform: scale(1.3);
-	cursor: pointer;
-	transition: all 0.5s ease-in-out;
+	font-family: var(--font-principal);
+	font-size: var(--font-size-title);
 }
 
+.subtitle {
+	color: var(--font-color-primary);
+	font-family: var(--font-secundaria);
+	font-size: var(--font-size-subtitle);
+}
+
+.paragraph {
+	color: var(--font-color-primary);
+	font-family: var(--font-secundaria);
+	font-size: var(--font-size-parrafo);
+	line-height: 2rem;
+}
+
+.scrollFadeAnimation {
+	view-timeline-name: --scrollFade;
+	view-timeline-axis: block;
+	animation-timeline: --scrollFade;
+	animation-name: show;
+	animation-range: entry 10% cover 50%;
+	animation-fill-mode: both;
+  }

@@ -11,6 +11,7 @@
     background: rgba(255, 255, 255,0.1);
     backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 100;
 }
 .navBar .logo a {
     font-size: 26px;
