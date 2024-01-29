@@ -1,6 +1,7 @@
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import {getProducts} from "./services/getProducts.js"
+const incomingId = window.location.href.split('#')[1];
 
 document.addEventListener("DOMContentLoaded", () => {
     Navbar();
@@ -8,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let products= getProducts()
-let idProductoBuscado = 1
 let stockLimit
 
 const mostrarProductoPorId = (idProducto) => {
@@ -212,7 +212,7 @@ btnSumar.addEventListener("click",sumar)
 btnRestar.addEventListener("click",restar)
 
 };
-mostrarProductoPorId(idProductoBuscado);
+mostrarProductoPorId(incomingId);
 
 
 
