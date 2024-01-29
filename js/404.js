@@ -1,6 +1,10 @@
-import Navbar from "./components/Header.js";
-import Footer from "./components/Footer.js";
+import Navbar from "./components/Header.js"
+import Footer from "./components/Footer.js"
 
+document.addEventListener("DOMContentLoaded", () => {
+    Navbar();
+    Footer();
+  });
 const randomNum=() =>{
   return Math.floor(Math.random() * 9) + 1;
 }
