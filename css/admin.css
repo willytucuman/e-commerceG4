@@ -1,0 +1,20 @@
+@import url(./main.css);
+
+.btn-rojo {
+  background-color: var(--color-red) !important;
+}
+@media screen and (max-width: 992px) {
+  .ocultar {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ocultar2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .ocultar3 {
+    display: none;
+  }
+}
