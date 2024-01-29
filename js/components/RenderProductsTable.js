@@ -1,6 +1,6 @@
 const productsTable = document.querySelector(".main__productsTable");
 const ProductCard = (product) => {
-    return `<div class="col col-11 col-sm-10 text-center mx-auto">
+    return `<div class="col col-11 col-sm-10 text-center mx-auto" onclick="location.href='./views/detailProduct.html#${product.id}';">
     <div class="main__productCard card h-100">
       <div class="card-footer p-0">
         <small class="text-body-secondary"><p class="text-center text-secondary m-0 p-0">${product.category.trim().charAt().toUpperCase()+product.category.slice(1)}</p></small>
