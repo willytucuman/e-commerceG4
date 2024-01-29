@@ -2,12 +2,12 @@
   font-family: "PT Sans Caption", sans-serif, "arial", "Times New Roman";
 } */
 body{
-  background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
 }
-@import url(./main.css);
+
 .error .clip .shadow {
   height: 180px;
 }

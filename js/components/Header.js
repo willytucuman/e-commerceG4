@@ -8,11 +8,11 @@ const Navbar = () => {
     <nav class="navBar">
             <div class="logo">
                 
-                <a href=""><img src="./assets/logo/logoBlanco.png" alt="">HardTech</a>
+                <a href=""><img src="../assets/logo/logoBlanco.png" alt="">HardTech</a>
             </div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="../views/index.html">Inicio</a></li>
+                <li><a href="../views/about.html">Nosotros</a></li>
                 ${
                     loggedUser
                         ? ""
@@ -24,7 +24,7 @@ const Navbar = () => {
                 ${
                     loggedUser
                     ? `<li class="nav-item dropdown me-5">
-                <a class="nav-link dropdown-toggle fs-5"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle fs-admin"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     ${
                     loggedUser?.role == "admin" ? "Admin" : ""
                     } <i class="bi bi-person "></i>
