@@ -19,7 +19,7 @@ const aboutContent= `
 			<section id="nosotros" class="container-md align-items-center justify-content-center">
 				<article class="row mb-4">
 					<div class="col-12">
-						<h1 class="text-center title">Equipo de Desarrolladores</h1>
+						<h1 class="text-center title">Hard-Tech</h1>
 						<p class="text-center paragraph fst-italic nosotros__text--bg p-4">
 							En el corazón de la revolución digital, se encuentra un equipo de
                             desarrolladores web llamados <strong>Devs-Sharks</strong> dedicados y apasionados. Por primera
@@ -46,11 +46,10 @@ const aboutContent= `
 				</article>
 				<article>
 					<ul class="row list-unstyled gy-4 d-flex justify-content-evenly align-items-stretch mt-2">
-						<li
-							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
-						>
-							<div class="card p-2 text-center scrollFadeAnimation" style="width: 18rem">
-								<div class="nosotros__card__image__container card-img-top">
+						<li class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
+						>       
+							<div class="card fondoCards p-2 text-center " style="width: 18rem">
+								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Jere.png"
 										class="nosotros__card__image rounded-circle"
@@ -76,26 +75,26 @@ const aboutContent= `
 						<li
 							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>
-							<div class="card p-2 text-center scrollFadeAnimation" style="width: 18rem">
-								<div class="nosotros__card__image__container card-img-top">
+							<div class="card fondoCards p-2 text-center scrollFadeAnimation" style="width: 18rem">
+								<div class="nosotros__card__image__container  bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Fede.png"
-										class="nosotros__card__image rounded-circle"
+										class="nosotros__card__image bg-transparent rounded-circle"
 										alt="foto miembro del equipo fede"
 									/>
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Federico A. Frau Ross</h5>
-									<a href="https://github.com/JeremiasJM" target="_blank" class="btn nosotros__card__btn__social"
+									<a href="https://github.com/FedericoFrau" target="_blank" class="btn nosotros__card__btn__social"
 										><i class="bi bi-github"></i
 									></a>
 									<a
-										href="https://www.linkedin.com/in/ezequiel-massa-dev/"
+										href="https://www.linkedin.com/in/federico-antonio-frau-ross-640aa7113"
 										target="_blank"
 										class="btn nosotros__card__btn__social"
 										><i class="bi bi-linkedin"></i
 									></a>
-									<a href="mailto:ezequielmassa.dev@gmail.com" class="btn nosotros__card__btn__social"
+									<a href="mailto:fedeafrau@gmail.com" class="btn nosotros__card__btn__social"
 										><i class="bi bi-envelope-at-fill"></i
 									></a>
 								</div>
@@ -104,11 +103,11 @@ const aboutContent= `
 						<li
 							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>
-							<div class="card p-2 text-center scrollFadeAnimation" style="width: 18rem">
-								<div class="nosotros__card__image__container card-img-top">
+							<div class="card fondoCards p-2 text-center scrollFadeAnimation" style="width: 18rem">
+								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Facu.png"
-										class="nosotros__card__image"
+										class="nosotros__card__image rounded-circle"
 										alt="foto miembro del equipo fACU"
 									/>
 								</div>
@@ -132,11 +131,11 @@ const aboutContent= `
 					</ul>
                     <ul class="row list-unstyled gy-4 justify-content-evenly align-items-stretch mt-3">
                         <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
-						>    <div class="card p-2 text-center scrollFadeAnimation" style="width: 18rem">
-								<div class="nosotros__card__image__container card-img-top">
+						>    <div class="card fondoCards p-2 text-center scrollFadeAnimation" style="width: 18rem">
+								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Tomas.png"
-										class="nosotros__card__image"
+										class="nosotros__card__image bg-transparent"
 										alt="foto miembro del equipo tomas"
 									/>
 								</div>
@@ -160,16 +159,16 @@ const aboutContent= `
 						<li
 							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 offset-md-2 offset-lg-0 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>
-							<div class="card p-2 text-center scrollFadeAnimation" style="width: 18rem">
-								<div class="nosotros__card__image__container card-img-top">
+							<div class="card fondoCards p-2 text-center scrollFadeAnimation" style="width: 18rem">
+								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-cristian.png"
-										class="nosotros__card__image"
+										class="nosotros__card__image "
 										alt="foto miembro del equipo cristian"
 									/>
 								</div>
 								<div class="card-body">
-									<h5 class="card-title">Cristian Fernandez</h5>
+									<h5 class="card-title">Cristián Fernández</h5>
 									<a
 										href="https://github.com/Fernandez-Cristian-Javier-ISI-UTN-FRT"
 										target="_blank"

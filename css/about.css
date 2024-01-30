@@ -1,179 +1,68 @@
-/*  .bodyabout {
-  margin-top: 1opx;
-  background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.about__text--bg,
-.card {
-  background: rgba(57, 57, 57, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(54, 54, 54, 0.3);
-}
-
-.about__card__image__container {
-  width: 8rem;
-  height: 8rem;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.about__card__image {
-  width: 100%;
-}
-
-.about__card__item:hover .nosotros__card__image__container {
-  background-color: rgba(255, 200, 81, 0.8);
-  transition: all 0.5s ease-in-out;
-}
-
-.about__card__item:hover .card-img-top img {
-  filter: grayscale(0%);
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-}
-
-.about__card__item:hover .card {
-  border-color: var(--color-primary);
-  transform: scale(1.05);
-  transition: all 0.5s ease-in-out;
-}
-
-.card img {
-  filter: grayscale(100%);
-}
-
-.card-title {
-  color: var(--color-primary);
-}
-
-.about__card__btn__social {
-  color: var(--font-color-primary);
-}
-
-.about__card__btn__social:hover {
-  color: var(--color-primary);
-  transform: scale(1.3);
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-
-@media screen and (min-width: 320px) {
-  .about__card__image__container {
-    width: 12rem;
-    height: 12rem;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .about__card__image__container {
-    width: 10rem;
-    height: 10rem;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --color-Background1: #1f1c18;
-  --color-Background2: #8e0e00;
-
-  --color-background: #000000;
-  --color-primary: #5a1212;
-  --font-color-primary: #c4ce85;
-  --font-color-secondary: #ffffff;
-  --font-principal: "Montserrat", sans-serif;
-  --font-secundaria: "Nunito Sans", sans-serif;
-  --font-size-title: 2rem;
-  --font-size-title-tablet: 2.5rem;
-  --font-size-title-desktop: 3rem;
-  --font-size-subtitle: 1.5rem;
-  --font-size-subtitle-tablet: 2rem;
-  --font-size-subtitle-desktop: 2.5rem;
-  --font-size-parrafo: 1rem;
-  --font-size-parrafo-tablet: 1.15rem;
-  --font-size-parrafo-desktop: 1.25rem;
-  --font-size-bottom: 1.2rem;
-}
-
-.nosotros__card__btn__social {
-  color: var(--font-color-primary);
-}
-
-.nosotros__card__btn__social:hover {
-  color: var(--color-primary);
-  transform: scale(1.3);
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-
-.main-about {
-  padding-top: 500px;
-}
-
-
-
-
- */
-
- body {
+/* body {
 	background-image: url('https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg');
 	background-position: top;
 	background-attachment: fixed;
 	background-blend-mode: color-burn;
 	background-color: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);;
 	
-}
+} */
 
-.divAbout{
-width: 100%;
-height: 100px;
-
-}
-/* .main-about {
-	margin-top: 200px;
-  } */
-
-.body{
-	background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+body{
+	background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg)!important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed!important;
+	background-size: cover!important;
   }
 
-.nosotros__text--bg,
-.card {
-	/* background: rgba(57, 57, 57, 0.2); */
+  .divAbout{
+	width: 100%;
+	height: 100px;
+	
+	}
+
+	.card {
+		
+		 background: rgba(0, 0, 0, 0.995)!important;
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(54, 54, 54, 0.3);
+	  }
+	  
+	  
+.nosotros__text--bg,.card {
+	 background: rgba(57, 57, 57, 0.2); 
 	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid rgba(54, 54, 54, 0.3);
+	border: 1px solid rgba(54, 54, 54, 0.3);	
+	
+}
+.fondoCards{
+	background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg)!important;
+	background-repeat: no-repeat !important;
+	background-size: cover!important;
 }
 
 .nosotros__card__image__container {
 	width: 8rem;
 	height: 8rem;
-	background-color: rgba(255, 255, 255, 1);
-	border-radius: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
 	overflow: hidden;
 	margin: 0 auto;
 }
 
-.nosotros__card__image {
+.card-title {
+	color: white!important;
+}
+ 
+ .nosotros__card__image {
 	width: 100%;
 }
+
 
 .nosotros__card__item:hover .nosotros__card__image__container {
 	background-color: rgba(137, 17, 21, 0.8);
@@ -197,19 +86,23 @@ height: 100px;
 }
 
 .card-title {
-	color: var(--color-primary);
+	color:#ffffff;
 }
 
 .nosotros__card__btn__social {
-	color: var(--font-color-primary);
+	color: red!important;
+	
+	
 }
 
 .nosotros__card__btn__social:hover {
-	color: var(--color-primary);
-	transform: scale(1.3);
+	color: #8E0E00;
+	transform: scale(1.8);
 	cursor: pointer;
 	transition: all 0.5s ease-in-out;
 }
+
+
 
 @media screen and (min-width: 320px) {
 	.nosotros__card__image__container {
@@ -233,10 +126,10 @@ height: 100px;
 	--color-background: #121618;
 	--color-primary:  rgba(137, 17, 21, 0.8);;
 	--font-color-primary:#8E0E00;
-	--font-color-secondary: #7b7b7b;
+	--font-color-secondary: #ffffff;
 	--font-principal: 'Montserrat', sans-serif;
 	--font-secundaria: 'Nunito Sans', sans-serif;
-	--font-size-title: 2rem;
+	--font-size-title: 3rem;
 	--font-size-title-tablet: 2.5rem;
 	--font-size-title-desktop: 3rem;
 	--font-size-subtitle: 1.5rem;
@@ -246,6 +139,7 @@ height: 100px;
 	--font-size-parrafo-tablet: 1.15rem;
 	--font-size-parrafo-desktop: 1.25rem;
 	--font-size-bottom: 1.2rem;
+
 }
 
 html {

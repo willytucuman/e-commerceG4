@@ -1,11 +1,20 @@
 import { Product } from "./classes/product.class.js";
 import { getProducts } from "./services/getProducts.js";
 import { setProducts } from "./services/setProducts.js";
+import Navbar from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import {protectedAdminRoute} from "./routes/protectedAdminRoute.js"
 
 const cuerpoTabla = document.querySelector("#cuerpo-tabla");
 const myModal = new bootstrap.Modal(document.getElementById("modalGift"));
 let btn_eliminar = document.querySelectorAll(".btn-delete");
 
+document.addEventListener("DOMContentLoaded", () => {
+  
+  Navbar();
+  protectedAdminRoute();
+  Footer();
+});
 setProducts();
 
 const datos = getProducts();
@@ -24,8 +33,8 @@ const cargarDatos = () => {
       producto.stock
     );
     cuerpoTabla.innerHTML += `
-    <tr>
-      <td><img class="rounded  img-thumbnail"  src="${product.image}" alt="${product.title}" width="100"></td>
+    <tr >
+      <td ><img class="rounded  img-thumbnail"  src="${product.image}" alt="${product.title}" width="100"></td>
       <td>${product.title}</td>
       <td class="ocultar ">${product.description}</td>
       <td class="ocultar2">$${product.price}</td>
@@ -33,7 +42,7 @@ const cargarDatos = () => {
       <td class="ocultar3">${product.category}</td>
       
       <td class="width=100%"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal(${product.id})">Update</button>
-      <button class="btn btn-primary btn-delete mt-1 w-100" id="${product.id} ">Delete</button>
+      <button class="btn btn-rojo btn-delete  mt-1 w-100 text-light" id="${product.id} ">Delete</button>
       </td>
       
     </tr>
