@@ -47,12 +47,14 @@ Simplemente nada mas que:
 - Entra a la cli de git y posicionate preferentemente en tu escritorio
 
 bash
-cd Desktop
+
+''cd Desktop
 
 - Clona el repo de toda la pagina
 
 bash
-git clone https://github.com/willytucuman/e-commerceG4/new/MAIN?filename=README.md
+
+''git clone https://github.com/willytucuman/e-commerceG4/new/MAIN?filename=README.md
 
 - Accede al repo desde tu ide y abrilo con live server preferentemente.
 
