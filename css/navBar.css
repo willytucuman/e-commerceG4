@@ -1,22 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root{
-    --red : #8E0E00;
-    --black : #1F1C18;
-    --white : #fcf2fa;
-    --purple-blc : #230622dd;
-    --shadow : 0.5px 10px 5px rgba(0, 0, 0, .3);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    background: black
-}
-nav{
+@import url(./main.css);
+.navBar{ 
     position: fixed;
     top: 0;
     width: 100%;
@@ -28,14 +11,15 @@ nav{
     background: rgba(255, 255, 255,0.1);
     backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 100;
 }
-nav .logo a {
+.navBar .logo a {
     font-size: 26px;
     color: #fff;
     font-weight: 600;
     text-decoration: none;
 }
-nav .logo a img{
+.navBar .logo a img{
     width: 48px;
     position: absolute;
     top: 50;
@@ -43,27 +27,27 @@ nav .logo a img{
     transform: translateX(30px);
 }
 
-nav .logo a:hover {
-    color: #ff2222;
+.navBar .logo a:hover {
+    color:#e72313;
     transition: .5s;
 }
-nav ul {
+header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
 }
-nav ul li{
+.navBar ul li{
     list-style: none;
 }
-nav ul li a {
+.navBar ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
 }
-nav ul li a:hover{
-    color: #ff2222;
+.navBar ul li a:hover{
+    color: #e72313;
     transition: .5s;
 }
 .menu-icon{
@@ -105,19 +89,20 @@ nav ul li a:hover{
     transform: rotate(135deg);
 }
 @media screen and (max-width:992px) {
-    nav ul {
+    .navBar ul {
         position: fixed;
         top: 80px;
         left: 100%;
         width: 100%;
-        height: 400px;
-        background: rgba(0,0,0,.5);
+        height: 300px;
+        background: rgba(13, 13, 13,0.05) !important;
+        backdrop-filter: blur(1px) !important;
         flex-direction: column;
         gap: 1.5rem;
         transition: .5 ease-in;
-        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        border-bottom: 2px solid rgba(255, 255, 255, .1);
     }
-    nav ul li a{
+    .navBar ul li a{
         font-size: 24px;
     }
     ul.active{
@@ -126,23 +111,32 @@ nav ul li a:hover{
     .menu-icon{
         display: block;
     }
-    
+    .dropdown-menu{
+        width: 400px !important;
+        height: 150px !important;
+    }
 }
 @media screen and (max-width:767px){
-    nav{
+    .navBar{
         padding: 0 50px;
     }
-    nav .logo a img{
+    .navBar .logo a img{
         display: none;
     }
     
 }
 @media screen and (max-width:567px){
-    nav ul li a{
+    .navBar ul li a{
         font-size:20px;
     }
     
 }
 .hidden{
     visibility: hidden;
-  }
+}
+.dropdown-bg{
+    background: rgba(255, 255, 255,0.2) !important;
+}
+.pointer{
+    cursor: pointer;
+}

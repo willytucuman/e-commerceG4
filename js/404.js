@@ -1,4 +1,7 @@
-function randomNum() {
+import Navbar from "./components/Header.js";
+import Footer from "./components/Footer.js";
+
+const randomNum=() =>{
   return Math.floor(Math.random() * 9) + 1;
 }
 let loop1,
@@ -13,7 +16,7 @@ loop3 = setInterval(function () {
     if (i > 40) {
         clearInterval(loop3);
         digit3.textContent = 4;
-    } else {
+    } else { 
         digit3.textContent = randomNum();
         i++;
     }

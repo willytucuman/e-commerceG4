@@ -1,13 +1,13 @@
 const footer = document.getElementsByTagName("footer")[0];
 const body = document.getElementsByTagName("body")[0];
 const head = document.getElementsByTagName("head")[0];
-const headFooterCss = `<link rel="stylesheet" href="./css/footer.css">`;
+const headFooterCss = `<link rel="stylesheet" href="../css/footer.css">`;
 const headBootstrap = `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">`;
 const bodyBootstrap = `<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>`;
 const headGoogleFonts = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&family=Genos:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Play:wght@400;700&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Silkscreen:wght@400;700&family=Tektur:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">`;
-const footerContent = `<div class="footer__homeLink position-absolute end-0 pe-1">
+const footerContent = `<div class="footer__homeLink position-absolute z-1 end-0 pe-1">
 <a href="#pageBeginning">
   <button class="footer__btn">
     <svg xmlns="http://www.w3.org/2000/svg" class="footer__arrow bi bi-arrow-up-circle" viewBox="0 0 16 16">
@@ -17,55 +17,56 @@ const footerContent = `<div class="footer__homeLink position-absolute end-0 pe-1
   </button>
 </a>
 </div>
+<div class="container col-10  border-top  border-secondary pt-4 mt-4"></div>
 <section class="footer__section row text-center justify-content-center">
 <nav class="col-12 col-md-4 row px-0 mx-0">
   <p class="footer__tittle col-12 h5 mb-3 mt-4">Links</p>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"
-      href="./pages/404.html">
+      href="/views/404.html">
       Términos & condiciones
     </a>
   </div>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"
-      href="./pages/404.html">
+      href="/views/404.html">
       Políticas de privacidad
     </a>
   </div>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"
-      href="./pages/about.html">
+      href="/views/about.html">
       Acerca de Nosotros
     </a>
   </div>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"
-      href="./pages/contact.html">
+      href="/views/404.html">
       Contáctanos
     </a>
   </div>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"
-      href="./pages/404.html">
+      href="/views/404.html">
       Tutoriales
     </a>
   </div>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"
-      href="./pages/404.html">
+      href="/views/404.html">
       Ayuda
     </a>
   </div>
 </nav>
 <figure class="col-12 col-md-4 my-0 align-self-center">
   <img
-    src="./assets/logo/logo_Minimizado_square400px.png"
+    src="/assets/logo/logo_Minimizado_square400px.png"
     alt="Logo de la marca"
     width="250"
     height="250"
@@ -77,7 +78,7 @@ const footerContent = `<div class="footer__homeLink position-absolute end-0 pe-1
   <figcaption class="footer__imgCaption fst-italic">hardware...</figcaption>
 </figure>
   <nav class="d-flex col-md-4 justify-content-center align-self-center">
-    <div class="footer__card">
+    <div class="footer__card d-flex d-md-block">
       <a class="footer__socialContainer footer__socialContainer_containerOne" href="https://www.instagram.com/" target="_blank">
         <svg viewBox="0 0 16 16" class="footer__socialSvg instagramSvg">
           <path
@@ -114,10 +115,13 @@ const footerContent = `<div class="footer__homeLink position-absolute end-0 pe-1
 </section>`;
 
 const Footer = () => {
-    footer.innerHTML = footerContent;
-    footer.classList.value = "container-fluid";
-    body.setAttribute("id", "pageBeginning");
-    body.insertAdjacentHTML("beforeend", bodyBootstrap);
-    head.insertAdjacentHTML("beforeend", headGoogleFonts+headFooterCss+headBootstrap);
+  footer.innerHTML = footerContent;
+  footer.classList.value = "container-fluid";
+  body.setAttribute("id", "pageBeginning");
+  body.insertAdjacentHTML("beforeend", bodyBootstrap);
+  head.insertAdjacentHTML(
+    "beforeend",
+    headGoogleFonts + headFooterCss + headBootstrap
+  );
 };
 export default Footer;

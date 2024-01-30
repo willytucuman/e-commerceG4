@@ -1,6 +1,6 @@
 :root {
   --color-Background1: #000000;
-  --color-Background2: #8E0E00;
+  --color-Background2: #8e0e00;
   --color-Social-Figures: rgb(255, 255, 255);
   --color-Social-Background: rgb(44, 44, 44);
   --color-Social-Instagram: #d62976;
@@ -18,7 +18,10 @@
 }
 
 .footer__section {
-  background: linear-gradient(0deg, var(--color-Background1) 20%, var(--color-Background2) 100%);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.1) 30%,
+    var(--color-Background2) 100%
+  );
 }
 
 .footer__card {
@@ -102,7 +105,10 @@
 .footer__btn {
   width: 4em;
   height: 4em;
-  background: linear-gradient(var(--color-Arrow-Background1), var(--color-Arrow-Background2));
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.1) 30%,
+    var(--color-Background2) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +123,7 @@
 }
 
 .footer__textBtn {
-  font-family: 'Bungee', 'Quantico';
+  font-family: "Bungee", "Quantico";
   font-size: 1.7vh;
   width: 20px;
   position: absolute;
@@ -143,7 +149,6 @@
 
 @media (max-width: 768px) {
   .footer__card {
-    display: flex;
     padding: 0px;
   }
   .footer__logoImage {
@@ -167,9 +172,13 @@
   }
 }
 
-.footer__link, .footer__tittle, .footer__imgCaption, .footer__logoName, .footer__text {
+.footer__link,
+.footer__tittle,
+.footer__imgCaption,
+.footer__logoName,
+.footer__text {
   color: var(--color-text-Custom);
-  font-family: 'Tektur';
+  font-family: "Tektur";
   font-size: 17px;
 }
 

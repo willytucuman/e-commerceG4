@@ -1,4 +1,5 @@
-import Navbar from "./components/NavBar.js";
+import Navbar from "./components/Header.js";
+import Footer from "./components/Footer.js";
 import { validateLoginUser } from "./validators/validateLoginUser.js";
 import { showPassword } from "./utils/showPassword.js";
 import { setLoggedUser } from "./services/setLoggedUser.js";
@@ -6,6 +7,7 @@ import { redirectIndex } from "./utils/redirectIndex.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   Navbar();
+  Footer()
 });
 
 const showPasswordButton = document.getElementById("showPasswordBtn");

@@ -1,4 +1,5 @@
-import Navbar from "./components/NavBar.js"; 
+import Navbar from "../js/components/Header.js"; 
+import Footer from "../js/components/Footer.js";
 import { validateExistingEmail } from "./validators/validateExistingEmail.js";
 import { validateSignUpPassword } from "./validators/validateSignUpPassword.js";
 import { validateRepeatPassword } from "./validators/validateRepeatPassword.js";
@@ -10,6 +11,7 @@ import { setLoggedUser } from "./services/setLoggedUser.js";
 
 document.addEventListener("DOMContentLoaded" , ()=>{
  Navbar()
+ Footer()
 })
 
 const showPasswordButton = document.getElementById("showPasswordBtn")

@@ -14,7 +14,7 @@ let products;
 document.addEventListener("DOMContentLoaded", () => {
   retrievePageTheme();
   title.innerHTML = "HARD-TECH";
-  // Navbar();
+  Navbar();
   setAdminUser();
   setProducts();
   products = getProducts();
@@ -28,8 +28,8 @@ const contentX = `<div class="container">
 <nav class="row row-cols-1">
     <div class="col col-auto mx-auto">
         <ul class="pagination pagination-sm">
-            <li class="page-item mx-1 mx-sm-3 disabled">
-                <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#"> &laquo; </a>
+            <li class="page-item mx-1 mx-sm-3">
+                <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#" data-bs-target="#carouselExample" data-bs-slide="prev"> &laquo; </a>
             </li>
             <li class="page-item mx-1 mx-sm-3 active">
                 <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#">1</a>
@@ -47,7 +47,7 @@ const contentX = `<div class="container">
                 <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#">5</a>
             </li>
             <li class="page-item mx-1 mx-sm-3">
-                <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#">&raquo;</a>
+                <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#" data-bs-target="#carouselExample" data-bs-slide="next">&raquo;</a>
             </li>
         </ul>
     </div>  
