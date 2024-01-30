@@ -8,11 +8,11 @@ const Navbar = () => {
     <nav class="navBar">
             <div class="logo">
                 
-                <a href=""><img src="../assets/logo/logoBlanco.png" alt="">HardTech</a>
+                <a href=""><img src="/assets/logo/logoBlanco.png" alt="">HardTech</a>
             </div>
             <ul>
-                <li><a href="../views/index.html">Inicio</a></li>
-                <li><a href="../views/about.html">Nosotros</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/views/about.html">Nosotros</a></li>
                 ${
                     loggedUser
                         ? ""
