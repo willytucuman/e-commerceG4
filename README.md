@@ -37,10 +37,11 @@ donde se encuentra este mismo panel, no podria ya que tiene una ruta protegida.
 
 ## Que tecnologias utilizamos para esta pagina?
 Simplemente nada mas que:
--Html
--Css
--Bootstrap
--Javascript
+
+- Html
+- Css
+- Bootstrap
+- Javascript
 
 ## Como clonar el repositorio en tu pc y poder tener nuestra pagina para ver el codigo con git?
 1-Entra a la cli de git y posicionate preferentemente en tu escritorio
