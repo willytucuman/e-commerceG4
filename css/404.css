@@ -8,6 +8,9 @@ body{
   background-size: cover !important;
 }
 @import url(./main.css);
+.error{
+  height: 50vh;
+}
 .error .clip .shadow {
   height: 180px;
 }
