@@ -48,13 +48,13 @@ Simplemente nada mas que:
 
 bash
 
-'cd Desktop'
+`cd Desktop`
 
 - Clona el repo de toda la pagina
 
 bash
 
-'git clone https://github.com/willytucuman/e-commerceG4/new/MAIN?filename=README.md'
+`git clone https://github.com/willytucuman/e-commerceG4/new/MAIN?filename=README.md`
 
 - Abri el repo desde tu ide y desplega el index.html con live server preferentemente.
 
