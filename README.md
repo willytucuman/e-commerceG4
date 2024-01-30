@@ -44,11 +44,15 @@ Simplemente nada mas que:
 - Javascript
 
 ## Como clonar el repositorio en tu pc y poder tener nuestra pagina para ver el codigo con git?
-1-Entra a la cli de git y posicionate preferentemente en tu escritorio
+- Entra a la cli de git y posicionate preferentemente en tu escritorio
+
 bash
 cd Desktop
-2-Clona el repo de toda la pagina
+
+- Clona el repo de toda la pagina
+
 bash
 git clone https://github.com/willytucuman/e-commerceG4/new/MAIN?filename=README.md
-3-Accede al repo desde tu ide y abrilo con live server preferentemente.
+
+- Accede al repo desde tu ide y abrilo con live server preferentemente.
 
