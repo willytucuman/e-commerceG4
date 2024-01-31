@@ -1,12 +1,3 @@
-/* body {
-	background-image: url('https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg');
-	background-position: top;
-	background-attachment: fixed;
-	background-blend-mode: color-burn;
-	background-color: linear-gradient(120deg, var(--color-Background1) 30%, var(--color-Background2) 100%);;
-	
-} */
-
 body{
 	background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg)!important;
 	background-repeat: no-repeat !important;
@@ -118,7 +109,7 @@ body{
 	}
 } 
 
-/* --------------------------------------------- */
+
 
 :root {
 	--color-Background1: #1F1C18;
@@ -192,11 +183,3 @@ p {
 	line-height: 2rem;
 }
 
-.scrollFadeAnimation {
-	view-timeline-name: --scrollFade;
-	view-timeline-axis: block;
-	animation-timeline: --scrollFade;
-	animation-name: show;
-	animation-range: entry 10% cover 50%;
-	animation-fill-mode: both;
-  }
