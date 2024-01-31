@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let products= getProducts()
 let stockLimit
+const offerItems = products.filter(Items => Items.offer== true)
+console.log(offerItems[0].title)
+
 
 const mostrarProductoPorId = (idProducto) => {
     try {
@@ -51,7 +54,7 @@ const mostrarProductoPorId = (idProducto) => {
                                     <dt class="col-3 text-secondary">categoria:</dt>
                                     <dd class="col-9 text-white"><strong>${productoEspecifico.category}</strong></dd>
                                     <dt class="col-3 text-secondary">marca</dt>
-                                    <dd class="col-9 text-white"><strong>${productoEspecifico.marca}</strong></dd>
+                                    <dd class="col-9 text-white"><strong>${productoEspecifico.brand}</strong></dd>
                                 </div>
                                 <hr />
                                 <div class="row mb-4">
@@ -116,12 +119,8 @@ const mostrarProductoPorId = (idProducto) => {
                                         <td class="py-2"></td>
                                     </tr>
                                     <tr>
-                                        <th class="py-2">Ancho</th>
-                                        <td class="py-2">${productoEspecifico.medida2}</td>
-                                    </tr>
-                                    <tr>
                                         <th class="py-2">Alto</th>
-                                        <td class="py-2">${productoEspecifico.medida1}</td>
+                                        <td class="py-2">${productoEspecifico.size}</td>
                                     </tr>
                                     </table>
                                 </div>
@@ -132,51 +131,25 @@ const mostrarProductoPorId = (idProducto) => {
                             <div class="px-0 border-dark rounded-2 shadow-0">
                                 <div class="card border-dark">
                                 <div class="card-body bg-dark text-white">
-                                    <h5 class="card-title text-center mb-3 ">Articulos Similares</h5>
-                                    <div class="d-flex mb-3 similarHover">
-                                    <a href="./404.html" class="me-3 ">
-                                        <img src="../assets/img/teclado.png" style="min-width: 96px; height: 96px;" class="img-md w-100" />
-                                    </a>
-                                    <div class="info ">
-                                        <a href="./404.html" class="nav-link mb-1">
-                                        Teclado Xpg Gaming Red Switch Winter <br />
-                                        </a>
-                                        <strong class="text-success"> $85.960,00</strong>
-                                    </div>
-                                    </div>
-                    
-                                    <div class="d-flex mb-3 similarHover">
-                                    <a href="./404.html" class="me-3">
-                                        <img src="../assets/img/gabinete.png" style="min-width: 96px; height: 96px;" class="img-md w-100 " />
-                                    </a>
-                                    <div class="info">
-                                        <a href="./404.html" class="nav-link mb-1">
-                                        Gabinete Senty k20 Super <br />
-                                        
-                                        </a>
-                                        <strong class="text-success"> $82.980,00</strong>
-                                    </div>
-                                    </div>
-                    
-                                    <div class="d-flex mb-3 similarHover">
-                                    <a href="./404.html" class="me-3">
-                                        <img src="../assets/img/placaVideo.png" style="min-width: 96px; height: 96px;" class="img-md" />
-                                    </a>
-                                    <div class="info">
-                                        <a href="./404.html" class="nav-link mb-1"> Placa video RTX 3080 8GB </a>
-                                        <strong class="text-success"> $1.235.000.00</strong>
-                                    </div>
-                                    </div>
-                    
-                                    <div class="d-flex similarHover">
-                                    <a href="./404.html" class="me-3">
-                                        <img src="../assets/img/silla.png" style="min-width: 96px; height: 96px;" class="img-md" />
-                                    </a>
-                                    <div class="info">
-                                        <a href="./404.html" class="nav-link mb-1"> Silla Gamer Ergonomica Reclinable </a>
-                                        <strong class="text-success"> $162.350,90</strong>
-                                    </div>
-                                    </div>
+                                    <h5 class="card-title text-center mb-3 ">Nuestras Ofertas</h5>
+                                    ${
+                                        products.filter(product => product.offer === true).map(product => (`
+                                            <div class="d-flex mb-3 similarHover" onclick="location.href='#${
+                                                product.id
+                                            }';location.reload()" >
+                                                <div class="me-3">
+                                                <img  src=${product.image} style="min-width: 96px; height: 96px;" class="img-md w-100" />
+                                                </div>
+                                                <div class="info">
+                                                <div  class="nav-link mb-1" >
+                                                    ${product.title} <br />
+                                                </div>
+                                                <strong class="text-success"> $ ${product.price}</strong>
+                                                </div>
+                                            </div>
+                                        `)).join('')
+                                    }
+
                                 </div>
                                 </div>
                             </div>
@@ -190,10 +163,11 @@ const mostrarProductoPorId = (idProducto) => {
     } catch (error) {
         console.error('Error al mostrar el producto:', error);
     }
+    const refreshBtn = document.querySelector("#refresh")
     const btnRestar = document.querySelector("#btnRestar")
 const btnSumar = document.querySelector("#btnSumar")
 const Quantity = document.querySelector("#productQuantity")
-console.log(Quantity.value)
+
 
 const sumar = () => {
     let valor = parseInt(Quantity.value);
