@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/navBar.css"></link>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -15,120 +11,100 @@
     </header>
     <main>
         <div class="container text-center text-light">
-            <h1 class="display-2 fw-normal mx-auto mb-3">HardTech</h1>
+            <h1 class="display-2 fw-normal mx-auto my-4 my-sm-3 my-md-2 my-lg-1 invisible">HardTech</h1>
         </div>
-        <section class="container-fluid mt-5 text-center d-flex justify-content-center align-items-center">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner ">
-                    <div class="carousel-item active">
-                        <img src="https://plus.unsplash.com/premium_photo-1681426669771-d2113672a49b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-25 h-25  " alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-25 h-25 " alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-25 h-25  " alt="">
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-auto ms-auto">
+                    <div class="col text-center">
+                      <label class="main__colSw">
+                        <input class="main__colSwIn" type="checkbox" />
+                        <span class="main__colSwSl slider round"></span>
+                      </label>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+            </div>
+        </div>
+        
+        <section class="container-fluid mb-5 py-3 text-center d-flex justify-content-center align-items-center">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="main__carouselDivContainer carousel-inner rounded-1">
+                  <div class="main__carouselDivImg carousel-item active img-fluid object-fit-contain" data-bs-interval="4000">
+                    <img src="https://media.istockphoto.com/id/1367851467/es/foto/hombre-de-negocios-inversi%C3%B3n-y-emprendedor-trading-mercado-de-valores-y-gr%C3%A1fico-de-discusi%C3%B3n-y.jpg?s=2048x2048&w=is&k=20&c=-HerEnx6PyAkxfHK3rcxAjwF55eujiEK904-FuxItYk=" class="main__carouselImg d-block w-100" alt="...">
+                  </div>
+                  <div class="main__carouselDivImg carousel-item img-fluid object-fit-contain" data-bs-interval="4000">
+                    <img src="https://media.istockphoto.com/id/1813326918/es/foto/tecnolog%C3%ADa-en-las-manos-de-empresarios.jpg?s=2048x2048&w=is&k=20&c=73s4wsZU9rknZYy0_YyNg6CHbALtEAKuapqIlup9F2Q=" class="main__carouselImg d-block w-100" alt="...">
+                  </div>
+                  <div class="main__carouselDivImg carousel-item img-fluid object-fit-contain" data-bs-interval="4000">
+                    <img src="https://media.istockphoto.com/id/1208320608/es/foto/engineer-realiza-el-desmontaje-de-la-ram-para-desmontar-y-reparar-un-port%C3%A1til.jpg?s=2048x2048&w=is&k=20&c=PsIEb5M5tKodV733H4GiK9AjsIhziy6q5x6gtzFrQiY=" class="main__carouselImg d-block w-100" alt="...">
+                  </div>
+                  <div class="main__carouselDivImg carousel-item img-fluid object-fit-contain" data-bs-interval="4000">
+                    <img src="https://media.istockphoto.com/id/1066158332/es/foto/un-empleado-de-servicio-de-reparaci%C3%B3n-de-computadoras.jpg?s=2048x2048&w=is&k=20&c=JWpgGi3u5C9zUUUEvu1cm29ZZir6XXpCKoQU9nANCqg=" class="main__carouselImg d-block w-100" alt="...">
+                  </div>
+                  <div class="main__carouselDivImg carousel-item img-fluid object-fit-contain" data-bs-interval="4000">
+                    <img src="https://media.istockphoto.com/id/1208320608/es/foto/engineer-realiza-el-desmontaje-de-la-ram-para-desmontar-y-reparar-un-port%C3%A1til.jpg?s=2048x2048&w=is&k=20&c=PsIEb5M5tKodV733H4GiK9AjsIhziy6q5x6gtzFrQiY=" class="main__carouselImg d-block w-100" alt="...">
+                  </div>
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev" >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next" >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
         </section>
 
         <section class="main__productsFilter">
         </section>
-
-        <section class="container head__cardsContainer my-3 bg-danger py-5 pt-1 rounded-1">
-            <div>
-                <!-- <div class="dropdown col-auto ms-auto">
-                    <button class="btn btn-light dropdown-toggle m-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Productos
+        
+        <section class="container main__cardsContainer">
+            <!-- <div class="row">
+                <div class="col">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <ul class="dropdown-menu mx-auto">
-                      <li><a class="dropdown-item" href="#">20</a></li>
-                      <li><a class="dropdown-item" href="#">30</a></li>
-                      <li><a class="dropdown-item" href="#">40</a></li>
-                    </ul>
-                  </div> -->
-                  
-                  <div class="row pb-2">
-                    <label for="validationCustom04" class="col col-4 col-sm-2 col-lg-1 ms-auto pe-0 form-label text-light lh-1 text-center">Items por pag.</label>
-                    <div class="col col-auto mx-0 px-1">
-                    <select class="form-select" id="validationCustom04" required>
-                      <!-- <option selected disabled value="" class="col-auto px-0 mx-0"></option> -->
-                      <option class="col-auto">20</option>
-                      <option class="col-auto">30</option>
-                      <option class="col-auto">40</option>
-                    </select>
-                    </div>
-                    
-                  </div>
-                  
-                  <!-- <div class="btn-group h-50 col-2">
-                    <button type="button" class="btn btn-light">Productos</button>
-                    <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">10</a></li>
-                      <li><a class="dropdown-item" href="#">20</a></li>
-                      <li><a class="dropdown-item" href="#">30</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">40</a></li>
-                    </ul>
-                  </div> -->
-            </div>
-
-            <div class="main__productsTable row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 gy-2">
-            </div>
-        </section>
-
-        <section class="container p-0">
-            <nav class="row row-cols-1">
-                
-                <div class="col-auto m-auto">
-                    <ul class="pagination pagination-sm">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#"> &laquo; </a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">4</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">5</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">&raquo;</a>
-                        </li>
-                    </ul>
                 </div>
-                
-            </nav>
-        </section>
+                <div class="col">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div> -->
+            <div class="row mb-4">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel main__pagesTable">
 
+                      <div class="carousel-item active">
+                        <div class="main__productsTable">
+                        </div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <div class="main__productsTable_page_2">
+                        </div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <div class="productstabl">
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <footer>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="module" src="./js/index.js"></script>
 </body>
