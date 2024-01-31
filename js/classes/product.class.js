@@ -11,8 +11,8 @@ export class Product {
     detail2,
     detail3,
     detail4,
-    medida1,
-    marca,
+    size,
+    brand,
     offer
   ) {
     this.id = id;
@@ -26,8 +26,8 @@ export class Product {
     this.detail2 = detail2;
     this.detail3 = detail3;
     this.detail4 = detail4;
-    this.medida1 = medida1;
-    this.marca = marca;
+    this.size = size;
+    this.brand = brand;
     this.offer = offer;
   }
 }

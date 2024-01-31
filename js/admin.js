@@ -34,8 +34,8 @@ const cargarDatos = () => {
       producto.detail2,
       producto.detail3,
       producto.detail4,
-      producto.medida1,
-      producto.marca
+      producto.size,
+      producto.brand
     );
     cuerpoTabla.innerHTML += `
     <tr >
@@ -71,8 +71,8 @@ window.mostrarModal = (id) => {
   document.getElementById("modaldetail2").value = datos[index].detail2;
   document.getElementById("modaldetail3").value = datos[index].detail3;
   document.getElementById("modaldetail4").value = datos[index].detail4;
-  document.getElementById("modalmedida1").value = datos[index].medida1;
-  document.getElementById("modalmarca").value = datos[index].marca;
+  document.getElementById("modalsize").value = datos[index].size;
+  document.getElementById("modalbrand").value = datos[index].brand;
 
   myModal.show();
 };
@@ -89,8 +89,8 @@ const UpdateProduct = (e) => {
   datos[index].detail2 = document.getElementById("modaldetail2").value;
   datos[index].detail3 = document.getElementById("modaldetail3").value;
   datos[index].detail4 = document.getElementById("modaldetail4").value;
-  datos[index].medida1 = document.getElementById("modalmedida1").value;
-  datos[index].marca = document.getElementById("modalmarca").value;
+  datos[index].size = document.getElementById("modalsize").value;
+  datos[index].brand = document.getElementById("modalbrand").value;
 
   localStorage.setItem("products", JSON.stringify(datos));
 
@@ -132,8 +132,8 @@ const agregarProducto = (event) => {
   let detail2 = document.getElementById("detail2").value;
   let detail3 = document.getElementById("detail3").value;
   let detail4 = document.getElementById("detail4").value;
-  let medida1 = document.getElementById("medida1").value;
-  let marca = document.getElementById("marca").value;
+  let size = document.getElementById("size").value;
+  let brand = document.getElementById("brand").value;
 
   let producto = new Product(
     id,
@@ -147,8 +147,8 @@ const agregarProducto = (event) => {
     detail2,
     detail3,
     detail4,
-    medida1,
-    marca
+    size,
+    brand
   );
  
   localStorage.setItem("products", JSON.stringify([...datos, producto]));
