@@ -1,5 +1,15 @@
 @import url(./main.css);
+.table{
+  --bs-table-bg: rgba(0, 0, 0, 0.705) !important;
+  
+}
 
+.bg-body{
+  background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
 .btn-rojo {
   background-color: var(--color-red) !important;
 }
