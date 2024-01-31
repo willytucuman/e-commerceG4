@@ -3,14 +3,13 @@ import { getProducts } from "./services/getProducts.js";
 import { setProducts } from "./services/setProducts.js";
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import {protectedAdminRoute} from "./routes/protectedAdminRoute.js"
+import { protectedAdminRoute } from "./routes/protectedAdminRoute.js";
 
 const cuerpoTabla = document.querySelector("#cuerpo-tabla");
 const myModal = new bootstrap.Modal(document.getElementById("modalGift"));
 let btn_eliminar = document.querySelectorAll(".btn-delete");
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   Navbar();
   protectedAdminRoute();
   Footer();
@@ -23,25 +22,32 @@ let idProductUpdate = null;
 const cargarDatos = () => {
   cuerpoTabla.innerHTML = "";
   datos.map((producto) => {
-    const product = new Product( 
+    const product = new Product(
       producto.id,
       producto.image,
       producto.title,
       producto.description,
       producto.price,
       producto.category,
-      producto.stock
+      producto.stock,
+      producto.detail1,
+      producto.detail2,
+      producto.detail3,
+      producto.detail4,
+      producto.medida1,
+      producto.marca
     );
     cuerpoTabla.innerHTML += `
     <tr >
-      <td ><img class="rounded  img-thumbnail"  src="${product.image}" alt="${product.title}" width="100"></td>
-      <td>${product.title}</td>
-      <td class="ocultar ">${product.description}</td>
-      <td class="ocultar2">$${product.price}</td>
-      <td class="ocultar2">${product.stock}</td>
-      <td class="ocultar3">${product.category}</td>
+      <td class="align-middle"><img class="bg-transparent "  src="${product.image}" alt="${product.title}" width="100"></td>
+      <td class="text-light  align-middle">${product.title}</td>
+      <td class="ocultar text-light  align-middle">${product.description}</td>
+      <td class="ocultar2 text-light align-middle">$${product.price}</td>
+      <td class="ocultar2 text-light align-middle">${product.stock}</td>
+      <td class="ocultar3 text-light align-middle">${product.category}</td>
+
       
-      <td class="width=100%"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal(${product.id})">Update</button>
+      <td class="width=100% align-middle"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal('${product.id}')">Update</button>
       <button class="btn btn-rojo btn-delete  mt-1 w-100 text-light" id="${product.id} ">Delete</button>
       </td>
       
@@ -54,30 +60,40 @@ const cargarDatos = () => {
 window.mostrarModal = (id) => {
   console.log(id);
   idProductUpdate = id;
-  let index = datos.findIndex((producto) => producto.id === idProductUpdate);
+  let index = datos.findIndex((producto) => producto.id == idProductUpdate);
 
   document.getElementById("modaltitle").value = datos[index].title;
   document.getElementById("modaldescription").value = datos[index].description;
   document.getElementById("modalprice").value = datos[index].price;
   document.getElementById("modalcategory").value = datos[index].category;
   document.getElementById("modalstock").value = datos[index].stock;
+  document.getElementById("modaldetail1").value = datos[index].detail1;
+  document.getElementById("modaldetail2").value = datos[index].detail2;
+  document.getElementById("modaldetail3").value = datos[index].detail3;
+  document.getElementById("modaldetail4").value = datos[index].detail4;
+  document.getElementById("modalmedida1").value = datos[index].medida1;
+  document.getElementById("modalmarca").value = datos[index].marca;
 
   myModal.show();
 };
 
 const UpdateProduct = (e) => {
   e.preventDefault();
-  let index = datos.findIndex((producto) => producto.id === idProductUpdate);
+  let index = datos.findIndex((producto) => producto.id == idProductUpdate);
   datos[index].title = document.getElementById("modaltitle").value;
   datos[index].description = document.getElementById("modaldescription").value;
   datos[index].price = document.getElementById("modalprice").value;
   datos[index].category = document.getElementById("modalcategory").value;
   datos[index].stock = document.getElementById("modalstock").value;
+  datos[index].detail1 = document.getElementById("modaldetail1").value;
+  datos[index].detail2 = document.getElementById("modaldetail2").value;
+  datos[index].detail3 = document.getElementById("modaldetail3").value;
+  datos[index].detail4 = document.getElementById("modaldetail4").value;
+  datos[index].medida1 = document.getElementById("modalmedida1").value;
+  datos[index].marca = document.getElementById("modalmarca").value;
 
-  // Guardar los datos actualizados en el localstorage
   localStorage.setItem("products", JSON.stringify(datos));
 
-  // Actualizar la tabla con los datos actualizados
   cuerpoTabla.innerHTML = "";
   cargarDatos();
 
@@ -86,9 +102,9 @@ const UpdateProduct = (e) => {
     text: "Product Edit",
     duration: 3000,
     close: true,
-    gravity: "bottom", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom", 
+    position: "left", 
+    stopOnFocus: true, 
     style: {
       background: "blue)",
       borderRadius: "2rem",
@@ -96,10 +112,10 @@ const UpdateProduct = (e) => {
       fontSize: ".75rem",
     },
     offset: {
-      x: "1.5rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-      y: "1.5rem", // vertical axis - can be a number or a string indicating unity. eg: '2em'
+      x: "1.5rem", 
+      y: "1.5rem", 
     },
-    onClick: function () {}, // Callback after click
+    onClick: function () {},
   }).showToast();
 };
 let myuuid = crypto.randomUUID();
@@ -112,6 +128,12 @@ const agregarProducto = (event) => {
   let price = document.getElementById("price").value;
   let category = document.getElementById("category").value;
   let stock = document.getElementById("stock").value;
+  let detail1 = document.getElementById("detail1").value;
+  let detail2 = document.getElementById("detail2").value;
+  let detail3 = document.getElementById("detail3").value;
+  let detail4 = document.getElementById("detail4").value;
+  let medida1 = document.getElementById("medida1").value;
+  let marca = document.getElementById("marca").value;
 
   let producto = new Product(
     id,
@@ -120,9 +142,15 @@ const agregarProducto = (event) => {
     description,
     price,
     category,
-    stock
+    stock,
+    detail1,
+    detail2,
+    detail3,
+    detail4,
+    medida1,
+    marca
   );
-  //Guardar el nuevo prodcuto en el localStorage juntos con los otros ya existentes
+ 
   localStorage.setItem("products", JSON.stringify([...datos, producto]));
   datos.push(producto);
   document.querySelector("#formGift").reset();
@@ -131,9 +159,9 @@ const agregarProducto = (event) => {
     text: "Product Add",
     duration: 3000,
     close: true,
-    gravity: "bottom", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom", 
+    position: "left", 
+    stopOnFocus: true,
     style: {
       background: "#5eff70",
       borderRadius: "2rem",
@@ -141,14 +169,13 @@ const agregarProducto = (event) => {
       fontSize: ".75rem",
     },
     offset: {
-      x: "1.5rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-      y: "1.5rem", // vertical axis - can be a number or a string indicating unity. eg: '2em'
+      x: "1.5rem", 
+      y: "1.5rem", 
     },
-    onClick: function () {}, // Callback after click
+    onClick: function () {}, 
   }).showToast();
 };
 
-// Función para eliminar un producto de la tabla y del localStorage cuando se hace click en el botón "Delete"
 function actualizar_btn_delete() {
   btn_eliminar = document.querySelectorAll(".btn-delete");
   btn_eliminar.forEach((btn) => {
@@ -157,6 +184,7 @@ function actualizar_btn_delete() {
 }
 function deleteProduct(e) {
   const idbtn = e.currentTarget.id;
+  console.log(idbtn);
   const index = datos.findIndex((producto) => producto.id == idbtn);
   let validar = Swal.fire({
     title: "Are you sure?",
@@ -170,7 +198,7 @@ function deleteProduct(e) {
     if (result.isConfirmed) {
       Swal.fire("Deleted!", "Your file has been deleted.", "success");
       datos.splice(index, 1);
-      // Guardar los datos actualizados en el localstorage
+      
       localStorage.setItem("products", JSON.stringify(datos));
       cargarDatos();
     }
