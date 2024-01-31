@@ -1,6 +1,7 @@
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import {getProducts} from "./services/getProducts.js"
+const incomingId = window.location.href.split('#')[1];
 
 document.addEventListener("DOMContentLoaded", () => {
     Navbar();
@@ -8,28 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let products= getProducts()
-// const url = "https://fakestoreapi.com/products";
-// const getProducts = async () => {
-//     try {
-//         const response = await fetch(url);
-//         console.log(response)
-//         if (!response.ok) {
-//             throw new Error("Error al cargar el archivo: ${response.statusText}");
-//         }
-//         const products = await response.json();
-//         return products;
-//     } catch (error) {
-//         console.error('Error al obtener productos:', error);
-//         return null;
-//     }
-// };
-let idProductoBuscado = 1
 let stockLimit
 
 const mostrarProductoPorId = (idProducto) => {
     try {
-        // const products = await getProducts();
-        // console.log(products)
+
         if (!products) {
             console.log('No se pudieron cargar los productos.');
             return;
@@ -116,14 +100,13 @@ const mostrarProductoPorId = (idProducto) => {
                                         <ul class="list-unstyled mb-0">
                                         <li><i class="bi bi-check-lg text-success me-2"></i></i>${productoEspecifico.detail1}</li>
                                         <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail2}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail3}</li>
+                                        
                                         </ul>
                                     </div>
                                     <div class="col-12 col-md-6 mb-0">
                                         <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail3}</li>
                                         <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail4}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail5}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail6}</li>
                                         </ul>
                                     </div>
                                     </div>
@@ -228,7 +211,7 @@ btnSumar.addEventListener("click",sumar)
 btnRestar.addEventListener("click",restar)
 
 };
-mostrarProductoPorId(idProductoBuscado);
+mostrarProductoPorId(incomingId);
 
 
 

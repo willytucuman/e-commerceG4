@@ -1,6 +1,13 @@
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
-
+const header = document.querySelector("header");
+const head = document.querySelector("head")
+const title = document.getElementsByTagName("title")[0];
+document.addEventListener("DOMContentLoaded", () => {
+    title.innerHTML = "HARD-TECH";
+    Navbar();
+    Footer();
+  });
 const randomNum=() =>{
   return Math.floor(Math.random() * 9) + 1;
 }

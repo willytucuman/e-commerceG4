@@ -3,9 +3,11 @@ import { validateLoginUser } from "./validators/validateLoginUser.js";
 import { showPassword } from "./utils/showPassword.js";
 import { setLoggedUser } from "./services/setLoggedUser.js";
 import { redirectIndex } from "./utils/redirectIndex.js";
+import Footer from "./components/Footer.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   Navbar();
+  Footer();
 });
 
 const showPasswordButton = document.getElementById("showPasswordBtn");
