@@ -100,14 +100,13 @@ const mostrarProductoPorId = (idProducto) => {
                                         <ul class="list-unstyled mb-0">
                                         <li><i class="bi bi-check-lg text-success me-2"></i></i>${productoEspecifico.detail1}</li>
                                         <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail2}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail3}</li>
+                                        
                                         </ul>
                                     </div>
                                     <div class="col-12 col-md-6 mb-0">
                                         <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail3}</li>
                                         <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail4}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail5}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail6}</li>
                                         </ul>
                                     </div>
                                     </div>
