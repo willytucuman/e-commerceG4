@@ -87,3 +87,36 @@ const retrievePageTheme = () => {
   // console.log(checkAtributte)
   // switchTheme;
 };
+
+
+
+
+// products = JSON.parse(localStorage.getItem("products"))
+// // console.log(products);
+// const productsTable = document.querySelector(".main__productsTable");
+// const pagesTable = document.querySelector(".main__pagesTable");
+// const excedentProd = [...products];
+// const prodPerPage = 4;
+// const batchProd = excedentProd.splice(0, prodPerPage-1);
+// // console.log(excedentProd);
+// // console.log(batchProd);
+
+// const pageFrame = (pageId) => {
+//   return `<div class="carousel-item"><div class="main__productsTable main__productsTable_page_${pageId}"></div></div>`
+// }
+// const productsTableX = (pageId) => {
+//   return document.querySelector(`.main__productsTable_page_${pageId}`);
+// }
+
+
+// const pagesRenderProductsTable = (productsArray) => {
+//   pagesTable.innerHTML = "";
+//   if(productsArray.length > prodPerPage) {
+  
+//   } else {
+//     pagesTable.insertAdjacentHTML("beforeend", pageFrame(1));
+//     RenderProductsTable(productsArray, 1);
+//   }
+// };
+
+
