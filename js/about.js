@@ -48,7 +48,7 @@ const aboutContent= `
 					<ul class="row list-unstyled gy-4 d-flex justify-content-evenly align-items-stretch mt-2">
 						<li class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>       
-							<div class="card fondoCards p-2 text-center" style="width: 18rem">
+							<div class="card fondoCards p-2 text-center border border-dark" style="width: 18rem">
 								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Jere.png"
@@ -75,7 +75,7 @@ const aboutContent= `
 						<li
 							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>
-							<div class="card fondoCards p-2 text-center" style="width: 18rem">
+							<div class="card fondoCards p-2 text-center border border-dark" style="width: 18rem">
 								<div class="nosotros__card__image__container  bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Fede.png"
@@ -103,7 +103,7 @@ const aboutContent= `
 						<li
 							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>
-							<div class="card fondoCards p-2 text-center" style="width: 18rem">
+							<div class="card fondoCards p-2 text-center border border-dark" style="width: 18rem">
 								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Facu.png"
@@ -131,7 +131,7 @@ const aboutContent= `
 					</ul>
                     <ul class="row list-unstyled gy-4 justify-content-evenly align-items-stretch mt-3">
                         <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 d-flex justify-content-center align-items-stretch nosotros__card__item"
-						>    <div class="card fondoCards p-2 text-center" style="width: 18rem">
+						>    <div class="card fondoCards p-2 text-center border border-dark" style="width: 18rem">
 								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-Tomas.png"
@@ -159,7 +159,7 @@ const aboutContent= `
 						<li
 							class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 offset-md-2 offset-lg-0 d-flex justify-content-center align-items-stretch nosotros__card__item"
 						>
-							<div class="card fondoCards p-2 text-center" style="width: 18rem">
+							<div class="card fondoCards p-2 text-center border border-dark" style="width: 18rem">
 								<div class="nosotros__card__image__container bg-transparent card-img-top">
 									<img
 										src="../assets/img/about-cristian.png"
