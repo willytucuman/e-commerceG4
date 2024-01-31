@@ -7,9 +7,10 @@ import { showPassword } from "./utils/showPassword.js";
 import { redirectIndex } from "./utils/redirectIndex.js";
 import { createUser } from "./services/createUser.js";
 import { setLoggedUser } from "./services/setLoggedUser.js";
-
+import Footer from "./components/Footer.js"
 document.addEventListener("DOMContentLoaded" , ()=>{
- Navbar()
+ Navbar();
+ Footer();
 })
 
 const showPasswordButton = document.getElementById("showPasswordBtn")
