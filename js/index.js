@@ -71,21 +71,17 @@ const switchTheme = (ev) => {
   }
   localStorage.setItem("pageTheme", JSON.stringify(arrayTheme));
   const valTheme = JSON.parse(localStorage.getItem("pageTheme"));
-  console.log(valTheme[0].theme)
 }
 colorSwitch.addEventListener("change", switchTheme);
 // Hasta aquí Switch cambia-color
 
 const retrievePageTheme = () => {
-  const valueTheme = JSON.parse(localStorage.getItem("pageTheme"))[0].theme;
-  document.body.setAttribute("theme", valueTheme);
-  let checkAtributte = document.querySelector(".main__colSwIn")
-  let temporal;
-  checkAtributte.checked ? temporal="light" : temporal="dark";
-  valueTheme!=temporal ? checkAtributte.click() : null
-  // valueTheme == "dark" ? checkAtributte=false : checkAtributte=true
-  // console.log(checkAtributte)
-  // switchTheme;
+  const retrieveStorage = JSON.parse(localStorage.getItem("pageTheme"));
+  const colorSwitchS = document.querySelector(".main__colSwIn")
+  const storageTheme = (retrieveStorage != null) ? retrieveStorage[0].theme : "dark";
+  const switchStatus = colorSwitchS.checked ? "light" : "dark";
+  document.body.setAttribute("theme", storageTheme);
+  storageTheme!=switchStatus ? colorSwitchS.click() : null
 };
 
 
