@@ -1,9 +1,9 @@
-body{
-	background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg)!important;
-	background-repeat: no-repeat !important;
-	background-attachment: fixed!important;
-	background-size: cover!important;
-  }
+	body{
+		background-image: url(https://wallpapercrafter.com/desktop1/667060-wave-red-lines-light-abstract-backgrounds-curve.jpg)!important;
+		background-repeat: no-repeat !important;
+		background-attachment: fixed!important;
+		background-size: cover!important;
+	}
 
   .divAbout{
 	width: 100%;
@@ -70,10 +70,6 @@ body{
 	border-color: var(--color-primary);
 	transform: scale(1.05);
 	transition: all 0.5s ease-in-out;
-}
-
-.card img {
-	filter: grayscale(100%);
 }
 
 .card-title {
@@ -165,7 +161,7 @@ p {
 
 
 .title {
-	color: var(--color-primary);
+	color: white;
 	font-family: var(--font-principal);
 	font-size: var(--font-size-title);
 }
@@ -177,7 +173,7 @@ p {
 }
 
 .paragraph {
-	color: var(--font-color-primary);
+	color:white;
 	font-family: var(--font-secundaria);
 	font-size: var(--font-size-parrafo);
 	line-height: 2rem;
