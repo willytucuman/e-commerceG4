@@ -200,7 +200,8 @@ input:checked + .main__colSwSl:hover:after {
 }
 .main__inputNameFilter,
 .main__inputCategoryFilter,
-.main__btnFilterClear {
+.main__btnFilterClear,
+.main__inputPriceOfferFilter {
   box-shadow: 1px 1px 15px -5px var(--color-fuente);
   color: var(--color-fondo);
   font-family: var(--font-family);
@@ -211,7 +212,8 @@ input:checked + .main__colSwSl:hover:after {
 }
 .main__inputNameFilter:hover,
 .main__inputCategoryFilter:hover,
-.main__btnFilterClear:hover {
+.main__btnFilterClear:hover,
+.main__inputPriceOfferFilter:hover {
   box-shadow: 1px 1px 25px -5px var(--color-fuente);
   background-color: var(--color-fuente);
   color: var(--color-fondo);
@@ -224,7 +226,8 @@ input:checked + .main__colSwSl:hover:after {
 }
 .main__inputNameFilter:focus,
 .main__inputCategoryFilter:focus,
-.main__btnFilterClear:focus {
+.main__btnFilterClear:focus,
+.main__inputPriceOfferFilter:focus {
   box-shadow: 1px 1px 25px -5px var(--color-shadow);
   background-color: var(--color-fuente);
 }
