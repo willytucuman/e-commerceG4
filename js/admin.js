@@ -9,6 +9,11 @@ const cuerpoTabla = document.querySelector("#cuerpo-tabla");
 const myModal = new bootstrap.Modal(document.getElementById("modalGift"));
 let btn_eliminar = document.querySelectorAll(".btn-delete");
 
+document.addEventListener("DOMContentLoaded", () => {
+  Navbar();
+  protectedAdminRoute();
+  Footer();
+});
 setProducts();
 
 const datos = getProducts();
@@ -33,16 +38,17 @@ const cargarDatos = () => {
       producto.brand
     );
     cuerpoTabla.innerHTML += `
-    <tr>
-      <td><img class="rounded  img-thumbnail"  src="${product.image}" alt="${product.title}" width="100"></td>
-      <td>${product.title}</td>
-      <td class="ocultar ">${product.description}</td>
-      <td class="ocultar2">$${product.price}</td>
-      <td class="ocultar2">${product.stock}</td>
-      <td class="ocultar3">${product.category}</td>
+    <tr >
+      <td class="align-middle"><img class="bg-transparent "  src="${product.image}" alt="${product.title}" width="100"></td>
+      <td class="text-light  align-middle">${product.title}</td>
+      <td class="ocultar text-light  align-middle">${product.description}</td>
+      <td class="ocultar2 text-light align-middle">$${product.price}</td>
+      <td class="ocultar2 text-light align-middle">${product.stock}</td>
+      <td class="ocultar3 text-light align-middle">${product.category}</td>
+
       
-      <td class="width=100%"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal(${product.id})">Update</button>
-      <button class="btn btn-primary btn-delete mt-1 w-100" id="${product.id} ">Delete</button>
+      <td class="width=100% align-middle"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal('${product.id}')">Update</button>
+      <button class="btn btn-rojo btn-delete  mt-1 w-100 text-light" id="${product.id} ">Delete</button>
       </td>
       
     </tr>
@@ -201,4 +207,4 @@ function deleteProduct(e) {
 
 document.querySelector("#formGift").addEventListener("submit", agregarProducto);
 document.querySelector("#formModal").addEventListener("submit", UpdateProduct);
-cargarDatos();
+cargarDatos()
