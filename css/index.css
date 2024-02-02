@@ -8,6 +8,7 @@
   /* --color-hover: rgb(0, 110, 255); */
   --color-hover: rgb(0, 174, 255);
   --color-productCard: #e725132a;
+  --color-formBorder: transparent;
   --font-family: "Tektur", "Bungee", "Quantico";
   --image-fondo: url(/assets/img/fondo1920x1080.jpg);
 }
@@ -17,6 +18,7 @@
   --color-shadow: rgb(83, 0, 0);
   /* --color-shadow: rgb(0, 110, 255); */
   --color-hover: rgba(255, 136, 0, 0.897);
+  --color-formBorder: #ffffff79;
   --color-productCard: #fdececa4;
   --image-fondo: url(/assets/img/fondoBlanco1280x720.png);
 }
@@ -208,8 +210,8 @@ input:checked + .main__colSwSl:hover:after {
   font-family: var(--font-family);
   font-weight: 500;
   background-color: var(--color-fuente);
-  /* border-color: var(--color-fuente); */
-  border-width: 0px;
+  border-color: var(--color-formBorder);
+  border-width: 0.5px;
 }
 .main__inputNameFilter:hover,
 .main__inputCategoryFilter:hover,
@@ -218,6 +220,7 @@ input:checked + .main__colSwSl:hover:after {
   box-shadow: 1px 1px 25px -5px var(--color-fuente);
   background-color: var(--color-fuente);
   color: var(--color-fondo);
+  border-color: var(--color-fondo);
 }
 .main__categoriesOption {
   background-color: var(--color-fuente);
@@ -237,4 +240,10 @@ h1 {
 }
 .main__carouselDivContainer {
   box-shadow: 1px 1px 25px -5px var(--color-fuente);
+}
+.main__inputPriceOfferFilter, .main__inputCategoryFilter {
+  cursor: pointer;
+}
+.navBar {
+  background: rgba(255, 0, 0, 0.01);
 }

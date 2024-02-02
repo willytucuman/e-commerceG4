@@ -30,7 +30,6 @@ const filterContent = `<form class="main__formProductFilter row g-3 justify-cont
 </div>
 <div class="col col-auto">
     <select class="main__inputCategoryFilter form-select">
-        
     </select>
 </div>
 <div class="col-auto">
@@ -74,13 +73,9 @@ const ProductsFilter = () => {
   renderCategoryFilter();
 
   const renderFilteredProducts = (inputName, inputOrder, inputCategory) => {
-    console.log(inputName)
     let filteredProducts = nameProductFilter(inputName);
-    console.log(filteredProducts)
     filteredProducts = priceOfferFilter(inputOrder, filteredProducts)
-    console.log(filteredProducts)
     filteredProducts = categoryProductFilter(inputCategory, filteredProducts);
-    console.log(filteredProducts)
     filteredProducts != ""
       ? pagesRenderProductsTable(filteredProducts)
       : (pagesTable.innerHTML = "")+(pagesTable.insertAdjacentHTML("beforeend", pageFrame(0)))+(productsTableX(0).parentElement.classList.add("active"))+(productsTableX(0).innerHTML = tableMsjNotFound);
