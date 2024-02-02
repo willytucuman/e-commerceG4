@@ -207,4 +207,4 @@ function deleteProduct(e) {
 
 document.querySelector("#formGift").addEventListener("submit", agregarProducto);
 document.querySelector("#formModal").addEventListener("submit", UpdateProduct);
-cargarDatos();
+cargarDatos()

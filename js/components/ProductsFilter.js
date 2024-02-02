@@ -14,6 +14,14 @@ const filterContent = `<form class="main__formProductFilter row g-3 justify-cont
     </div>
 </div>
 <div class="col col-auto">
+    <select class="main__inputPriceOfferFilter form-select">
+      <option disabled selected hidden class="default" value=""> Ordenar por precio </option>
+      <option class="main__PriceOfferFilterOption" value="ascendente">Precio ascendente</option>
+      <option class="main__PriceOfferFilterOption" value="descendente">Precio descendente</option>
+      <option class="main__PriceOfferFilterOption" value="oferta">En Oferta</option>
+    </select>
+</div>
+<div class="col col-auto">
     <select class="main__inputCategoryFilter form-select">
         
     </select>
@@ -30,6 +38,7 @@ const ProductsFilter = () => {
   productsFilter.innerHTML = filterContent;
   productsFilter.classList.value = "container mb-4 mt-5";
   const inputNameFilter = document.querySelector(".main__inputNameFilter");
+  const inputPriceOfferFilter = document.querySelector(".main__inputPriceOfferFilter");
   const inputCategoryFilter = document.querySelector(
     ".main__inputCategoryFilter"
   );
@@ -56,8 +65,9 @@ const ProductsFilter = () => {
   };
   renderCategoryFilter();
 
-  const renderFilteredProducts = (inputName, inputCategory) => {
+  const renderFilteredProducts = (inputName, inputOrder, inputCategory) => {
     let filteredProducts = nameProductFilter(inputName);
+    filteredProducts = priceOfferFilter(inputOrder, filteredProducts)
     filteredProducts = categoryProductFilter(inputCategory, filteredProducts);
     filteredProducts != ""
       ? RenderProductsTable(filteredProducts)
@@ -81,28 +91,52 @@ const ProductsFilter = () => {
     return outgoing;
   };
 
-  const categoryProductFilter = (selectedCategory, productArray) => {
-    const outgoing = productArray.filter(
+  const priceOfferFilter = (selectedOrderOrOffer, productsArray) => {
+    let arrayOrdered = [];
+    if (selectedOrderOrOffer=="ascendente") {
+      return arrayOrdered = productsArray.sort((a, b) => a.price - b.price);
+    } else if (selectedOrderOrOffer=="descendente") {
+      return arrayOrdered = productsArray.sort((a, b) => b.price - a.price);
+    } else if(selectedOrderOrOffer=="oferta") {
+      return arrayOrdered = (productsArray.filter(product => product.offer == true)).sort((a, b) => a.price - b.price);
+    } else {
+      return productsArray;
+    }
+  };
+
+  const categoryProductFilter = (selectedCategory, productsArray) => {
+    const outgoing = productsArray.filter(
       (product) =>
         product.category.toLowerCase() == selectedCategory.toLowerCase()
     );
     if (selectedCategory) {
       return outgoing;
     } else {
-      return productArray;
+      return productsArray;
     }
   };
 
   inputNameFilter.addEventListener("keyup", (e) => {
     renderFilteredProducts(
       e.target.value.toLowerCase(),
+      inputPriceOfferFilter.value,
       inputCategoryFilter.value.toLowerCase()
     );
+  });
+
+  inputPriceOfferFilter.addEventListener("change", (e) => {
+    renderFilteredProducts(
+      inputNameFilter.value.toLowerCase(),
+      e.target.value,
+      inputCategoryFilter.value.toLowerCase()
+    );
+    document.activeElement.blur();
   });
 
   inputCategoryFilter.addEventListener("change", (e) => {
     renderFilteredProducts(
       inputNameFilter.value.toLowerCase(),
+      inputPriceOfferFilter.value,
       e.target.value.toLowerCase()
     );
     document.activeElement.blur();
@@ -111,6 +145,7 @@ const ProductsFilter = () => {
   btnFilterClear.addEventListener("click", (e) => {
     e.preventDefault();
     inputNameFilter.value = "";
+    inputPriceOfferFilter.value = "";
     inputCategoryFilter.value = "";
     RenderProductsTable(products);
     document.activeElement.blur();
