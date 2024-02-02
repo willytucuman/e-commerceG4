@@ -16,6 +16,19 @@ html {
 body{
     background: var(--color-background);
 }
+body::-webkit-scrollbar {
+	width: 1.3vh;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(209, 30, 30, 0.589);
+	border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb:hover {
+	background-color: #ff00009a;
+}
+body::-webkit-scrollbar-track {
+	background-color: #2e2c2c;
+}
 *{
     margin: 0;
 	padding: 0;
