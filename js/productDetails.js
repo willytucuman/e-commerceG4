@@ -24,7 +24,7 @@ const mostrarProductoPorId = (idProducto) => {
         const productoEspecifico = products.find(producto => producto.id == idProducto);
         const elementoAMostrar = document.getElementById('productDetail')
                     const contenidoHTML = `
-                    <section class="py-5 bg-black mt-5">
+                    <section class="py-5 mt-5">
                     <div class="container">
                         <div class="row gx-5">
                             <aside class="col-lg-6">
@@ -83,7 +83,7 @@ const mostrarProductoPorId = (idProducto) => {
                     </div>
                 </section>
             
-                <section class="bg-black py-4">
+                <section class="bg-transparent py-4">
                         <div class="container">
                         <div class="row gx-4">
                             <div class="col-lg-8 mb-4">
@@ -136,7 +136,7 @@ const mostrarProductoPorId = (idProducto) => {
                                         products.filter(product => product.offer === true).map(product => (`
                                             <div class="d-flex mb-3 similarHover" onclick="location.href='#${
                                                 product.id
-                                            }';location.reload()" >
+                                            }';location.reload();window.location.hash='' " >
                                                 <div class="me-3">
                                                 <img  src=${product.image} style="min-width: 96px; height: 96px;" class="img-md w-100" />
                                                 </div>
