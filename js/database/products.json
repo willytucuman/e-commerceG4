@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Monitor Gamer 24 Samsung Curvo Full Hd 144hz",
-    "price": 390.999,
+    "price": 390999,
     "description": "El monitor de juegos curvo Samsung de 24 pulgadas ofrece una experiencia inmersiva con su pantalla Full HD y una frecuencia de actualización de 144Hz. Conectividad DP G50 y resolución de 1080P, todo en un elegante color negro.",
     "category": "monitores",
     "image": "../assets/img-database/monitor.png",
@@ -19,7 +19,7 @@
   {
     "id": 2,
     "title": "Monitor Philips V 193v5lhsb2/55 Lcd Full Hd Negro 18,5",
-    "price": 94.499,
+    "price": 94499,
     "description": "El monitor Philips V 193v5lhsb2/55 es un monitor LCD de 18,5 pulgadas con resolución Full HD y color negro. Ofrece una experiencia visual nítida y de alta calidad para diversas aplicaciones informáticas",
     "category": "monitores",
     "image": "../assets/img-database/monitor-philips.png",
@@ -35,7 +35,7 @@
   {
     "id": 3,
     "title": "Mens Cotton JacketTeclado bluetooth Logitech K380",
-    "price": 64.999,
+    "price": 64999,
     "description": "El teclado Bluetooth Logitech K380 es un teclado inalámbrico compacto y versátil con distribución QWERTY español y color grafito. Es compatible con múltiples dispositivos y cuenta con teclas cómodas y silenciosas, lo que lo hace ideal para trabajar en diferentes dispositivos con facilidad",
     "category": "teclados",
     "image": "../assets/img-database/D_NQ_NP_608379-MLA50844629761_072022-O-PhotoRoom.png-PhotoRoom.png",
@@ -51,7 +51,7 @@
   {
     "id": 4,
     "title": "Teclado gamer Redragon Kumara K552",
-    "price": 150.99,
+    "price": 15099,
     "description": "El teclado gamer Redragon Kumara K552 es un teclado mecánico con interruptores Outemu Blue, diseñado para ofrecer una experiencia de juego de alta calidad. Cuenta con distribución QWERTY en español latinoamérica, retroiluminación RGB y un diseño compacto y duradero en color negro",
     "category": "teclados",
     "image": "../assets/img-database/teclado.png",
@@ -67,7 +67,7 @@
   {
     "id": 5,
     "title": "Steelseries Rival 5",
-    "price": 269.998,
+    "price": 269998,
     "description": "Sensor de aire TrueMove: un sensor de seguimiento personalizado real 1 a 1, 18.000 CPI, 400 IPS, 40G de aceleración y seguimiento de inclinación. 9 botones programables: cada botón es totalmente personalizable para sus teclas de acceso rápido más importantes.",
     "category": "mouse",
     "image": "../assets/img-database/mouse-steelseries.png",
@@ -84,7 +84,7 @@
   {
     "id": 6,
     "title": "Logitech G Series Lightsync G203 negro",
-    "price": 38.999,
+    "price": 38999,
     "description": "Logitech diseña productos y experiencias que ocupan un lugar cotidiano en la vida de las personas, poniendo foco en la innovación y la calidad. Su objetivo es crear momentos verdaderamente únicos y significativos para sus usuarios.",
     "category": "mouse",
     "image": "../assets/img-database/Logitecg_G_Series.png",
@@ -100,7 +100,7 @@
   {
     "id": 7,
     "title": "HyperX Cloud Flight HX-HSCF",
-    "price": 114.999,
+    "price": 114999,
     "description": "Ideado para los gamers más exigentes, el HyperX Cloud Flight tiene todo lo que un jugador busca. Su conectividad inalámbrica permite moverte de un lugar a otro sin cables.",
     "category": "auriculares",
     "image": "../assets/img-database/auriculares-hx.png",
@@ -116,7 +116,7 @@
   {
     "id": 8,
     "title": "Steelseries Arctis X9",
-    "price": 276.612,
+    "price": 276612,
     "description": "¡Experimenta la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los SteelSeries Arctis 9X no te pierdes ningún detalle y escuchas el audio tal y como fue diseñado por los creadores.",
     "category": "auriculares",
     "image": "../assets/img-database/auriculares-steelseries.png",

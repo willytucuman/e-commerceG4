@@ -1,6 +1,8 @@
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import {getProducts} from "./services/getProducts.js"
+import {getProducts} from "./services/getProducts.js";
+import { formatCurrency } from "./utils/formatCurrency.js";
+
 const incomingId = window.location.href.split('#')[1];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,7 +47,7 @@ const mostrarProductoPorId = (idProducto) => {
                                 </div>
                                 <div class="mb-3">
                                     <span class="text-secondary"><strong>Precio</strong></span>
-                                    <span class="h5 text-white"><strong>$ ${productoEspecifico.price}<strong></span>
+                                    <span class="h5 text-white"><strong> ${formatCurrency(productoEspecifico.price)}<strong></span>
                                 </div>
                                 <p class="text-white textJustify">
                                     ${productoEspecifico.description}
@@ -144,7 +146,7 @@ const mostrarProductoPorId = (idProducto) => {
                                                 <div  class="nav-link mb-1" >
                                                     ${product.title} <br />
                                                 </div>
-                                                <strong class="text-success"> $ ${product.price}</strong>
+                                                <strong class="text-success">  ${formatCurrency(product.price)}</strong>
                                                 </div>
                                             </div>
                                         `)).join('')
