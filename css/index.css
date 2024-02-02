@@ -68,6 +68,7 @@ body {
   transform: scale(1.05);
   transition: all 0.3s;
   box-shadow: 22px 20px 19px -6px var(--color-shadow);
+  cursor: pointer;
 }
 .main__carouselImg:hover {
   transform: scale(1.75);

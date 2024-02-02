@@ -9,19 +9,21 @@ const headIndexCss = `<link rel="stylesheet" href="./css/index.css">`;
 const head = document.getElementsByTagName("head")[0];
 const title = document.getElementsByTagName("title")[0];
 const headFaviconContent = `<link rel="icon" type="image/icon" sizes="" href="./assets/favicon/favicon-red-48px-HT.ico" />`;
+setProducts();
 let products;
 
 document.addEventListener("DOMContentLoaded", () => {
+  products = getProducts();
   retrievePageTheme();
   title.innerHTML = "HARD-TECH";
   Navbar();
   setAdminUser();
   setProducts();
-  products = getProducts();
-  ProductsFilter();
-  RenderProductsTable(products);
   Footer();
   head.insertAdjacentHTML("beforeend", headFaviconContent + headIndexCss);
+  pagesRenderProductsTable(products);
+  ProductsFilter();
+  // renderCategoryFilter();
 });
 
 const contentX = `<div class="container">
@@ -59,60 +61,70 @@ cardsContainer.insertAdjacentHTML("afterend", contentX);
 // console.log(inputCategoryFilter.parentNode.innerHTML)
 
 // Desde aquí Switch cambia-color
-const colorSwitch = document.querySelector('.main__colSw input[type="checkbox"]');
+const colorSwitch = document.querySelector(
+  '.main__colSw input[type="checkbox"]'
+);
 const switchTheme = (ev) => {
   const arrayTheme = [];
   if (ev.target.checked) {
     document.body.setAttribute("theme", "light");
-    arrayTheme.push({ theme : "light" });
+    arrayTheme.push({ theme: "light" });
   } else {
     document.body.setAttribute("theme", "dark");
-    arrayTheme.push({ theme : "dark" });
+    arrayTheme.push({ theme: "dark" });
   }
   localStorage.setItem("pageTheme", JSON.stringify(arrayTheme));
   const valTheme = JSON.parse(localStorage.getItem("pageTheme"));
-}
+};
 colorSwitch.addEventListener("change", switchTheme);
-// Hasta aquí Switch cambia-color
 
 const retrievePageTheme = () => {
   const retrieveStorage = JSON.parse(localStorage.getItem("pageTheme"));
-  const colorSwitchS = document.querySelector(".main__colSwIn")
-  const storageTheme = (retrieveStorage != null) ? retrieveStorage[0].theme : "dark";
+  const colorSwitchS = document.querySelector(".main__colSwIn");
+  const storageTheme =
+  retrieveStorage != null ? retrieveStorage[0].theme : "dark";
   const switchStatus = colorSwitchS.checked ? "light" : "dark";
   document.body.setAttribute("theme", storageTheme);
-  storageTheme!=switchStatus ? colorSwitchS.click() : null
+  storageTheme != switchStatus ? colorSwitchS.click() : null;
+};
+// Hasta aquí Switch cambia-color
+
+// Desde aquí nuevo código para páginacion interna del index
+
+products = JSON.parse(localStorage.getItem("products"));
+const productsTable = document.querySelector(".main__productsTable");
+const pagesTable = document.querySelector(".main__pagesTable");
+const prodPerPage = 9;
+
+const pageFrame = (pageId) => {
+  return `<div class="carousel-item"><div class="main__productsTable main__productsTable_page_${pageId}"></div></div>`;
+};
+const productsTableX = (pageId) => {
+  return document.querySelector(`.main__productsTable_page_${pageId}`);
 };
 
-
-
-
-// products = JSON.parse(localStorage.getItem("products"))
-// // console.log(products);
-// const productsTable = document.querySelector(".main__productsTable");
-// const pagesTable = document.querySelector(".main__pagesTable");
-// const excedentProd = [...products];
-// const prodPerPage = 4;
-// const batchProd = excedentProd.splice(0, prodPerPage-1);
-// // console.log(excedentProd);
-// // console.log(batchProd);
-
-// const pageFrame = (pageId) => {
-//   return `<div class="carousel-item"><div class="main__productsTable main__productsTable_page_${pageId}"></div></div>`
-// }
-// const productsTableX = (pageId) => {
-//   return document.querySelector(`.main__productsTable_page_${pageId}`);
-// }
-
-
-// const pagesRenderProductsTable = (productsArray) => {
-//   pagesTable.innerHTML = "";
-//   if(productsArray.length > prodPerPage) {
-  
-//   } else {
-//     pagesTable.insertAdjacentHTML("beforeend", pageFrame(1));
-//     RenderProductsTable(productsArray, 1);
-//   }
-// };
-
-
+export const pagesRenderProductsTable = (productsArray) => {
+  let excedentProducts = [...productsArray];
+  pagesTable.innerHTML = "";
+  console.log(excedentProducts.length > prodPerPage);
+  if (excedentProducts.length > prodPerPage) {
+    let batchProducts = [];
+    let i;
+    for (i = 0; excedentProducts.length > prodPerPage; i++) {
+      pagesTable.insertAdjacentHTML("beforeend", pageFrame(i));
+      batchProducts = [];
+      batchProducts = excedentProducts.splice(0, prodPerPage);
+      RenderProductsTable(batchProducts, i);
+    };
+    console.log(i);
+    excedentProducts.length != 0
+      ? pagesTable.insertAdjacentHTML("beforeend", pageFrame(i))+(RenderProductsTable(excedentProducts, i))
+      : null;
+    productsTableX(0).parentElement.classList.add("active");
+  } else {
+    pagesTable.insertAdjacentHTML("beforeend", pageFrame(0));
+    productsTableX(0).parentElement.classList.add("active");
+    console.log(productsTableX(0).parentElement);
+    RenderProductsTable(excedentProducts, 0);
+  }
+};

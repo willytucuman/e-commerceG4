@@ -1,7 +1,14 @@
-import RenderProductsTable from "./RenderProductsTable.js";
+import { pagesRenderProductsTable } from "../index.js";
 import { getProducts } from "../services/getProducts.js";
 let products = getProducts();
 const productsFilter = document.querySelector(".main__productsFilter");
+const pagesTable = document.querySelector(".main__pagesTable");
+const pageFrame = (pageId) => {
+  return `<div class="carousel-item"><div class="main__productsTable main__productsTable_page_${pageId}"></div></div>`;
+};
+const productsTableX = (pageId) => {
+  return document.querySelector(`.main__productsTable_page_${pageId}`);
+};
 const filterContent = `<form class="main__formProductFilter row g-3 justify-content-center">
 <div class="col-11 col-md-4">
     <div class="input-group">
@@ -50,6 +57,7 @@ const ProductsFilter = () => {
     const categoryFirstLine = `<option disabled selected hidden class="default" value=""> Filtrar por categoria </option>`;
     inputCategoryFilter.innerHTML = ``;
     inputCategoryFilter.insertAdjacentHTML("beforeend", categoryFirstLine);
+    products = JSON.parse(localStorage.getItem('products'))
     const categoryFilter = products.map((prod) => {
       const cat =
         prod.category.trim().charAt().toUpperCase() + prod.category.slice(1);
@@ -66,12 +74,16 @@ const ProductsFilter = () => {
   renderCategoryFilter();
 
   const renderFilteredProducts = (inputName, inputOrder, inputCategory) => {
+    console.log(inputName)
     let filteredProducts = nameProductFilter(inputName);
+    console.log(filteredProducts)
     filteredProducts = priceOfferFilter(inputOrder, filteredProducts)
+    console.log(filteredProducts)
     filteredProducts = categoryProductFilter(inputCategory, filteredProducts);
+    console.log(filteredProducts)
     filteredProducts != ""
-      ? RenderProductsTable(filteredProducts)
-      : (productsTable.innerHTML = tableMsjNotFound);
+      ? pagesRenderProductsTable(filteredProducts)
+      : (pagesTable.innerHTML = "")+(pagesTable.insertAdjacentHTML("beforeend", pageFrame(0)))+(productsTableX(0).parentElement.classList.add("active"))+(productsTableX(0).innerHTML = tableMsjNotFound);
   };
 
   const nameProductFilter = (inputWord) => {
@@ -147,7 +159,7 @@ const ProductsFilter = () => {
     inputNameFilter.value = "";
     inputPriceOfferFilter.value = "";
     inputCategoryFilter.value = "";
-    RenderProductsTable(products);
+    pagesRenderProductsTable(products);
     document.activeElement.blur();
   });
 };
