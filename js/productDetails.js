@@ -1,38 +1,41 @@
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import {getProducts} from "./services/getProducts.js";
+import { getProducts } from "./services/getProducts.js";
 import { formatCurrency } from "./utils/formatCurrency.js";
 
-const incomingId = window.location.href.split('#')[1];
+let botonesAgregar = document.querySelectorAll(".boton-agregar");
+const numerito = document.querySelector("#numerito");
+
+const incomingId = window.location.href.split("#")[1];
 
 document.addEventListener("DOMContentLoaded", () => {
-    Navbar();
-    Footer();
+  Navbar();
+  Footer();
 });
 
-let products= getProducts()
-let stockLimit
-const offerItems = products.filter(Items => Items.offer== true)
-console.log(offerItems[0].title)
-
+let products = getProducts();
+let stockLimit;
 
 const mostrarProductoPorId = (idProducto) => {
-    try {
-
-        if (!products) {
-            console.log('No se pudieron cargar los productos.');
-            return;
-        }
-        const productoEspecifico = products.find(producto => producto.id == idProducto);
-        const elementoAMostrar = document.getElementById('productDetail')
-                    const contenidoHTML = `
+  try {
+    if (!products) {
+      console.log("No se pudieron cargar los productos.");
+      return;
+    }
+    const productoEspecifico = products.find(
+      (producto) => producto.id == idProducto
+    );
+    const elementoAMostrar = document.getElementById("productDetail");
+    const contenidoHTML = `
                     <section class="py-5 mt-5">
                     <div class="container">
                         <div class="row gx-5">
                             <aside class="col-lg-6">
                             <div class="bg-transparent rounded-4 mb-3 d-flex justify-content-center">
                                 <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit floatImage" src="${productoEspecifico.image}"/>
+                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit floatImage" src="${
+                                  productoEspecifico.image
+                                }"/>
                                 </a>
                             </div>
                             </aside>
@@ -43,20 +46,28 @@ const mostrarProductoPorId = (idProducto) => {
                                 </h4>
                                 <div class="d-flex flex-row my-3">
                                     <span class="text-success ms-2">In stock</span>
-                                    <span class="text-white"><i class="bi bi-bag mx-1"></i>${productoEspecifico.stock}</span>
+                                    <span class="text-white"><i class="bi bi-bag mx-1"></i>${
+                                      productoEspecifico.stock
+                                    }</span>
                                 </div>
                                 <div class="mb-3">
                                     <span class="text-secondary"><strong>Precio</strong></span>
-                                    <span class="h5 text-white"><strong> ${formatCurrency(productoEspecifico.price)}<strong></span>
+                                    <span class="h5 text-white"><strong> ${formatCurrency(
+                                      productoEspecifico.price
+                                    )}<strong></span>
                                 </div>
                                 <p class="text-white textJustify">
                                     ${productoEspecifico.description}
                                 </p>
                                 <div class="row">
                                     <dt class="col-3 text-secondary">categoria:</dt>
-                                    <dd class="col-9 text-white"><strong>${productoEspecifico.category}</strong></dd>
+                                    <dd class="col-9 text-white"><strong>${
+                                      productoEspecifico.category
+                                    }</strong></dd>
                                     <dt class="col-3 text-secondary">marca</dt>
-                                    <dd class="col-9 text-white"><strong>${productoEspecifico.brand}</strong></dd>
+                                    <dd class="col-9 text-white"><strong>${
+                                      productoEspecifico.brand
+                                    }</strong></dd>
                                 </div>
                                 <hr />
                                 <div class="row mb-4">
@@ -77,9 +88,11 @@ const mostrarProductoPorId = (idProducto) => {
                                     </div>
                                 </div>
                                 <a href="./404.html" class="btn btn-success shadow-0"> Buy now </a>
-                                <a href="./404.html" class="btn similarHover border-dark text-secondary shadow-0"> <i class="bi bi-cart-plus"></i> Add to cart </a>
-                                <a href="./404.html" class="btn btn-dark py-2 icon-hover px-3"> <i class="bi bi-heart-fill text-danger"></i> Save </a>
-                            </div>
+                                <button id=${
+                                  productoEspecifico.id
+                                } class="btn similarHover border-dark text-secondary shadow-0 boton-agregar"> <i class="bi bi-cart-plus"></i> Add to cart </button>
+                                <a href="./404.html" class="btn btn-dark py-2 icon-hover  px-3"> <i class="bi bi-heart-fill text-danger"></i> Save </a>
+                             </div>
                             </main>
                         </div>
                     </div>
@@ -103,15 +116,23 @@ const mostrarProductoPorId = (idProducto) => {
                                     <div class="row mb-2">
                                     <div class="col-12 col-md-6">
                                         <ul class="list-unstyled mb-0">
-                                        <li><i class="bi bi-check-lg text-success me-2"></i></i>${productoEspecifico.detail1}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail2}</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i></i>${
+                                          productoEspecifico.detail1
+                                        }</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${
+                                          productoEspecifico.detail2
+                                        }</li>
                                         
                                         </ul>
                                     </div>
                                     <div class="col-12 col-md-6 mb-0">
                                         <ul class="list-unstyled">
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail3}</li>
-                                        <li><i class="bi bi-check-lg text-success me-2"></i>${productoEspecifico.detail4}</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${
+                                          productoEspecifico.detail3
+                                        }</li>
+                                        <li><i class="bi bi-check-lg text-success me-2"></i>${
+                                          productoEspecifico.detail4
+                                        }</li>
                                         </ul>
                                     </div>
                                     </div>
@@ -122,7 +143,9 @@ const mostrarProductoPorId = (idProducto) => {
                                     </tr>
                                     <tr>
                                         <th class="py-2">Alto</th>
-                                        <td class="py-2">${productoEspecifico.size}</td>
+                                        <td class="py-2">${
+                                          productoEspecifico.size
+                                        }</td>
                                     </tr>
                                     </table>
                                 </div>
@@ -134,23 +157,32 @@ const mostrarProductoPorId = (idProducto) => {
                                 <div class="card border-dark">
                                 <div class="card-body bg-dark text-white">
                                     <h5 class="card-title text-center mb-3 ">Nuestras Ofertas</h5>
-                                    ${
-                                        products.filter(product => product.offer === true).map(product => (`
+                                    ${products
+                                      .filter(
+                                        (product) => product.offer === true
+                                      )
+                                      .map(
+                                        (product) => `
                                             <div class="d-flex mb-3 similarHover" onclick="location.href='#${
-                                                product.id
+                                              product.id
                                             }';location.reload();window.location.hash='' " >
                                                 <div class="me-3">
-                                                <img  src=${product.image} style="min-width: 96px; height: 96px;" class="img-md w-100" />
+                                                <img  src=${
+                                                  product.image
+                                                } style="min-width: 96px; height: 96px;" class="img-md w-100" />
                                                 </div>
                                                 <div class="info">
                                                 <div  class="nav-link mb-1" >
                                                     ${product.title} <br />
                                                 </div>
-                                                <strong class="text-success">  ${formatCurrency(product.price)}</strong>
+                                                <strong class="text-success">  ${formatCurrency(
+                                                  product.price
+                                                )}</strong>
                                                 </div>
                                             </div>
-                                        `)).join('')
-                                    }
+                                        `
+                                      )
+                                      .join("")}
 
                                 </div>
                                 </div>
@@ -160,35 +192,74 @@ const mostrarProductoPorId = (idProducto) => {
                         </div>
                 </section>
                     `;
-                    stockLimit = productoEspecifico.stock
-        elementoAMostrar.innerHTML=contenidoHTML
-    } catch (error) {
-        console.error('Error al mostrar el producto:', error);
-    }
-    const refreshBtn = document.querySelector("#refresh")
-    const btnRestar = document.querySelector("#btnRestar")
-const btnSumar = document.querySelector("#btnSumar")
-const Quantity = document.querySelector("#productQuantity")
+    stockLimit = productoEspecifico.stock;
+    elementoAMostrar.innerHTML = contenidoHTML;
+    actualizarBotonesAgregar();
+  } catch (error) {
+    console.error("Error al mostrar el producto:", error);
+  }
+  const refreshBtn = document.querySelector("#refresh");
+  const btnRestar = document.querySelector("#btnRestar");
+  const btnSumar = document.querySelector("#btnSumar");
+  const Quantity = document.querySelector("#productQuantity");
 
-
-const sumar = () => {
+  const sumar = () => {
     let valor = parseInt(Quantity.value);
-    if(valor<stockLimit){
-        Quantity.value = valor + 1;
+    if (valor < stockLimit) {
+      Quantity.value = valor + 1;
     }
-}
-const restar = () => {
+  };
+  const restar = () => {
     let valor = parseInt(Quantity.value);
     if (valor > 0) {
-        Quantity.value = valor - 1;
+      Quantity.value = valor - 1;
     }
-}
-btnSumar.addEventListener("click",sumar)
-btnRestar.addEventListener("click",restar)
-
+  };
+  btnSumar.addEventListener("click", sumar);
+  btnRestar.addEventListener("click", restar);
 };
 mostrarProductoPorId(incomingId);
 
+function actualizarBotonesAgregar() {
+  botonesAgregar = document.querySelectorAll(".boton-agregar");
+  botonesAgregar.forEach((boton) => {
+    boton.addEventListener("click", agregarAlCarrito);
+  });
+}
+let productCart;
+
+let productCartLS = localStorage.getItem("productCart");
+if (productCartLS) {
+  productCart = JSON.parse(productCartLS);
+  actualizarnumbercart();
+}else{
+    productCart = [];
+}
 
 
+ function agregarAlCarrito(e) {
+  const idBoton = e.currentTarget.id;
+  const cantidad = document.querySelector("#productQuantity").value;
+  const producto = products.find((product) => product.id == idBoton);
+  if (cantidad == 0) {
+    alert("No puede ser 0");
+  } else {
+    if (productCart.some((product) => product.id == idBoton)) {
+        const productoExistente = productCart.find(
+        (product) => product.id == idBoton
+      );
+      productoExistente.cantidad += parseInt(cantidad);
+    }else{
+        producto.cantidad = parseInt(cantidad);
+        productCart.push(producto);
+    }
+    }
+    console.log(productCart);
+    actualizarnumbercart();
+    localStorage.setItem("productCart", JSON.stringify(productCart));
+  }
 
+function actualizarnumbercart(){
+    let nuevoNumero = productCart.reduce((ac,productos) => ac + productos.cantidad, 0);
+    numerito.innerText = nuevoNumero;
+}

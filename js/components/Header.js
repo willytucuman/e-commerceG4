@@ -13,6 +13,7 @@ const Navbar = () => {
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/views/about.html">Nosotros</a></li>
+                <li><span id="numerito" class="text-light">0</span></li>
                 ${
                     loggedUser
                         ? ""
