@@ -1,11 +1,15 @@
 import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import { actualizarnumbercart } from "./services/cart.number.js";
+
 const header = document.querySelector("header");
 const head = document.querySelector("head")
 const title = document.getElementsByTagName("title")[0];
+let  productCart = JSON.parse(localStorage.getItem("productCart"));
 document.addEventListener("DOMContentLoaded", () => {
     title.innerHTML = "HARD-TECH";
     Navbar();
+    actualizarnumbercart(productCart);
     Footer();
   });
 const randomNum=() =>{
