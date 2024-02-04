@@ -88,7 +88,7 @@ const ProductsFilter = () => {
     filteredProducts = categoryProductFilter(inputCategory, filteredProducts);
     filteredProducts != ""
       ? Paginator(filteredProducts, inputQty||10)+(console.log(inputQty))
-      : (pagesTable.innerHTML = "")+(pagesTable.insertAdjacentHTML("beforeend", pageFrame(0)))+(productsTableX(0).parentElement.classList.add("active"))+(productsTableX(0).innerHTML = tableMsjNotFound);
+      : Paginator([], 0)+(productsTableX(0).innerHTML = tableMsjNotFound);
   };
 
   const nameProductFilter = (inputWord) => {

@@ -48,24 +48,33 @@ const Paginator = (productsArray, Qty) => {
   if (excedentProducts.length > Qty) {
     paginationCtrl.innerHTML = "";
     paginationCtrl.insertAdjacentHTML("afterbegin", paginationCtrlFrame);
-    const paginationCtrlsList = document.querySelector(".main__paginationList");
-    const productsFilter = document.querySelector(".main__productsFilter");
     const paginationCtrlNext = document.querySelector(".main__paginationItem_index_next");
     let batchProducts = [];
     let i;
     for (i = 0; excedentProducts.length > Qty; i++) {
-      pagesTable.insertAdjacentHTML("beforeend", pageFrame(i));
-      batchProducts = excedentProducts.splice(0, Qty);
-      RenderProductsTable(batchProducts, i);
-      paginationCtrlNext.insertAdjacentHTML(
-        "beforebegin",
-        paginationCtrlNumber(i)
-      );
+        pagesTable.insertAdjacentHTML("beforeend", pageFrame(i));
+        batchProducts = excedentProducts.splice(0, Qty);
+        RenderProductsTable(batchProducts, i);
+        paginationCtrlNext.insertAdjacentHTML(
+            "beforebegin",
+            paginationCtrlNumber(i)
+            );
+        }
+        excedentProducts.length != 0
+        ? pagesTable.insertAdjacentHTML("beforeend", pageFrame(i))+(RenderProductsTable(excedentProducts, i))+(paginationCtrlNext.insertAdjacentHTML("beforebegin", paginationCtrlNumber(i)))
+        : null;
+        productsTableX(0).parentElement.classList.add("active");
+        run();
+    } else {
+        paginationCtrl.innerHTML = "";
+        pagesTable.insertAdjacentHTML("beforeend", pageFrame(0));
+        productsTableX(0).parentElement.classList.add("active");
+        RenderProductsTable(excedentProducts, 0);
     }
-    excedentProducts.length != 0
-      ? pagesTable.insertAdjacentHTML("beforeend", pageFrame(i))+(RenderProductsTable(excedentProducts, i))+(paginationCtrlNext.insertAdjacentHTML("beforebegin", paginationCtrlNumber(i)))
-      : null;
-    productsTableX(0).parentElement.classList.add("active");
+};
+const run = () => {
+    const paginationCtrlsList = document.querySelector(".main__paginationList");
+    const productsFilter = document.querySelector(".main__productsFilter");
     paginationCtrlsList.addEventListener("click", (e) => {
       console.log(e.target)
       const prevCtrl = paginationCtrlsList.firstElementChild;
@@ -84,11 +93,5 @@ const Paginator = (productsArray, Qty) => {
       productsFilter.scrollIntoView(true);
       console.log(listOfCtrls)    
     });
-  } else {
-    paginationCtrl.innerHTML = "";
-    pagesTable.insertAdjacentHTML("beforeend", pageFrame(0));
-    productsTableX(0).parentElement.classList.add("active");
-    RenderProductsTable(excedentProducts, 0);
-  }
-};
+}
 export default Paginator;
