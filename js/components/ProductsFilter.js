@@ -80,14 +80,13 @@ const ProductsFilter = () => {
   renderCategoryFilter();
 
   const pagesTable = document.querySelector(".main__pagesTable");
-  console.log(pagesTable)
 
   const renderFilteredProducts = (inputName, inputOrder, inputCategory, inputQty) => {
     let filteredProducts = nameProductFilter(inputName);
     filteredProducts = priceOfferFilter(inputOrder, filteredProducts)
     filteredProducts = categoryProductFilter(inputCategory, filteredProducts);
     filteredProducts != ""
-      ? Paginator(filteredProducts, inputQty||10)+(console.log(inputQty))
+      ? Paginator(filteredProducts, inputQty||10)
       : Paginator([], 0)+(productsTableX(0).innerHTML = tableMsjNotFound);
   };
 

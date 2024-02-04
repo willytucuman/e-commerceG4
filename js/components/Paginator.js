@@ -38,7 +38,6 @@ const productsTableX = (pageId) => {
 };
 
 const Paginator = (productsArray, Qty) => {
-  console.log(Qty)
   cardsContainer.innerHTML = "";
   cardsContainer.insertAdjacentHTML("afterbegin", paginationFrame);
   let excedentProducts = [...productsArray];
@@ -76,22 +75,18 @@ const run = () => {
     const paginationCtrlsList = document.querySelector(".main__paginationList");
     const productsFilter = document.querySelector(".main__productsFilter");
     paginationCtrlsList.addEventListener("click", (e) => {
-      console.log(e.target)
       const prevCtrl = paginationCtrlsList.firstElementChild;
       const nextCtrl = paginationCtrlsList.lastElementChild;
       let listOfCtrls = [...paginationCtrlsList.children];
-      console.log(listOfCtrls)
       if(e.target.parentElement==prevCtrl||e.target.parentElement==nextCtrl) {
         document.activeElement.blur();
       } else {
         listOfCtrls.forEach( ctrl => {
           ctrl==nextCtrl||ctrl==prevCtrl ? null
           :(ctrl.classList.remove("active"))+(e.target.parentElement.classList.add("active"))
-          console.log(e.target)
         });
       }
-      productsFilter.scrollIntoView(true);
-      console.log(listOfCtrls)    
+      productsFilter.scrollIntoView(true); 
     });
 }
 export default Paginator;
