@@ -15,15 +15,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/cart.css" />
-    <title></title>
+    <title>HARD-TECH</title>
   </head>
-  <body>
+  <body class="bg-body">
     <header></header>
-    <div class="alto">
-      <main class="maincarrito container">
-        <h2 class="titulo-principal">Carrito</h2>
+    
+      <main class="maincarrito container-fluid">
+        <h2 class="text-light text-center">Carrito</h2>
         <div class="contenedor-carrito">
-          <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.</p>
+          <h6 id="carrito-vacio" class="carrito-vacio text-light text-center mt-2">Tu carrito está vacío.</h6>
 
           <div id="carrito-productos" class="carrito-productos disabled">
             <!-- Esto se va a completar con el JS -->
@@ -40,8 +40,8 @@
             </div>
             <div class="carrito-acciones-derecha">
               <div class="carrito-acciones-total">
-                <p>Total:</p>
-                <p id="total">$3000</p>
+                <p class="text-light">Total:</p>
+                <p class="text-light" id="total">$3000</p>
               </div>
               <button
                 id="carrito-acciones-comprar"
@@ -52,12 +52,12 @@
             </div>
           </div>
 
-          <p id="carrito-comprado" class="carrito-comprado disabled">
+          <h6 id="carrito-comprado" class="carrito-comprado disabled text-center text-light">
             Muchas gracias por tu compra.
-          </p>
+          </h6>
         </div>
       </main>
-    </div>
+   
     <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

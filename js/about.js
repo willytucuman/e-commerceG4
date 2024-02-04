@@ -1,6 +1,6 @@
 import Navbar from "./components/Header.js"
 import Footer from "./components/Footer.js";
-
+import { actualizarnumbercart } from "./services/cart.number.js";
 
 
 const head = document.getElementsByTagName("head")[0];
@@ -9,6 +9,7 @@ const body = document.getElementsByTagName("body")[0];
 
 document.addEventListener("DOMContentLoaded", () => {
   Navbar(); 
+  actualizarnumbercart(productCart);
   Footer();
 });
 
@@ -193,4 +194,4 @@ const aboutContent= `
 
     main.innerHTML=aboutContent;
     main.classList.value = "conteiner-fluid pt-2";
- 
+	let productCart = JSON.parse(localStorage.getItem("productCart"));

@@ -3,10 +3,12 @@ import { validateLoginUser } from "./validators/validateLoginUser.js";
 import { showPassword } from "./utils/showPassword.js";
 import { setLoggedUser } from "./services/setLoggedUser.js";
 import { redirectIndex } from "./utils/redirectIndex.js";
+import { actualizarnumbercart } from "./services/cart.number.js";
 import Footer from "./components/Footer.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   Navbar();
+  actualizarnumbercart(productCart);
   Footer();
 });
 
@@ -49,5 +51,5 @@ const userLogin = (e) =>{
 
   return userLoginFeedback(false)
 }
-
+let productCart = JSON.parse(localStorage.getItem("productCart"));
 loginForm.addEventListener("submit", userLogin)

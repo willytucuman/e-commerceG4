@@ -2,14 +2,14 @@ import Navbar from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import { getProducts } from "./services/getProducts.js";
 import { formatCurrency } from "./utils/formatCurrency.js";
+import { actualizarnumbercart } from "./services/cart.number.js";
 
 let botonesAgregar = document.querySelectorAll(".boton-agregar");
-const numerito = document.querySelector("#numerito");
-
 const incomingId = window.location.href.split("#")[1];
 
 document.addEventListener("DOMContentLoaded", () => {
   Navbar();
+  actualizarnumbercart(productCart);
   Footer();
 });
 
@@ -80,7 +80,7 @@ const mostrarProductoPorId = (idProducto) => {
                                                 <i class="bi bi-dash "></i>
                                             </button>
                                         
-                                            <input type="" id="productQuantity" class="form-control text-center text-white bg-black border border-danger"   aria-describedby="button-addon1" value="2">
+                                            <input type="" id="productQuantity" class="form-control text-center text-white bg-black border border-danger"   aria-describedby="button-addon1" value="0">
                                             <button id="btnSumar" type="button" class="btn similarHover border border-danger text-secondary bg-dark" >
                                             <i class="bi bi-plus "></i>
                                             </button>
@@ -226,12 +226,11 @@ function actualizarBotonesAgregar() {
     boton.addEventListener("click", agregarAlCarrito);
   });
 }
-let productCart;
+export let productCart;
 
 let productCartLS = localStorage.getItem("productCart");
 if (productCartLS) {
   productCart = JSON.parse(productCartLS);
-  actualizarnumbercart();
 }else{
     productCart = [];
 }
@@ -242,7 +241,11 @@ if (productCartLS) {
   const cantidad = document.querySelector("#productQuantity").value;
   const producto = products.find((product) => product.id == idBoton);
   if (cantidad == 0) {
-    alert("No puede ser 0");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Agregue cuantas Unidades desea comprar!",
+    });
   } else {
     if (productCart.some((product) => product.id == idBoton)) {
         const productoExistente = productCart.find(
@@ -254,12 +257,7 @@ if (productCartLS) {
         productCart.push(producto);
     }
     }
-    console.log(productCart);
-    actualizarnumbercart();
+    actualizarnumbercart(productCart)
     localStorage.setItem("productCart", JSON.stringify(productCart));
   }
 
-function actualizarnumbercart(){
-    let nuevoNumero = productCart.reduce((ac,productos) => ac + productos.cantidad, 0);
-    numerito.innerText = nuevoNumero;
-}
