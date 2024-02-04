@@ -145,7 +145,7 @@ function actualizar_total() {
     (ac, productos) => ac + productos.price * productos.cantidad,
     0
   );
-  total.innerText = `$${total_calculado}`;
+  total.innerText = formatCurrency(total_calculado);
 }
 
 btn_comprar.addEventListener("click", comprar_carrito);

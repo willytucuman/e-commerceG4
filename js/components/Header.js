@@ -45,7 +45,7 @@ const Navbar = () => {
                     <li ><a class="dropdown-item w-100 d-flex" href="/views/404.html">Opciones <i class="bi bi-gear ms-auto"></i></a></li>
                     ${
                     loggedUser.role == "admin"
-                        ? '<li ><a class="dropdown-item w-100 d-flex" href="/views/adminPage.html">Panel de administrador <i class="bi bi-gear ms-auto"></i></a></li>'
+                        ? '<li ><a class="dropdown-item w-100 d-flex" href="/views/adminPage.html">Panel administrador <i class="bi bi-gear ms-auto ps-2"></i></a></li>'
                         : ""
                     }
                     <li><a id="logout" onclick="logout()" class="dropdown-item w-100 d-flex pointer">Cerrar sesion <i class="bi bi-box-arrow-in-left ms-auto"></i></a></li>

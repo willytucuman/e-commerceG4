@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Navbar();
   actualizarnumbercart(productCart);
   Footer();
+  window.location.hash='';
 });
 
 let products = getProducts();
@@ -87,11 +88,11 @@ const mostrarProductoPorId = (idProducto) => {
                                         </div>
                                     </div>
                                 </div>
-                                <a href="./404.html" class="btn btn-success shadow-0"> Buy now </a>
+                                <a href="../views/cart.html" class="btn btn-success shadow-0"> Comprar ahora</a>
                                 <button id=${
                                   productoEspecifico.id
-                                } class="btn similarHover border-dark text-secondary shadow-0 boton-agregar"> <i class="bi bi-cart-plus"></i> Add to cart </button>
-                                <a href="./404.html" class="btn btn-dark py-2 icon-hover  px-3"> <i class="bi bi-heart-fill text-danger"></i> Save </a>
+                                } class="btn similarHover border border-secondary text-white  boton-agregar"> <i class="bi bi-cart-plus"></i> Agregar a carrito </button>
+                                <a href="./404.html" class="btn btn-dark py-2 icon-hover  px-3"> <i class="bi bi-heart-fill text-danger"></i> Guardar </a>
                              </div>
                             </main>
                         </div>
