@@ -11,10 +11,10 @@ const paginationCtrlFrame = `<div class="container">
 <nav class="row row-cols-1">
 <div class="col col-auto mx-auto">
 <ul class="main__paginationList pagination">
-<li class="main__paginationItem main__paginationItem_index_prev page-item mx-1 mx-sm-3">
+<li class="main__paginationItem main__paginationItem_index_prev page-item mx-1 mx-sm-3 invisible">
 <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#" data-bs-target="#carouselExample" data-bs-slide="prev"> &laquo; </a>
 </li>
-<li class="main__paginationItem main__paginationItem_index_next page-item mx-1 mx-sm-3">
+<li class="main__paginationItem main__paginationItem_index_next page-item mx-1 mx-sm-3 invisible">
 <a class="main__paginationText page-link rounded-3 bg-transparent border-0" href="#" data-bs-target="#carouselExample" data-bs-slide="next">&raquo;</a>
 </li>
 </ul>
