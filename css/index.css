@@ -24,6 +24,7 @@
   --color-bgNavBar: rgba(255, 0, 0, 0.527);
   --image-fondo: url(/assets/img/fondoBlanco1280x720.png);
   --color-Arrow-Shape: rgba(102, 93, 93, 0.938);
+  --color-text-Custom: #fc9292;
 }
 html {
   scroll-behavior: smooth;

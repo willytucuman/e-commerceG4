@@ -1,4 +1,4 @@
-import { paginator } from "../index.js";
+import Paginator from "./Paginator.js";
 import { getProducts } from "../services/getProducts.js";
 let products = getProducts();
 const productsFilter = document.querySelector(".main__productsFilter");
@@ -58,7 +58,6 @@ const ProductsFilter = () => {
   const btnFilterClear = document.querySelector(".main__btnFilterClear");
   const inputPPP = document.querySelector(".main__inputPPP");
   const tableMsjNotFound = `<div class="w-100 vh-100 text-center"> <h2 class="text-secondary">Oops, no hay productos que coincidan con su busqueda</h2></div>`;
-  const productsTable = document.querySelector(".main__productsTable");
 
   const renderCategoryFilter = () => {
     const categoryFirstLine = `<option disabled selected hidden class="default" value=""> Filtrar por categoria </option>`;
@@ -88,7 +87,7 @@ const ProductsFilter = () => {
     filteredProducts = priceOfferFilter(inputOrder, filteredProducts)
     filteredProducts = categoryProductFilter(inputCategory, filteredProducts);
     filteredProducts != ""
-      ? paginator(filteredProducts, inputQty||10)+(console.log(inputQty))
+      ? Paginator(filteredProducts, inputQty||10)+(console.log(inputQty))
       : (pagesTable.innerHTML = "")+(pagesTable.insertAdjacentHTML("beforeend", pageFrame(0)))+(productsTableX(0).parentElement.classList.add("active"))+(productsTableX(0).innerHTML = tableMsjNotFound);
   };
 
@@ -172,7 +171,7 @@ const ProductsFilter = () => {
     inputPriceOfferFilter.value = "";
     inputCategoryFilter.value = "";
     inputPPP.value = "";
-    paginator(products, 10);
+    Paginator(products, 10);
     document.activeElement.blur();
   });
 
