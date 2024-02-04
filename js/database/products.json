@@ -34,7 +34,7 @@
   },
   {
     "id": 3,
-    "title": "Mens Cotton JacketTeclado bluetooth Logitech K380",
+    "title": "Teclado Mens Cotton Jacket bluetooth Logitech K380",
     "price": 64999,
     "description": "El teclado Bluetooth Logitech K380 es un teclado inalámbrico compacto y versátil con distribución QWERTY español y color grafito. Es compatible con múltiples dispositivos y cuenta con teclas cómodas y silenciosas, lo que lo hace ideal para trabajar en diferentes dispositivos con facilidad",
     "category": "teclados",
@@ -66,7 +66,7 @@
   },
   {
     "id": 5,
-    "title": "Steelseries Rival 5",
+    "title": "Mouse Steelseries Rival 5",
     "price": 269998,
     "description": "Sensor de aire TrueMove: un sensor de seguimiento personalizado real 1 a 1, 18.000 CPI, 400 IPS, 40G de aceleración y seguimiento de inclinación. 9 botones programables: cada botón es totalmente personalizable para sus teclas de acceso rápido más importantes.",
     "category": "mouse",
@@ -83,7 +83,7 @@
 
   {
     "id": 6,
-    "title": "Logitech G Series Lightsync G203 negro",
+    "title": "Mouse Logitech G Series Lightsync G203 negro",
     "price": 38999,
     "description": "Logitech diseña productos y experiencias que ocupan un lugar cotidiano en la vida de las personas, poniendo foco en la innovación y la calidad. Su objetivo es crear momentos verdaderamente únicos y significativos para sus usuarios.",
     "category": "mouse",
@@ -99,7 +99,7 @@
   },
   {
     "id": 7,
-    "title": "HyperX Cloud Flight HX-HSCF",
+    "title": "Auriculares HyperX Cloud Flight HX-HSCF",
     "price": 114999,
     "description": "Ideado para los gamers más exigentes, el HyperX Cloud Flight tiene todo lo que un jugador busca. Su conectividad inalámbrica permite moverte de un lugar a otro sin cables.",
     "category": "auriculares",
@@ -115,7 +115,7 @@
   },
   {
     "id": 8,
-    "title": "Steelseries Arctis X9",
+    "title": "Auriculares Steelseries Arctis X9",
     "price": 276612,
     "description": "¡Experimenta la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los SteelSeries Arctis 9X no te pierdes ningún detalle y escuchas el audio tal y como fue diseñado por los creadores.",
     "category": "auriculares",
@@ -131,7 +131,7 @@
   },
   {
     "id": 9,
-    "title": " Intel Core i9-13900K BX8071513900K de 24 núcleos y 5.8GHz ",
+    "title": "Procesador Intel Core i9-13900K BX8071513900K de 24 núcleos y 5.8GHz ",
     "price": 1617459,
     "description": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
     "category": "procesadores",
@@ -147,7 +147,7 @@
   },
   {
     "id": 10,
-    "title": "AMD Ryzen 5 5600X 100-100000065BOX de 6 núcleos y 4.6GHz",
+    "title": "Procesador AMD Ryzen 5 5600X 100-100000065BOX de 6 núcleos y 4.6GHz",
     "price": 252461,
     "description": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
     "category": "procesadores",
