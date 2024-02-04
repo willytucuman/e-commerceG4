@@ -5,10 +5,11 @@
   --color-fuente: #ffffff;
   --color-fondo: #000;
   --color-shadow: rgb(218, 0, 0);
-  /* --color-hover: rgb(0, 110, 255); */
   --color-hover: rgb(0, 174, 255);
   --color-productCard: #e725132a;
   --color-formBorder: transparent;
+  --color-pagCtrl: #ffffff;
+  --color-bgNavBar: rgba(255, 0, 0, 0.01);
   --font-family: "Tektur", "Bungee", "Quantico";
   --image-fondo: url(/assets/img/fondo1920x1080.jpg);
 }
@@ -16,11 +17,13 @@
   --color-fuente: #000;
   --color-fondo: #ffffff;
   --color-shadow: rgb(83, 0, 0);
-  /* --color-shadow: rgb(0, 110, 255); */
   --color-hover: rgba(255, 136, 0, 0.897);
-  --color-formBorder: #ffffff79;
   --color-productCard: #fdececa4;
+  --color-formBorder: #ffffff79;
+  --color-pagCtrl: #750000;
+  --color-bgNavBar: rgba(255, 0, 0, 0.527);
   --image-fondo: url(/assets/img/fondoBlanco1280x720.png);
+  --color-Arrow-Shape: rgba(102, 93, 93, 0.938);
 }
 html {
   scroll-behavior: smooth;
@@ -189,22 +192,23 @@ input:checked + .main__colSwSl:hover:after {
   font-family: "Tektur";
   font-weight: 600;
   font-size: 20px;
-  color: var(--color-fuente);
+  color: var(--color-pagCtrl);
   text-shadow: 2px 2px 4px var(--color-shadow);
 }
 .main__paginationText:hover {
   color: var(--color-hover);
 }
-.page-item.active .main__paginationText {
-  color: var(--color-shadow);
+.main__paginationItem.active .main__paginationText {
+  color: var(--color-productCard);
 }
-.page-item.disabled .main__paginationText {
+.main__paginationItem.disabled .main__paginationText {
   color: rgb(128, 128, 128);
 }
 .main__inputNameFilter,
 .main__inputCategoryFilter,
 .main__btnFilterClear,
-.main__inputPriceOfferFilter {
+.main__inputPriceOfferFilter,
+.main__inputPPP {
   box-shadow: 1px 1px 15px -5px var(--color-fuente);
   color: var(--color-fondo);
   font-family: var(--font-family);
@@ -216,7 +220,8 @@ input:checked + .main__colSwSl:hover:after {
 .main__inputNameFilter:hover,
 .main__inputCategoryFilter:hover,
 .main__btnFilterClear:hover,
-.main__inputPriceOfferFilter:hover {
+.main__inputPriceOfferFilter:hover,
+.main__inputPPP:hover {
   box-shadow: 1px 1px 25px -5px var(--color-fuente);
   background-color: var(--color-fuente);
   color: var(--color-fondo);
@@ -231,7 +236,8 @@ input:checked + .main__colSwSl:hover:after {
 .main__inputNameFilter:focus,
 .main__inputCategoryFilter:focus,
 .main__btnFilterClear:focus,
-.main__inputPriceOfferFilter:focus {
+.main__inputPriceOfferFilter:focus,
+.main__inputPPP:focus {
   box-shadow: 1px 1px 25px -5px var(--color-shadow);
   background-color: var(--color-fuente);
 }
@@ -245,5 +251,8 @@ h1 {
   cursor: pointer;
 }
 .navBar {
-  background: rgba(255, 0, 0, 0.01);
+  background: var(--color-bgNavBar);
+}
+.main__paginationText:focus {
+  box-shadow: none;
 }

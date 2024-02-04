@@ -31,11 +31,8 @@ const ProductCard = (product) => {
 };
 
 const RenderProductsTable = (productsArray, pageId) => {
-  console.log(productsArray)
-  console.log(pageId)
   productsTableX(pageId).innerHTML = "";
   productsTableX(pageId).classList.add("row", "row-cols-1", "row-cols-sm-2", "row-cols-lg-3", "row-cols-xxl-4", "g-4", "justify-content-center");
-  console.log(productsTableX(pageId))
   productsArray.forEach((product) => {
     productsTableX(pageId).insertAdjacentHTML("beforeend", ProductCard(product));
   });
