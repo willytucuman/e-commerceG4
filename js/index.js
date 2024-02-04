@@ -26,10 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ProductsFilter();
 });
 
-// Desde aquí Switch cambia-color
-const colorSwitch = document.querySelector(
-  '.main__colSw input[type="checkbox"]'
-);
+const colorSwitch = document.querySelector('.main__colSw input[type="checkbox"]');
 const switchTheme = (e) => {
   const arrayTheme = [];
   if (e.target.checked) {
@@ -40,7 +37,6 @@ const switchTheme = (e) => {
     arrayTheme.push({ theme: "dark" });
   }
   localStorage.setItem("pageTheme", JSON.stringify(arrayTheme));
-  const valTheme = JSON.parse(localStorage.getItem("pageTheme"));
 };
 colorSwitch.addEventListener("change", switchTheme);
 
@@ -53,6 +49,5 @@ const retrievePageTheme = () => {
   document.body.setAttribute("theme", storageTheme);
   storageTheme != switchStatus ? colorSwitchS.click() : null;
 };
-// Hasta aquí Switch cambia-color
 
 
