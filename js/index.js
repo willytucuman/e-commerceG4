@@ -5,6 +5,7 @@ import RenderProductsTable from "./components/RenderProductsTable.js";
 import { setAdminUser } from "./services/setAdminUser.js";
 import { getProducts } from "./services/getProducts.js";
 import { setProducts } from "./services/setProducts.js";
+import { actualizarnumbercart } from "./services/cart.number.js";
 const headIndexCss = `<link rel="stylesheet" href="./css/index.css">`;
 const head = document.getElementsByTagName("head")[0];
 const title = document.getElementsByTagName("title")[0];
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   retrievePageTheme();
   title.innerHTML = "HARD-TECH";
   Navbar();
+  actualizarnumbercart(productCart)
   setAdminUser();
   setProducts();
   products = getProducts();
@@ -84,7 +86,7 @@ const retrievePageTheme = () => {
   storageTheme!=switchStatus ? colorSwitchS.click() : null
 };
 
-
+let productCart = JSON.parse(localStorage.getItem("productCart"));
 
 
 // products = JSON.parse(localStorage.getItem("products"))
