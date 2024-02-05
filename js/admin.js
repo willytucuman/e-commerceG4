@@ -47,8 +47,8 @@ const cargarDatos = () => {
       <td class="ocultar3 text-light align-middle">${product.category}</td>
 
       
-      <td class="width=100% align-middle"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal('${product.id}')">Update</button>
-      <button class="btn btn-rojo btn-delete  mt-1 w-100 text-light" id="${product.id} ">Delete</button>
+      <td class="width=100% align-middle"><button class="btn btn-primary mb-2 w-100" onclick="mostrarModal('${product.id}')">Editar</button>
+      <button class="btn btn-rojo btn-delete  mt-1 w-100 text-light" id="${product.id} ">Eliminar</button>
       </td>
       
     </tr>
@@ -58,7 +58,7 @@ const cargarDatos = () => {
 };
 
 window.mostrarModal = (id) => {
-  console.log(id);
+
   idProductUpdate = id;
   let index = datos.findIndex((producto) => producto.id == idProductUpdate);
 
@@ -99,7 +99,7 @@ const UpdateProduct = (e) => {
 
   myModal.hide();
   Toastify({
-    text: "Product Edit",
+    text: "Producto Editado",
     duration: 3000,
     close: true,
     gravity: "bottom", 
@@ -156,7 +156,7 @@ const agregarProducto = (event) => {
   document.querySelector("#formGift").reset();
   cargarDatos();
   Toastify({
-    text: "Product Add",
+    text: "Producto Agregado",
     duration: 3000,
     close: true,
     gravity: "bottom", 
@@ -184,19 +184,19 @@ function actualizar_btn_delete() {
 }
 function deleteProduct(e) {
   const idbtn = e.currentTarget.id;
-  console.log(idbtn);
+
   const index = datos.findIndex((producto) => producto.id == idbtn);
   let validar = Swal.fire({
-    title: "Are you sure?",
+    title: "Estas Seguro?",
     icon: "question",
-    html: "Delete Produtc",
+    html: "Borrar Producto",
     showCancelButton: true,
     focusConfirm: false,
-    confirmButtonText: "Yes",
+    confirmButtonText: "Si",
     cancelButtonText: "No",
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      Swal.fire("Borrado!", "Tu producto se ha borrado.", "success");
       datos.splice(index, 1);
       
       localStorage.setItem("products", JSON.stringify(datos));

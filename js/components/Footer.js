@@ -20,7 +20,7 @@ const footerContent = `<div class="footer__homeLink position-absolute z-1 end-0 
 <div class="container col-10  border-top  border-secondary pt-4 mt-4"></div>
 <section class="footer__section row text-center justify-content-center">
 <nav class="col-12 col-md-4 row px-0 mx-0">
-  <p class="footer__tittle col-12 h5 mb-3 mt-4">Links</p>
+  <p class="footer__tittle text-white col-12 h5 mb-3 mt-4">Links</p>
   <div class="col-6 col-md-12 mb-3 px-0">
     <a
       class="footer__link text-decoration-none"

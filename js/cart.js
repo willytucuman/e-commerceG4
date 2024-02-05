@@ -159,7 +159,7 @@ function comprar_carrito() {
       confirmButtonText: "Ok",
       footer: '<a href="../views/login.html">Inicie Session o Registrese</a>',
     });
-  } else {
+  }else {
     productos_carrito.length = 0;
     localStorage.setItem("productCart", JSON.stringify(productos_carrito));
 

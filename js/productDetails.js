@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Navbar();
   actualizarnumbercart(productCart);
   Footer();
-  window.location.hash='';
+  window.location.hash=incomingId;
 });
 
 let products = getProducts();
@@ -20,7 +20,7 @@ let stockLimit;
 const mostrarProductoPorId = (idProducto) => {
   try {
     if (!products) {
-      console.log("No se pudieron cargar los productos.");
+    
       return;
     }
     const productoEspecifico = products.find(
@@ -46,7 +46,7 @@ const mostrarProductoPorId = (idProducto) => {
                                 ${productoEspecifico.title} <br/>
                                 </h4>
                                 <div class="d-flex flex-row my-3">
-                                    <span class="text-success ms-2">In stock</span>
+                                    <span class="text-success ms-2">En stock</span>
                                     <span class="text-white"><i class="bi bi-bag mx-1"></i>${
                                       productoEspecifico.stock
                                     }</span>
@@ -89,9 +89,7 @@ const mostrarProductoPorId = (idProducto) => {
                                     </div>
                                 </div>
                                 <a href="../views/cart.html" class="btn btn-success shadow-0"> Comprar ahora</a>
-                                <button id=${
-                                  productoEspecifico.id
-                                } class="btn similarHover border border-secondary text-white  boton-agregar"> <i class="bi bi-cart-plus"></i> Agregar a carrito </button>
+                                <button value=${productoEspecifico.id} class="btn similarHover border border-secondary text-white  boton-agregar"> <i class="bi bi-cart-plus"></i> Agregar a carrito </button>
                                 <a href="./404.html" class="btn btn-dark py-2 icon-hover  px-3"> <i class="bi bi-heart-fill text-danger"></i> Guardar </a>
                              </div>
                             </main>
@@ -238,7 +236,7 @@ if (productCartLS) {
 
 
  function agregarAlCarrito(e) {
-  const idBoton = e.currentTarget.id;
+  const idBoton = e.currentTarget.value;
   const cantidad = document.querySelector("#productQuantity").value;
   const producto = products.find((product) => product.id == idBoton);
   if (cantidad == 0) {
@@ -256,7 +254,11 @@ if (productCartLS) {
     }else{
         producto.cantidad = parseInt(cantidad);
         productCart.push(producto);
+        
     }
+    Swal.fire({ icon: "success", title :"se ha agregado al carrito"});
+    const Quantity = document.querySelector("#productQuantity");
+    Quantity.value=0
     }
     actualizarnumbercart(productCart)
     localStorage.setItem("productCart", JSON.stringify(productCart));

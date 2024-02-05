@@ -257,3 +257,11 @@ h1 {
 .main__paginationText:focus {
   box-shadow: none;
 }
+.textJustify{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+}

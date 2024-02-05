@@ -21,7 +21,7 @@ const ProductCard = (product) => {
       </div>
       <div class="card-body text-center row align-items-center">
         <h5 class="card-title">${product.title}</h5>
-        <p class="card-text h6">${product.description}</p>
+        <p class="card-text h6 textJustify">${product.description}</p>
       </div>
       <div class="card-footer text-center">
         <small class="text-body-secondary text-reset h4">${formatCurrency(product.price)}</small>
