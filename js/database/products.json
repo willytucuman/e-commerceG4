@@ -199,6 +199,7 @@
     "price": 107999,
     "description": "El teclado gamer Hyperx Alloy Origins 65 Red es un teclado compacto diseñado para jugadores que buscan un rendimiento óptimo. Cuenta con interruptores mecánicos red, teclas retroiluminadas personalizables y un diseño duradero y resistente. Además, su idioma es inglés, lo que lo hace ideal para usuarios que prefieren este idioma para sus juegos y comunicaciones en línea",
     "image": "../assets/img-database/teclado-hyperX.png",
+    "category":"teclados",
     "stock": 4,
     "detail1": "Retroiluminación RGB personalizable",
     "detail2": "Diseñado especialmente para gamers exigentes",
@@ -241,7 +242,7 @@
     "offer":false
   },
   {
-    "id": 15,
+    "id": 23,
     "title": "Mouse gamer de juego Redragon Griffin M607 blanco",
     "price": 29999.00,
     "description": "El mouse gamer Redragon Griffin M607 blanco es un dispositivo diseñado específicamente para satisfacer las necesidades de los jugadores más exigentes. Cuenta con un diseño ergonómico que proporciona comodidad durante largas sesiones de juego, así como un sensor óptico de alta precisión que garantiza un rendimiento excepcional. Además, cuenta con botones programables y una iluminación LED personalizable para adaptarse a las preferencias de cada usuario. Con su alta calidad de construcción y su rendimiento superior, el mouse Redragon Griffin M607 es una opción ideal para los amantes de los videojuegos.",

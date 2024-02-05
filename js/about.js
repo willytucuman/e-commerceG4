@@ -177,10 +177,10 @@ const aboutContent= `
 										><i class="bi bi-github"></i
 									></a>
 									<a
-										href="https://www.facebook.com/cristianjavier.fernandez.58?mibextid=ZbWKwL"
+										href="https://www.linkedin.com/in/fern%C3%A1ndez-cristian-javier-93-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 										target="_blank"
 										class="btn nosotros__card__btn__social"
-										><i class="bi bi-facebook"></i
+										><i class="bi bi-linkedin"></i
 									></a>
 									<a href="mailto:fernandezcristiana.utn@gmail.com" class="btn nosotros__card__btn__social"
 										><i class="bi bi-envelope-at-fill"></i
