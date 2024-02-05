@@ -1,0 +1,267 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&family=Genos:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Play:wght@400;700&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Silkscreen:wght@400;700&family=Tektur:wght@400;500;600;700;800;900&display=swap");
+@import url(./main.css);
+:root {
+  --color-fuente: #ffffff;
+  --color-fondo: #000;
+  --color-shadow: rgb(218, 0, 0);
+  --color-hover: rgb(0, 174, 255);
+  --color-productCard: #e725132a;
+  --color-formBorder: transparent;
+  --color-pagCtrl: #ffffff;
+  --color-bgNavBar: rgba(255, 0, 0, 0.01);
+  --font-family: "Tektur", "Bungee", "Quantico";
+  --image-fondo: url(/assets/img/fondo1920x1080.jpg);
+}
+[theme="light"] {
+  --color-fuente: #000;
+  --color-fondo: #ffffff;
+  --color-shadow: rgb(83, 0, 0);
+  --color-hover: rgba(255, 136, 0, 0.897);
+  --color-productCard: #fdececa4;
+  --color-formBorder: #ffffff79;
+  --color-pagCtrl: #750000;
+  --color-bgNavBar: rgba(255, 0, 0, 0.527);
+  --image-fondo: url(/assets/img/lightMode.jpeg);
+  --color-Arrow-Shape: rgba(102, 93, 93, 0.938);
+  --color-text-Custom: #fc9292;
+}
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 1.3vh;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(209, 30, 30, 0.589);
+  border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #ff00009a;
+}
+body::-webkit-scrollbar-track {
+  background-color: #2e2c2c;
+}
+.main__productImage {
+  max-height: 15rem;
+}
+.main__productCard:hover .main__productImage{
+  animation: float 4s linear infinite;
+}
+@keyframes float {
+  0% , 100%{
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-fuente);
+  background-image: var(--image-fondo);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main__productCard {
+  transition: all 1.3s;
+  box-shadow: 10px 10px 18px -10px var(--color-shadow);
+  color: var(--color-fuente);
+  background-color: var(--color-productCard);
+}
+.main__productCard:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+  box-shadow: 22px 20px 19px -6px var(--color-shadow);
+  cursor: pointer;
+}
+.main__carouselImg:hover {
+  transform: scale(1.75);
+  transition: all 3s;
+}
+.main__carouselImg {
+  transition: all 1s;
+}
+.main__carouselDivContainer {
+  height: 30vw;
+}
+
+/* Desde aquí switch cambia-color */
+.main__colSw {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.main__colSw input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.main__colSwSl {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-fuente);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.main__colSwSl:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--color-fondo);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .main__colSwSl {
+  background-color: var(--color-fuente);
+  box-shadow: 0 0 500px var(--color-fuente);
+}
+input:not(:checked) + .main__colSwSl {
+  box-shadow: 0 0 500px var(--color-fuente);
+}
+input:focus + .main__colSwSl {
+  box-shadow: 0 0 1px var(--color-fuente);
+}
+input:checked + .main__colSwSl:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.main__colSwSl.round {
+  border-radius: 34px;
+}
+.main__colSwSl.round:before {
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-fondo);
+}
+
+input:checked + .main__colSwSl:after {
+  content: "\F494";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  right: 36px;
+  top: 5px;
+  color: rgba(128, 128, 128, 0.61);
+}
+input:not(:checked) + .main__colSwSl:after {
+  content: "\F5A1";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 38px;
+  top: 5px;
+  color: rgba(128, 128, 128, 0.61);
+}
+input:not(:checked) + .main__colSwSl:before {
+  content: "\F497";
+  font-family: "bootstrap-icons";
+  color: rgb(253, 250, 63);
+}
+input:checked + .main__colSwSl:before {
+  content: "\F5A1";
+  font-family: "bootstrap-icons";
+  color: rgb(253, 148, 63);
+}
+input:not(:checked) + .main__colSwSl:hover:before {
+  box-shadow: none;
+  color: rgb(121, 121, 1);
+}
+input:not(:checked) + .main__colSwSl:hover:after {
+  transition: 0.8s;
+  color: rgb(253, 148, 63);
+}
+input:checked + .main__colSwSl:hover:before {
+  box-shadow: none;
+  color: rgb(255, 215, 182);
+}
+input:checked + .main__colSwSl:hover:after {
+  content: "\F497";
+  transition: 0.8s;
+  color: rgb(253, 250, 63);
+}
+/* Hasta aquí switch cambia-color */
+
+.main__paginationText {
+  font-family: "Tektur";
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-pagCtrl);
+  text-shadow: 2px 2px 4px var(--color-shadow);
+}
+.main__paginationText:hover {
+  color: var(--color-hover);
+}
+.main__paginationItem.active .main__paginationText {
+  color: var(--color-productCard);
+}
+.main__paginationItem.disabled .main__paginationText {
+  color: rgb(128, 128, 128);
+}
+.main__inputNameFilter,
+.main__inputCategoryFilter,
+.main__btnFilterClear,
+.main__inputPriceOfferFilter,
+.main__inputPPP {
+  box-shadow: 1px 1px 15px -5px var(--color-fuente);
+  color: var(--color-fondo);
+  font-family: var(--font-family);
+  font-weight: 500;
+  background-color: var(--color-fuente);
+  border-color: var(--color-formBorder);
+  border-width: 0.5px;
+}
+.main__inputNameFilter:hover,
+.main__inputCategoryFilter:hover,
+.main__btnFilterClear:hover,
+.main__inputPriceOfferFilter:hover,
+.main__inputPPP:hover {
+  box-shadow: 1px 1px 25px -5px var(--color-fuente);
+  background-color: var(--color-fuente);
+  color: var(--color-fondo);
+  border-color: var(--color-fondo);
+}
+.main__categoriesOption {
+  background-color: var(--color-fuente);
+}
+.main__inputNameFilter::placeholder {
+  color: var(--color-fondo);
+}
+.main__inputNameFilter:focus,
+.main__inputCategoryFilter:focus,
+.main__btnFilterClear:focus,
+.main__inputPriceOfferFilter:focus,
+.main__inputPPP:focus {
+  box-shadow: 1px 1px 25px -5px var(--color-shadow);
+  background-color: var(--color-fuente);
+}
+h1 {
+  color: var(--color-fuente);
+}
+.main__carouselDivContainer {
+  box-shadow: 1px 1px 25px -5px var(--color-fuente);
+}
+.main__inputPriceOfferFilter, .main__inputCategoryFilter {
+  cursor: pointer;
+}
+.navBar {
+  background: var(--color-bgNavBar);
+}
+.main__paginationText:focus {
+  box-shadow: none;
+}
+.textJustify{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+}
